@@ -75,6 +75,106 @@
 		<bsch:cmdOpCode>22</bsch:cmdOpCode>
 		<bsch:cmdOperand>0</bsch:cmdOperand>
 	</sessionModule>
+	<startPageWorkingArea>
+		<workingAreaTemplate>OneColumn</workingAreaTemplate>
+		<column>
+			<form>CommonForm.Desktop</form>
+			<height>10</height>
+		</column>
+	</startPageWorkingArea>
+	<commonForm name="Desktop" id="ba14910b-955a-4058-b3d5-2a4a89784a1c">
+		<synonym>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Desktop</v8:content>
+			</v8:item>
+		</synonym>
+		<form>
+			<mf:serverModule version="1" startAddr="0">
+				<bsch:cmdOpCode>22,22</bsch:cmdOpCode>
+				<bsch:cmdOperand>0,0</bsch:cmdOperand>
+			</mf:serverModule>
+			<mf:clientModule version="1" startAddr="0">
+				<bsch:cmdOpCode>22,22</bsch:cmdOpCode>
+				<bsch:cmdOperand>0,0</bsch:cmdOperand>
+			</mf:clientModule>
+			<mf:serverWOContextModule version="1">
+				<bsch:cmdOpCode>22</bsch:cmdOpCode>
+				<bsch:cmdOperand>0</bsch:cmdOperand>
+			</mf:serverWOContextModule>
+			<mf:clientServerWOContextModule version="1">
+				<bsch:cmdOpCode>22</bsch:cmdOpCode>
+				<bsch:cmdOperand>0</bsch:cmdOperand>
+			</mf:clientServerWOContextModule>
+			<mf:attributes>
+				<mf:attribute name="Number">
+					<mf:title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Number</v8:content>
+						</v8:item>
+					</mf:title>
+					<mf:type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>25</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</mf:type>
+				</mf:attribute>
+			</mf:attributes>
+			<mf:mainElement>
+				<mf:group name="GroupVertical" type="UsualGroup">
+					<mf:title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Group vertical</v8:content>
+						</v8:item>
+					</mf:title>
+					<mf:tooltip>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Group vertical</v8:content>
+						</v8:item>
+					</mf:tooltip>
+					<mf:usualData group="Vertical" representation="None">
+						<mf:showTitle>false</mf:showTitle>
+					</mf:usualData>
+					<mf:decoration name="Decoration1" type="Label">
+						<mf:verticalStretch>true</mf:verticalStretch>
+					</mf:decoration>
+					<mf:group name="GroupHorizontal" type="UsualGroup">
+						<mf:title>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Group horizontal</v8:content>
+							</v8:item>
+						</mf:title>
+						<mf:tooltip>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Group horizontal</v8:content>
+							</v8:item>
+						</mf:tooltip>
+						<mf:usualData group="Horizontal" representation="None">
+							<mf:showTitle>false</mf:showTitle>
+						</mf:usualData>
+						<mf:decoration name="Decoration3" type="Label">
+							<mf:horizontalStretch>true</mf:horizontalStretch>
+						</mf:decoration>
+						<mf:field name="Number" kind="InputField" dataPath="Number"/>
+						<mf:decoration name="Decoration4" type="Label">
+							<mf:horizontalStretch>true</mf:horizontalStretch>
+						</mf:decoration>
+					</mf:group>
+					<mf:decoration name="Decoration2" type="Label">
+						<mf:verticalStretch>true</mf:verticalStretch>
+					</mf:decoration>
+				</mf:group>
+			</mf:mainElement>
+		</form>
+		<useStandardCommands>false</useStandardCommands>
+	</commonForm>
 	<requiredPermission>
 		<permission>Multimedia</permission>
 		<use>false</use>
