@@ -44,8 +44,8 @@
 			</UsePurposes>
 			<ScriptVariant>English</ScriptVariant>
 			<DefaultRoles/>
-			<Vendor/>
-			<Version/>
+			<Vendor>Ildar Gabdrakhmanov</Vendor>
+			<Version>1.0.1</Version>
 			<UpdateCatalogAddress/>
 			<IncludeHelpInContents>false</IncludeHelpInContents>
 			<UseManagedFormInOrdinaryApplication>false</UseManagedFormInOrdinaryApplication>
@@ -103,9 +103,19 @@
 			<DefaultInterface/>
 			<DefaultStyle/>
 			<DefaultLanguage>Language.English</DefaultLanguage>
-			<BriefInformation/>
+			<BriefInformation>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Accident Free</v8:content>
+				</v8:item>
+			</BriefInformation>
 			<DetailedInformation/>
-			<Copyright/>
+			<Copyright>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Ildar Gabdrakhmanov</v8:content>
+				</v8:item>
+			</Copyright>
 			<VendorInformationAddress/>
 			<ConfigurationInformationAddress/>
 			<DataLockControlMode>Managed</DataLockControlMode>
