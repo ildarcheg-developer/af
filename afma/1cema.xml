@@ -5,6 +5,14 @@
 			<v8:lang>en</v8:lang>
 			<v8:content>Accident free</v8:content>
 		</v8:item>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Accident free</v8:content>
+		</v8:item>
+		<v8:item>
+			<v8:lang>ar</v8:lang>
+			<v8:content>Accident free</v8:content>
+		</v8:item>
 	</synonym>
 	<language name="English" id="4692d80b-71fa-4149-8bfe-5910bef2d945" languageCode="en">
 		<synonym>
@@ -36,10 +44,26 @@
 			<v8:lang>en</v8:lang>
 			<v8:content>Accident Free</v8:content>
 		</v8:item>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Accident free</v8:content>
+		</v8:item>
+		<v8:item>
+			<v8:lang>ar</v8:lang>
+			<v8:content>Accident free</v8:content>
+		</v8:item>
 	</briefInformation>
 	<copyright>
 		<v8:item>
 			<v8:lang>en</v8:lang>
+			<v8:content>Ildar Gabdrakhmanov</v8:content>
+		</v8:item>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Ildar Gabdrakhmanov</v8:content>
+		</v8:item>
+		<v8:item>
+			<v8:lang>ar</v8:lang>
 			<v8:content>Ildar Gabdrakhmanov</v8:content>
 		</v8:item>
 	</copyright>
