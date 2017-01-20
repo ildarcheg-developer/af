@@ -1,0 +1,10 @@
+﻿
+&AtClient
+Procedure OnClose(Exit)
+	//Insert handler contents
+EndProcedure
+
+&AtClient
+Procedure BeforeClose(Cancel, Exit, MessageText, StandardProcessing)
+	Cancel = True;
+EndProcedure

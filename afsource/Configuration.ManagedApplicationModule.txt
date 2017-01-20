@@ -1,0 +1,4 @@
+﻿
+Procedure OnStart()
+	OpenForm("CommonForm.Desktop");
+EndProcedure
