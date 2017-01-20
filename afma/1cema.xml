@@ -137,10 +137,16 @@
 				</mf:attribute>
 			</mf:attributes>
 			<mf:mainElement>
+				<mf:title>
+					<v8:item>
+						<v8:lang>en</v8:lang>
+						<v8:content>Accident Free</v8:content>
+					</v8:item>
+				</mf:title>
+				<mf:autoTitle>false</mf:autoTitle>
+				<mf:commandBarLocation>None</mf:commandBarLocation>
 				<mf:autoCommandBar name="FormCommandBar" type="AutoCommandBar">
-					<mf:autoMenuData>
-						<mf:autofill>false</mf:autofill>
-					</mf:autoMenuData>
+					<mf:button name="FormClose" type="CommandBarButton" commandName="Form.StandardCommand.Close"/>
 				</mf:autoCommandBar>
 				<mf:windowOpeningMode>LockWholeInterface</mf:windowOpeningMode>
 				<mf:event handler="BeforeClose" name="BeforeClose"/>
@@ -185,6 +191,7 @@
 						</mf:decoration>
 						<mf:field name="Number" kind="InputField" dataPath="Number">
 							<mf:titleLocation>None</mf:titleLocation>
+							<mf:horizontalAlign>Center</mf:horizontalAlign>
 							<mf:inputData>
 								<mf:font ref="style:NormalTextFont" height="14" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
 								<mf:inputHint>
