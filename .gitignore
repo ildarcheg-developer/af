@@ -51,3 +51,7 @@ afdb/1Cv8.1CL
 afdb/1Cv8Log/1Cv8.lgd
 *.cgr
 afdb/1Cv8Log/1Cv8.lgd
+*.1CD
+afmaindb/1Cv8.1CD.cfl
+*.cfl
+afmaindb/1Cv8Log/1Cv8.lgd

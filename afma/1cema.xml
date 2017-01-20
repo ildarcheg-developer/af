@@ -203,16 +203,6 @@
 				<mf:windowOpeningMode>LockWholeInterface</mf:windowOpeningMode>
 				<mf:event handler="BeforeClose" name="BeforeClose"/>
 				<mf:event handler="OnClose" name="OnClose"/>
-				<mf:decoration name="jghjg" type="Label">
-					<mf:formattedTitle>
-						<mf:str>
-							<v8:item>
-								<v8:lang>en</v8:lang>
-								<v8:content>Jghjgg</v8:content>
-							</v8:item>
-						</mf:str>
-					</mf:formattedTitle>
-				</mf:decoration>
 				<mf:group name="GroupVertical" type="UsualGroup">
 					<mf:title>
 						<v8:item>
@@ -288,6 +278,7 @@
 							<mf:horizontalStretch>true</mf:horizontalStretch>
 						</mf:decoration>
 						<mf:button name="Submit" type="UsualButton" commandName="Form.Command.Submit">
+							<mf:textColor>style:FormTextColor</mf:textColor>
 							<mf:font ref="style:NormalTextFont" height="14" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
 						</mf:button>
 						<mf:decoration name="Decoration6" type="Label">
