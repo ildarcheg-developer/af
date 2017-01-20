@@ -67,9 +67,12 @@
 			<v8:content>Ildar Gabdrakhmanov</v8:content>
 		</v8:item>
 	</copyright>
-	<mainModule version="1" startAddr="0">
-		<bsch:cmdOpCode>22,22</bsch:cmdOpCode>
-		<bsch:cmdOperand>0,0</bsch:cmdOperand>
+	<mainModule version="1" startAddr="7">
+		<bsch:cmdOpCode>1,4,18,19,1,1,22,22,22</bsch:cmdOpCode>
+		<bsch:cmdOperand>3,0,1,1,3,4,0,0,0</bsch:cmdOperand>
+		<bsch:constant>SCommonForm.Desktop</bsch:constant>
+		<bsch:procedure name="OnStart" parametersCount="0" startAddr="0"/>
+		<bsch:procedure name="OpenForm" isFunction="true" isExternal="true" parametersCount="8" startAddr="0"/>
 	</mainModule>
 	<sessionModule version="1">
 		<bsch:cmdOpCode>22</bsch:cmdOpCode>
@@ -77,10 +80,6 @@
 	</sessionModule>
 	<startPageWorkingArea>
 		<workingAreaTemplate>OneColumn</workingAreaTemplate>
-		<column>
-			<form>CommonForm.Desktop</form>
-			<height>10</height>
-		</column>
 	</startPageWorkingArea>
 	<commonForm name="Desktop" id="ba14910b-955a-4058-b3d5-2a4a89784a1c">
 		<synonym>
@@ -94,9 +93,23 @@
 				<bsch:cmdOpCode>22,22</bsch:cmdOpCode>
 				<bsch:cmdOperand>0,0</bsch:cmdOperand>
 			</mf:serverModule>
-			<mf:clientModule version="1" startAddr="0">
-				<bsch:cmdOpCode>22,22</bsch:cmdOpCode>
-				<bsch:cmdOperand>0,0</bsch:cmdOperand>
+			<mf:clientModule version="1" startAddr="8">
+				<bsch:cmdOpCode>1,22,1,3,7,16,1,22,22,22</bsch:cmdOpCode>
+				<bsch:cmdOperand>5,0,9,0,0,0,10,0,0,0</bsch:cmdOperand>
+				<bsch:procedure name="OnClose" parametersCount="1" startAddr="0">
+					<bsch:variable name="Exit" isLocal="true" isParam="true"/>
+					<bsch:paramsDefValue/>
+				</bsch:procedure>
+				<bsch:procedure name="BeforeClose" parametersCount="4" startAddr="2">
+					<bsch:variable name="Cancel" isLocal="true" isParam="true"/>
+					<bsch:variable name="Exit" isLocal="true" isParam="true"/>
+					<bsch:variable name="MessageText" isLocal="true" isParam="true"/>
+					<bsch:variable name="StandardProcessing" isLocal="true" isParam="true"/>
+					<bsch:paramsDefValue/>
+					<bsch:paramsDefValue/>
+					<bsch:paramsDefValue/>
+					<bsch:paramsDefValue/>
+				</bsch:procedure>
 			</mf:clientModule>
 			<mf:serverWOContextModule version="1">
 				<bsch:cmdOpCode>22</bsch:cmdOpCode>
@@ -124,6 +137,14 @@
 				</mf:attribute>
 			</mf:attributes>
 			<mf:mainElement>
+				<mf:autoCommandBar name="FormCommandBar" type="AutoCommandBar">
+					<mf:autoMenuData>
+						<mf:autofill>false</mf:autofill>
+					</mf:autoMenuData>
+				</mf:autoCommandBar>
+				<mf:windowOpeningMode>LockWholeInterface</mf:windowOpeningMode>
+				<mf:event handler="BeforeClose" name="BeforeClose"/>
+				<mf:event handler="OnClose" name="OnClose"/>
 				<mf:group name="GroupVertical" type="UsualGroup">
 					<mf:title>
 						<v8:item>
@@ -162,7 +183,18 @@
 						<mf:decoration name="Decoration3" type="Label">
 							<mf:horizontalStretch>true</mf:horizontalStretch>
 						</mf:decoration>
-						<mf:field name="Number" kind="InputField" dataPath="Number"/>
+						<mf:field name="Number" kind="InputField" dataPath="Number">
+							<mf:titleLocation>None</mf:titleLocation>
+							<mf:inputData>
+								<mf:font ref="style:NormalTextFont" height="14" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+								<mf:inputHint>
+									<v8:item>
+										<v8:lang>en</v8:lang>
+										<v8:content>Chassis Number</v8:content>
+									</v8:item>
+								</mf:inputHint>
+							</mf:inputData>
+						</mf:field>
 						<mf:decoration name="Decoration4" type="Label">
 							<mf:horizontalStretch>true</mf:horizontalStretch>
 						</mf:decoration>
