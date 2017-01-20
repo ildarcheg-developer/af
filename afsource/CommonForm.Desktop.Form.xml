@@ -23,6 +23,16 @@
 		<Event name="OnClose">OnClose</Event>
 	</Events>
 	<ChildItems>
+		<LabelDecoration name="jghjg" id="35">
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Jghjgg</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="jghjgContextMenu" id="36"/>
+			<ExtendedTooltip name="jghjgExtendedTooltip" id="37"/>
+		</LabelDecoration>
 		<UsualGroup name="GroupVertical" id="1">
 			<Title>
 				<v8:item>
@@ -90,6 +100,42 @@
 						</LabelDecoration>
 					</ChildItems>
 				</UsualGroup>
+				<UsualGroup name="GroupHorizontal1" id="22">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Group horizontal</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Group horizontal</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="GroupHorizontal1ExtendedTooltip" id="23"/>
+					<ChildItems>
+						<LabelDecoration name="Decoration5" id="24">
+							<HorizontalStretch>true</HorizontalStretch>
+							<ContextMenu name="Decoration5ContextMenu" id="25"/>
+							<ExtendedTooltip name="Decoration5ExtendedTooltip" id="26"/>
+						</LabelDecoration>
+						<Button name="Submit" id="33">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.Submit</CommandName>
+							<Font ref="style:NormalTextFont" height="14" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+							<ExtendedTooltip name="SubmitExtendedTooltip" id="34"/>
+						</Button>
+						<LabelDecoration name="Decoration6" id="30">
+							<HorizontalStretch>true</HorizontalStretch>
+							<ContextMenu name="Decoration6ContextMenu" id="31"/>
+							<ExtendedTooltip name="Decoration6ExtendedTooltip" id="32"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
 				<LabelDecoration name="Decoration2" id="8">
 					<VerticalStretch>true</VerticalStretch>
 					<ContextMenu name="Decoration2ContextMenu" id="9"/>
@@ -114,5 +160,48 @@
 				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection/>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemGroup">
+						<dcsset:groupType>OrGroup</dcsset:groupType>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Number</dcsset:left>
+							<dcsset:comparisonType>NotEqual</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:string">1</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Number</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:string">1</dcsset:right>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>BackColor</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:FieldSelectionBackColor</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
 	</Attributes>
+	<Commands>
+		<Command name="Submit" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Submit</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Submit</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Submit</Action>
+		</Command>
+	</Commands>
 </Form>

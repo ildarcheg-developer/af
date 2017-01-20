@@ -93,9 +93,10 @@
 				<bsch:cmdOpCode>22,22</bsch:cmdOpCode>
 				<bsch:cmdOperand>0,0</bsch:cmdOperand>
 			</mf:serverModule>
-			<mf:clientModule version="1" startAddr="8">
-				<bsch:cmdOpCode>1,22,1,3,7,16,1,22,22,22</bsch:cmdOpCode>
-				<bsch:cmdOperand>5,0,9,0,0,0,10,0,0,0</bsch:cmdOperand>
+			<mf:clientModule version="1" startAddr="20">
+				<bsch:cmdOpCode>1,22,1,3,7,16,1,6,18,19,1,1,22,1,2,18,19,1,1,22,22,22</bsch:cmdOpCode>
+				<bsch:cmdOperand>5,0,9,0,0,0,10,0,1,2,10,11,0,20,0,1,4,20,21,0,0,0</bsch:cmdOperand>
+				<bsch:variable name="Number" isExternal="true"/>
 				<bsch:procedure name="OnClose" parametersCount="1" startAddr="0">
 					<bsch:variable name="Exit" isLocal="true" isParam="true"/>
 					<bsch:paramsDefValue/>
@@ -110,10 +111,20 @@
 					<bsch:paramsDefValue/>
 					<bsch:paramsDefValue/>
 				</bsch:procedure>
+				<bsch:procedure name="Exit" isExternal="true" parametersCount="3" startAddr="0"/>
+				<bsch:procedure name="Submit" parametersCount="1" startAddr="13">
+					<bsch:variable name="Command" isLocal="true" isParam="true"/>
+					<bsch:paramsDefValue/>
+				</bsch:procedure>
+				<bsch:procedure name="SubmitAtServer" isExternal="true" parametersCount="1" startAddr="0"/>
 			</mf:clientModule>
 			<mf:serverWOContextModule version="1">
-				<bsch:cmdOpCode>22</bsch:cmdOpCode>
-				<bsch:cmdOperand>0</bsch:cmdOperand>
+				<bsch:cmdOpCode>1,22,22</bsch:cmdOpCode>
+				<bsch:cmdOperand>16,0,0</bsch:cmdOperand>
+				<bsch:procedure name="SubmitAtServer" parametersCount="1" startAddr="0">
+					<bsch:variable name="ChassisNumber" isLocal="true" isParam="true"/>
+					<bsch:paramsDefValue/>
+				</bsch:procedure>
 			</mf:serverWOContextModule>
 			<mf:clientServerWOContextModule version="1">
 				<bsch:cmdOpCode>22</bsch:cmdOpCode>
@@ -135,7 +146,48 @@
 						</v8:StringQualifiers>
 					</mf:type>
 				</mf:attribute>
+				<mf:conditionalAppearance>
+					<dcsset:item>
+						<dcsset:selection/>
+						<dcsset:filter>
+							<dcsset:item xsi:type="dcsset:FilterItemGroup">
+								<dcsset:groupType>OrGroup</dcsset:groupType>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">Number</dcsset:left>
+									<dcsset:comparisonType>NotEqual</dcsset:comparisonType>
+									<dcsset:right xsi:type="xs:string">1</dcsset:right>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">Number</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="xs:string">1</dcsset:right>
+								</dcsset:item>
+							</dcsset:item>
+						</dcsset:filter>
+						<dcsset:appearance>
+							<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+								<dcscor:parameter>BackColor</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Color">style:FieldSelectionBackColor</dcscor:value>
+							</dcscor:item>
+						</dcsset:appearance>
+					</dcsset:item>
+				</mf:conditionalAppearance>
 			</mf:attributes>
+			<mf:command name="Submit">
+				<mf:title>
+					<v8:item>
+						<v8:lang>en</v8:lang>
+						<v8:content>Submit</v8:content>
+					</v8:item>
+				</mf:title>
+				<mf:handlerName>Submit</mf:handlerName>
+				<mf:tooltip>
+					<v8:item>
+						<v8:lang>en</v8:lang>
+						<v8:content>Submit</v8:content>
+					</v8:item>
+				</mf:tooltip>
+			</mf:command>
 			<mf:mainElement>
 				<mf:title>
 					<v8:item>
@@ -151,6 +203,16 @@
 				<mf:windowOpeningMode>LockWholeInterface</mf:windowOpeningMode>
 				<mf:event handler="BeforeClose" name="BeforeClose"/>
 				<mf:event handler="OnClose" name="OnClose"/>
+				<mf:decoration name="jghjg" type="Label">
+					<mf:formattedTitle>
+						<mf:str>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Jghjgg</v8:content>
+							</v8:item>
+						</mf:str>
+					</mf:formattedTitle>
+				</mf:decoration>
 				<mf:group name="GroupVertical" type="UsualGroup">
 					<mf:title>
 						<v8:item>
@@ -203,6 +265,32 @@
 							</mf:inputData>
 						</mf:field>
 						<mf:decoration name="Decoration4" type="Label">
+							<mf:horizontalStretch>true</mf:horizontalStretch>
+						</mf:decoration>
+					</mf:group>
+					<mf:group name="GroupHorizontal1" type="UsualGroup">
+						<mf:title>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Group horizontal</v8:content>
+							</v8:item>
+						</mf:title>
+						<mf:tooltip>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Group horizontal</v8:content>
+							</v8:item>
+						</mf:tooltip>
+						<mf:usualData group="Horizontal" representation="None">
+							<mf:showTitle>false</mf:showTitle>
+						</mf:usualData>
+						<mf:decoration name="Decoration5" type="Label">
+							<mf:horizontalStretch>true</mf:horizontalStretch>
+						</mf:decoration>
+						<mf:button name="Submit" type="UsualButton" commandName="Form.Command.Submit">
+							<mf:font ref="style:NormalTextFont" height="14" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+						</mf:button>
+						<mf:decoration name="Decoration6" type="Label">
 							<mf:horizontalStretch>true</mf:horizontalStretch>
 						</mf:decoration>
 					</mf:group>
