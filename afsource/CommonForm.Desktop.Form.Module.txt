@@ -13,6 +13,18 @@ EndProcedure
 &AtServerNoContext
 Procedure SubmitAtServer(ChassisNumber)
 	
+	ConnectionStructure = HTTPServices.GetHTTPRequest();
+	
+	ConnectionStructure.Request.ResourceAddress = ConnectionStructure.Request.ResourceAddress + "/?chassisnumber="+ChassisNumber+"&type=mob";
+	
+	Response = ConnectionStructure.Connection.Get(ConnectionStructure.Request);
+	Connected = TRUE;
+	
+	BodyAsString = Response.GetBodyAsString();
+	BodyAsString = Serialization.AddValueTag(BodyAsString);
+	BodyStructure = Serialization.GetDataFromString(BodyAsString);
+	Parsed = TRUE;
+	
 EndProcedure
 
 &AtClient

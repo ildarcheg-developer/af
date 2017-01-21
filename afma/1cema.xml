@@ -81,6 +81,870 @@
 	<startPageWorkingArea>
 		<workingAreaTemplate>OneColumn</workingAreaTemplate>
 	</startPageWorkingArea>
+	<commonModule name="StringFunctionsClientServer" id="a92f35a1-aa52-4e33-856a-fe44cb44a459">
+		<synonym>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>String functions - client &amp; server</v8:content>
+			</v8:item>
+		</synonym>
+		<clientModule version="1">
+			<bsch:cmdOpCode>1,3,18,51,16,1,3,8,33,40,1,3,3,4,33,40,7,39,6,16,1,3,65,40,1,3,4,33,40,1,3,4,18,20,1,39,1,1,3,17,45,39,39,1,39,1,1,3,3,65,29,16,1,3,4,16,1,3,3,53,16,1,3,3,53,16,1,3,3,3,60,16,1,3,4,35,1,40,1,3,40,1,3,3,4,34,40,3,39,3,3,60,16,1,3,4,35,30,3,3,36,69,40,1,3,3,4,34,40,3,39,3,3,3,24,4,59,16,1,3,3,3,60,16,1,3,4,35,1,40,1,3,53,3,3,24,37,30,3,3,3,24,3,59,3,33,69,40,1,3,3,3,4,3,26,24,4,59,16,39,1,3,3,3,3,24,4,59,16,1,39,1,1,3,3,3,60,16,1,39,1,3,3,3,60,16,1,3,4,33,40,1,39,39,1,39,1,39,1,1,3,4,34,40,1,3,3,3,53,3,53,25,24,16,1,3,4,16,39,1,39,1,1,3,3,3,4,25,57,16,1,3,29,31,3,65,29,69,40,1,3,30,3,4,57,3,33,69,30,3,4,58,3,33,69,40,1,3,3,4,3,53,4,25,59,18,20,1,39,1,3,3,18,20,1,1,39,1,1,3,3,3,3,24,4,59,16,1,3,3,3,60,16,1,39,1,3,29,31,3,65,29,69,40,1,3,30,3,4,57,3,33,69,30,3,4,58,3,33,69,40,1,3,3,4,3,53,4,25,59,18,20,1,39,1,3,3,18,20,1,1,39,1,1,3,17,45,39,1,22,1,3,4,16,1,48,49,3,14,16,1,3,49,16,3,15,40,3,3,16,3,8,16,1,3,3,107,4,108,33,40,3,39,3,71,16,1,3,3,65,40,4,39,3,16,1,3,3,3,24,3,24,16,1,39,50,3,8,16,3,8,16,1,3,17,45,39,1,22,1,3,65,29,40,1,3,3,63,60,4,35,17,45,39,39,1,3,18,51,16,1,3,4,4,4,18,51,18,20,1,1,3,4,4,4,18,51,18,20,1,1,3,4,4,4,18,51,18,20,1,1,3,4,4,4,18,51,18,20,1,1,48,49,3,14,16,1,3,49,16,3,15,40,3,3,16,3,8,16,1,3,3,12,37,30,3,3,12,38,69,40,1,6,17,45,39,39,1,1,39,50,3,8,16,3,8,16,1,7,17,45,39,1,1,22,1,3,18,51,16,1,3,3,53,16,1,3,4,16,1,3,4,16,48,49,3,16,1,49,3,37,40,1,3,3,3,64,16,1,3,3,18,19,5,1,40,1,3,3,34,40,1,3,3,3,3,3,25,59,18,20,1,39,1,1,3,3,4,24,16,39,1,1,3,43,39,50,1,3,3,34,40,1,3,3,3,3,3,25,59,18,20,1,39,1,1,3,17,45,39,1,22,1,3,8,33,31,3,53,4,33,69,40,1,4,17,45,39,39,1,1,3,4,16,1,3,4,16,1,3,4,16,1,3,3,53,38,1,40,1,3,3,3,4,59,16,1,3,4,34,40,1,3,3,4,24,16,1,39,39,1,1,3,3,3,3,3,3,25,59,24,16,1,3,3,4,24,16,1,3,3,3,4,59,16,1,3,4,33,40,1,3,3,4,24,16,1,3,3,16,1,3,3,4,24,16,1,39,39,1,44,1,3,3,70,16,1,45,39,1,4,3,24,18,19,5,1,47,1,46,1,3,4,33,40,1,3,3,16,39,1,3,4,33,40,1,3,3,16,39,1,3,4,33,40,1,3,3,16,39,1,3,4,33,40,1,3,3,16,39,1,3,4,33,40,1,3,3,16,39,1,3,4,33,40,1,3,3,16,39,1,3,4,33,40,1,3,3,16,39,1,3,4,33,40,1,3,3,16,39,1,3,4,33,40,1,3,3,16,39,1,4,3,24,18,19,5,1,47,1,1,3,8,33,40,1,3,4,16,39,1,3,3,71,16,1,1,3,3,3,24,16,1,3,3,4,24,16,1,3,3,16,1,39,1,3,3,53,38,40,1,3,3,3,3,3,53,3,25,4,24,59,24,16,39,1,1,3,17,45,39,1,22,1,3,3,16,1,3,3,18,21,5,1,16,1,3,4,35,1,40,1,3,3,3,4,25,13,16,1,3,65,29,40,1,3,3,4,3,4,110,24,3,100,16,39,1,1,3,3,4,25,16,1,39,1,3,17,45,39,1,22,1,3,3,16,1,3,4,16,1,3,3,4,60,16,1,3,4,35,40,1,3,3,3,4,24,4,59,18,19,5,1,16,1,3,4,16,1,3,3,3,4,25,57,16,1,48,49,3,14,16,1,3,49,16,3,15,40,3,3,16,3,8,16,1,3,12,18,19,5,1,30,3,3,12,3,18,21,5,1,69,40,1,3,3,4,3,12,24,4,24,3,100,16,39,1,3,3,4,3,12,24,4,24,4,100,16,1,1,39,50,3,8,16,3,8,16,39,1,1,48,49,3,14,16,1,3,49,16,3,15,40,3,3,16,3,8,16,1,3,3,18,19,5,1,30,3,3,12,3,18,21,5,1,69,16,1,3,4,3,12,24,4,24,60,4,35,40,1,3,3,4,3,12,24,4,24,3,40,3,12,23,3,110,39,3,12,23,100,16,39,1,1,3,3,4,3,12,24,4,24,3,40,3,12,3,110,39,3,12,100,16,1,39,50,3,8,16,3,8,16,1,3,17,45,39,1,22,1,3,18,51,16,1,3,4,63,16,1,3,3,4,18,19,5,1,16,1,48,49,3,14,16,1,3,49,16,3,15,40,3,3,16,3,8,16,1,3,3,4,60,16,1,3,3,3,4,25,57,56,16,1,3,3,3,4,24,4,59,56,16,1,3,4,57,3,33,30,3,4,58,3,33,69,40,1,3,3,4,3,53,4,25,59,16,39,1,44,1,3,3,3,18,20,1,1,45,39,1,46,1,39,50,3,8,16,3,8,16,1,3,17,45,39,1,22,1,3,107,4,108,34,40,1,6,17,45,39,39,1,1,3,18,19,5,1,29,40,1,7,17,45,39,39,1,1,3,29,40,1,3,3,4,4,100,16,39,1,1,3,29,40,1,3,4,16,1,3,4,16,48,49,3,53,16,1,49,3,37,40,1,3,3,4,24,16,1,3,3,3,4,59,4,64,16,1,3,4,34,40,1,39,39,1,1,3,43,39,50,1,3,3,3,4,59,16,39,1,1,3,4,16,48,49,3,53,16,1,49,3,37,40,1,3,3,3,4,59,4,64,16,1,3,4,37,30,3,4,38,69,29,40,1,6,17,45,39,39,1,1,3,43,39,50,1,7,17,45,39,1,22,1,3,107,4,108,34,40,1,6,17,45,39,39,1,1,3,18,19,5,1,29,40,1,7,17,45,39,39,1,1,3,18,51,16,1,3,4,16,48,49,3,53,16,1,49,3,37,40,1,3,3,3,4,59,4,64,18,20,1,1,3,43,39,50,1,3,4,16,48,49,3,53,16,1,49,3,37,40,1,3,3,3,4,59,4,64,16,1,3,4,36,31,3,4,35,30,3,4,36,69,69,31,3,4,35,69,30,3,3,18,21,5,1,8,33,69,30,3,29,30,3,18,19,5,1,69,29,69,40,1,6,17,45,39,39,1,1,3,43,39,50,1,7,17,45,39,1,22,1,3,4,57,4,33,1,40,1,3,3,4,4,59,16,1,39,1,3,4,58,4,33,1,40,1,3,3,3,53,4,25,57,16,1,39,1,3,17,45,39,1,22,1,3,3,3,53,3,25,57,16,1,22,1,3,3,53,23,16,48,49,4,23,16,1,49,3,37,40,1,3,3,23,4,59,3,33,40,1,3,23,17,45,39,39,1,1,3,43,39,50,1,4,17,45,39,1,22,1,3,4,16,1,3,53,3,53,34,40,1,6,17,45,39,39,1,1,3,4,16,48,49,3,53,16,1,49,3,37,40,1,3,3,64,4,33,30,3,3,64,4,36,31,3,3,64,4,35,69,30,3,3,64,4,36,31,3,3,64,4,35,69,69,69,31,3,3,64,4,33,30,3,3,64,4,34,69,69,40,1,6,17,45,39,39,1,1,3,43,39,50,1,7,17,45,39,1,22,1,3,4,16,1,3,4,16,48,49,3,16,1,49,3,37,40,1,3,3,3,24,16,1,3,43,39,50,1,3,17,45,39,1,22,1,3,65,40,1,3,4,16,39,1,1,3,3,4,57,16,1,3,3,56,16,1,3,3,3,53,25,16,1,3,4,35,40,1,3,3,3,18,19,5,1,16,1,3,61,4,33,40,1,3,3,3,24,16,39,1,3,61,4,33,40,1,3,3,3,24,16,39,1,39,1,1,3,17,45,39,1,22,1,3,61,4,33,40,1,3,4,57,3,33,1,40,1,3,3,4,4,59,16,1,39,39,1,3,61,4,33,40,1,3,4,58,3,33,1,40,1,3,3,3,53,4,25,57,16,1,39,39,1,1,3,17,45,39,1,22,1,3,3,16,1,3,4,16,48,49,3,53,16,1,49,3,37,40,1,3,3,3,3,4,59,3,3,4,59,100,16,1,3,43,39,50,1,3,17,45,39,1,22,1,3,4,16,1,3,3,4,18,19,5,1,16,1,3,4,16,1,3,4,16,1,3,4,16,1,3,4,16,1,3,4,16,1,3,4,16,1,3,4,16,1,3,3,4,4,59,70,16,1,3,3,4,4,59,70,16,1,3,3,4,4,59,70,16,1,3,3,3,3,3,3,18,19,5,1,24,16,1,3,3,3,3,3,3,18,19,5,1,24,16,1,3,3,3,3,3,3,18,19,5,1,24,16,1,3,17,45,39,1,22,1,3,4,16,1,3,4,16,1,3,4,16,1,3,4,16,1,3,4,16,1,3,4,16,1,3,4,16,1,3,4,16,1,3,3,56,16,1,3,3,53,16,1,3,4,16,48,49,3,16,1,49,3,37,40,1,3,3,4,59,3,33,40,1,3,3,4,24,16,39,1,3,3,4,59,3,33,40,1,3,3,4,24,16,39,1,3,3,4,59,3,33,40,1,3,3,36,30,3,3,4,24,4,59,3,33,31,3,3,4,24,4,59,3,33,69,69,40,1,3,3,4,25,16,39,1,3,3,4,24,16,1,39,1,3,3,4,59,3,33,40,1,3,3,4,24,16,39,1,3,3,4,59,3,33,40,1,3,3,36,30,3,3,4,24,4,59,3,33,31,3,3,4,24,4,59,3,33,69,69,40,1,3,3,4,25,16,39,1,3,3,4,24,16,1,39,1,3,3,4,59,3,33,40,1,3,3,4,24,16,39,1,3,3,4,59,3,33,40,1,3,3,36,30,3,3,4,24,4,59,3,33,31,3,3,4,24,4,59,3,33,69,69,40,1,3,3,4,25,16,39,1,3,3,4,24,16,1,39,1,1,3,43,39,50,1,3,17,45,39,1,22,1,3,4,16,1,3,3,62,16,1,3,3,4,60,16,1,3,4,35,40,1,3,3,3,4,24,4,59,16,1,3,3,3,4,24,4,59,16,1,3,3,4,60,16,1,3,4,35,40,1,3,3,3,4,24,4,59,16,1,3,3,3,4,24,4,59,16,39,1,39,1,1,3,3,4,60,16,1,3,4,35,40,1,3,3,3,4,25,57,16,1,3,3,3,4,25,57,16,39,1,1,3,3,4,60,16,1,3,4,35,1,40,1,3,3,4,60,16,1,3,4,33,40,1,3,3,53,16,39,1,1,3,3,3,4,25,57,3,3,4,24,4,59,24,16,1,3,3,3,4,25,57,3,3,4,24,4,59,24,16,1,3,3,4,60,16,1,39,1,3,3,4,60,16,1,3,4,35,1,40,1,3,3,4,60,16,1,3,4,33,40,1,3,3,53,16,39,1,1,3,3,3,4,25,57,3,3,4,24,4,59,24,16,1,3,3,3,4,25,57,3,3,4,24,4,59,24,16,1,3,3,4,60,16,1,39,1,3,3,4,60,16,1,3,4,35,1,40,1,3,3,3,3,4,25,57,24,16,1,3,3,3,4,24,4,59,16,1,3,3,3,4,24,4,59,16,1,3,3,4,60,16,1,3,4,35,40,1,3,3,3,4,24,4,59,16,1,3,3,3,4,24,4,59,16,39,1,1,3,3,4,60,16,1,39,1,3,3,3,24,16,1,3,56,17,45,39,1,22,1,3,4,16,1,3,4,33,40,1,3,3,16,39,1,3,4,33,40,1,3,3,3,24,16,39,1,3,4,33,40,1,3,3,3,24,3,24,16,39,1,3,4,33,40,1,3,3,3,24,16,39,1,3,4,33,40,1,3,3,16,39,1,3,4,33,40,1,3,3,3,24,16,39,1,3,4,33,40,1,3,3,3,24,3,24,16,39,1,3,4,33,40,1,3,3,3,24,3,24,3,24,16,39,1,3,4,33,40,1,3,3,3,24,16,39,1,1,3,17,45,39,1,22,22</bsch:cmdOpCode>
+			<bsch:cmdOperand>46,4,0,0,0,49,2,0,0,45,50,2,1,1,0,18,0,19,0,0,51,0,0,43,52,1,1,0,36,53,4,3,1,2,53,36,54,55,4,0,0,348,43,56,45,57,60,5,3,0,0,0,61,6,3,0,62,7,3,0,0,63,8,1,0,0,66,9,0,1,0,0,67,9,4,0,67,295,70,5,221,71,10,6,3,0,89,6,90,0,3,0,0,72,10,4,0,102,10,9,0,0,198,75,6,6,3,0,111,6,112,0,10,7,0,5,0,0,78,10,6,3,0,0,79,10,4,0,79,180,82,6,0,10,7,0,0,147,6,10,7,0,7,0,3,0,0,160,85,6,6,10,6,7,0,0,5,0,0,171,88,6,6,10,7,0,5,0,0,89,180,90,93,10,6,3,0,0,94,124,97,9,6,1,0,0,98,9,4,0,194,100,295,196,103,72,104,198,105,108,6,3,0,219,110,9,9,0,0,6,0,0,0,0,112,6,3,0,219,113,221,114,117,11,0,9,7,0,0,0,118,2,0,238,11,0,0,0,277,119,5,248,11,7,0,3,0,0,255,11,7,0,3,0,0,269,121,4,11,6,11,0,6,0,0,1,2,121,275,124,4,11,1,2,124,125,277,126,129,0,0,9,8,0,5,0,0,130,9,0,1,0,0,131,72,134,2,0,303,0,0,0,0,342,135,5,313,0,7,0,3,0,0,320,0,7,0,3,0,0,334,137,4,0,6,0,0,6,0,0,1,2,137,340,140,4,0,1,2,140,141,342,142,145,4,0,0,348,147,0,161,2,3,0,163,0,0,0,0,0,163,4,0,0,4,0,405,3,4,0,4,0,0,165,5,3,0,8,0,0,383,3,385,3,0,0,167,6,2,0,393,3,394,1,0,169,2,2,6,0,5,0,0,171,360,1,4,0,0,4,0,0,173,2,0,0,417,175,0,188,1,0,0,435,190,1,0,0,0,4,0,0,0,533,532,194,2,0,0,0,195,2,9,10,11,3,12,1,2,195,196,2,9,13,14,3,12,1,2,196,197,2,9,15,16,3,12,1,2,197,198,2,9,17,17,3,12,1,2,198,200,0,0,2,0,0,200,4,0,0,4,0,520,3,4,0,4,0,0,201,0,3,18,0,510,0,3,19,0,0,517,202,0,0,0,533,517,203,204,486,1,4,0,0,4,0,0,206,0,0,0,533,208,210,0,229,2,0,0,0,231,3,0,0,0,232,4,7,0,233,5,7,0,0,0,3,0,233,0,5,0,606,234,6,0,5,0,0,235,6,1,2,2,0,235,601,236,5,4,0,593,237,2,0,4,5,4,0,0,1,2,237,593,238,239,4,5,7,0,0,601,240,241,5,0,557,1,243,5,4,0,624,244,2,0,4,5,4,0,0,1,2,244,624,245,247,2,0,0,630,249,0,269,0,0,0,642,0,0,4,0,0,649,270,3,0,0,921,649,271,273,10,3,0,274,11,7,0,275,12,7,0,276,12,0,0,0,276,894,277,13,0,12,7,0,0,278,13,20,0,690,279,12,12,7,0,0,280,662,690,281,282,10,10,0,11,12,11,0,0,0,0,283,12,12,7,0,0,284,13,0,12,7,0,0,286,13,20,0,739,287,12,12,7,0,0,288,11,12,0,289,10,10,20,0,0,290,662,739,291,749,294,14,13,0,0,297,1,760,296,21,13,0,1,5,0,296,1,297,0,299,13,22,0,770,300,15,1,0,859,301,13,23,0,780,302,15,2,0,859,303,13,24,0,790,304,15,3,0,859,305,13,25,0,800,306,15,4,0,859,307,13,26,0,810,308,15,5,0,859,309,13,27,0,820,310,15,6,0,859,311,13,28,0,830,312,15,7,0,859,313,13,29,0,840,314,15,8,0,859,315,13,30,0,850,316,15,9,0,859,318,21,15,0,1,5,0,318,1,319,320,15,0,0,870,321,15,3,0,875,323,15,15,0,0,324,325,10,10,15,0,0,326,12,12,7,0,0,327,11,12,0,329,662,331,11,0,0,0,915,332,10,10,0,11,0,0,11,0,7,0,0,0,0,915,333,335,10,0,0,921,337,0,359,2,0,0,361,3,1,0,31,0,361,0,362,3,4,0,362,975,363,4,1,3,7,0,0,0,364,4,0,0,966,365,2,2,20,3,32,0,0,4,0,0,966,366,367,3,3,7,0,0,368,935,370,2,0,0,980,372,0,399,3,0,0,400,4,3,0,402,5,0,33,0,0,403,5,4,0,1099,406,6,0,5,7,0,5,0,1,8,0,406,0,407,7,3,0,408,3,0,5,7,0,0,0,411,0,0,1,0,0,411,9,0,0,9,0,1091,8,9,0,9,0,0,412,8,34,1,9,0,412,1062,6,8,36,7,2,35,0,412,0,1076,413,3,3,37,8,36,0,38,0,7,0,0,1088,415,3,3,37,8,36,0,38,0,3,0,0,416,417,1032,1,9,0,0,9,0,0,1099,418,420,0,0,1,0,0,420,9,0,0,9,0,1195,8,9,0,9,0,0,423,10,2,1,9,0,423,1136,2,8,36,4,2,35,0,423,0,0,426,3,39,8,36,0,38,0,0,4,0,1172,427,3,3,39,8,36,0,38,0,10,1166,8,34,0,4,0,1169,8,34,0,0,0,1172,428,431,3,3,40,8,36,0,38,0,10,1189,8,34,4,0,1191,8,34,0,0,432,1106,1,9,0,0,9,0,0,434,3,0,0,1207,436,0,453,1,0,12,0,455,2,41,0,0,457,3,0,42,2,0,0,457,0,459,0,0,3,0,0,459,5,0,0,5,0,1313,4,5,0,5,0,0,461,6,4,43,0,0,464,7,4,6,7,0,0,0,0,467,8,4,6,7,0,5,0,0,0,469,8,7,0,2,0,1285,8,7,0,2,0,0,1297,472,8,8,6,8,0,6,0,0,0,1297,474,1309,477,1,7,8,2,44,477,479,1,1311,479,0,481,1234,1,5,0,0,5,0,0,483,1,0,0,1325,485,0,500,0,0,8,0,0,1340,501,0,0,0,1480,1340,502,504,0,1,9,0,504,0,1355,505,0,0,0,1480,1355,506,508,2,0,1368,509,0,0,1,3,0,0,1368,510,512,1,0,1428,513,3,4,0,514,4,7,0,0,0,0,0,0,514,0,4,0,1419,515,3,3,7,0,0,516,5,0,4,7,0,7,0,0,517,5,10,0,1414,518,1419,1414,519,520,4,0,1386,1,521,0,0,3,5,0,0,1428,522,524,4,7,0,0,0,0,0,0,524,0,4,0,1474,525,5,0,4,7,0,7,0,0,526,5,10,0,1461,5,11,0,0,0,1469,527,0,0,0,1480,1469,528,529,4,0,1438,1,531,0,0,0,1480,533,0,548,0,0,8,0,0,1495,549,0,0,0,1628,1495,550,552,0,1,9,0,552,0,1510,553,0,0,0,1628,1510,554,556,3,0,0,0,558,4,7,0,0,0,2,0,0,558,0,4,0,1545,559,3,2,4,7,0,7,0,1,2,559,560,4,0,1525,1,562,4,7,0,0,0,0,0,0,562,0,4,0,1622,563,5,0,4,7,0,7,0,0,564,5,13,0,1583,5,14,0,1582,5,15,0,0,0,1588,5,16,0,0,1598,3,5,1,45,0,565,0,0,0,1610,1,0,1608,5,1,2,0,566,0,0,0,1617,567,0,0,0,1628,1617,568,569,4,0,1555,1,571,0,0,0,1628,573,0,585,0,7,0,46,0,585,1647,586,0,0,6,5,0,0,587,1630,589,0,7,0,46,0,589,1666,590,0,0,0,0,7,0,0,0,591,1647,593,0,0,0,1671,595,0,605,0,0,0,0,1,0,0,0,607,0,621,2,0,0,0,0,0,0,7,0,0,621,0,2,0,1721,622,0,2,0,7,0,1,0,1716,623,2,0,0,0,1727,1716,624,625,2,0,1695,1,627,4,0,0,1727,629,0,642,1,47,0,644,1,0,0,0,0,1746,645,0,0,0,1827,1746,646,647,2,7,0,0,0,0,0,0,647,0,2,0,1821,648,1,2,0,48,0,1795,0,2,0,10,0,1780,0,2,0,11,0,0,1794,0,2,0,15,0,1793,0,2,0,49,0,0,0,0,1809,1,2,0,50,0,1808,0,2,0,50,0,0,0,1816,650,0,0,0,1827,1816,651,652,2,0,1756,1,654,0,0,0,1827,656,0,669,2,3,0,670,3,7,0,0,0,1,0,670,0,3,0,1856,671,2,2,0,0,0,672,3,0,1841,1,674,2,0,0,1862,676,0,700,2,0,1873,701,2,51,0,1873,702,705,2,2,7,0,0,708,0,0,0,0,710,4,1,0,0,0,0,712,4,4,0,1934,714,5,2,4,2,16,0,714,0,716,3,0,52,0,1919,718,0,5,0,0,0,1932,720,3,0,53,0,1932,722,0,0,5,0,0,1932,724,1934,726,728,0,0,0,1940,730,0,743,2,0,52,0,1966,745,0,7,0,1,0,745,1965,747,0,0,6,5,0,0,749,1948,1992,751,2,0,53,0,1992,753,0,7,0,1,0,753,1991,755,0,0,0,0,7,0,0,0,757,1972,1992,759,761,0,0,0,1998,762,0,781,3,1,0,783,4,7,0,0,0,0,0,0,783,0,4,0,2035,784,3,3,0,4,7,0,2,4,7,0,0,0,785,4,0,2013,1,787,3,0,0,2041,789,0,804,1,3,0,805,0,0,54,2,17,0,805,0,807,2,55,0,807,3,56,0,807,4,57,0,807,5,58,0,807,6,59,0,807,7,60,0,807,8,61,0,809,9,0,54,7,0,0,0,810,10,0,6,7,0,0,0,811,11,0,7,7,0,0,0,813,1,1,11,6,7,8,4,21,0,813,0,0,814,1,1,10,4,5,6,4,21,0,814,0,0,815,1,1,9,2,3,4,4,21,0,815,0,0,817,1,0,0,2152,819,0,834,1,4,0,836,2,55,0,836,3,56,0,836,4,57,0,836,5,58,0,836,6,59,0,836,7,60,0,836,8,61,0,838,0,0,0,0,839,9,0,0,0,841,10,7,0,0,0,9,0,841,0,10,0,2418,842,0,10,7,0,8,0,2224,843,1,1,62,0,0,2413,844,0,10,7,0,7,0,2239,845,1,1,63,0,0,2413,846,0,10,7,0,6,0,2287,847,10,9,0,2271,0,10,7,0,7,0,7,0,2270,0,10,7,0,7,0,8,0,0,0,2279,848,1,1,64,0,0,2285,850,1,1,64,0,0,851,2413,852,0,10,7,0,5,0,2302,853,1,1,65,0,0,2413,854,0,10,7,0,4,0,2350,855,10,9,0,2334,0,10,7,0,7,0,5,0,2333,0,10,7,0,7,0,6,0,0,0,2342,856,1,1,66,0,0,2348,858,1,1,66,0,0,859,2413,860,0,10,7,0,3,0,2365,861,1,1,67,0,0,2413,862,0,10,7,0,2,0,2413,863,10,9,0,2397,0,10,7,0,7,0,3,0,2396,0,10,7,0,7,0,4,0,0,0,2405,864,1,1,7,0,0,2411,866,1,1,7,0,0,867,2413,868,869,10,0,2204,1,871,1,0,0,2424,873,0,884,1,3,0,886,2,0,0,0,889,3,2,68,0,0,890,3,4,0,2496,891,2,2,3,67,0,5,0,0,892,0,0,3,67,0,5,0,0,893,3,2,69,0,0,894,3,4,0,2494,895,2,2,3,7,0,5,0,0,896,0,0,3,7,0,5,0,0,2494,897,2496,898,900,3,2,70,0,0,901,3,4,0,2525,902,2,2,3,7,0,0,0,903,0,0,3,7,0,0,0,2525,904,907,3,2,71,0,0,908,3,4,0,908,2594,909,4,2,72,0,0,910,4,4,0,2555,912,4,2,0,0,2555,913,914,2,2,3,7,0,0,2,4,73,0,5,0,0,0,915,0,0,3,7,0,0,0,4,73,0,5,0,0,0,916,3,2,71,0,0,917,2532,920,3,2,74,0,0,921,3,4,0,921,2662,922,4,2,75,0,0,923,4,4,0,2623,925,4,2,0,0,2623,926,927,2,2,3,7,0,0,2,4,76,0,5,0,0,0,928,0,0,3,7,0,0,0,4,76,0,5,0,0,0,929,3,2,74,0,0,930,2600,933,3,2,77,0,0,934,3,4,0,934,2741,935,1,1,0,3,7,0,0,0,0,936,2,2,3,7,0,5,0,0,937,0,0,3,7,0,5,0,0,938,3,2,69,0,0,939,3,4,0,2732,940,2,2,3,7,0,5,0,0,941,0,0,3,7,0,5,0,0,2732,942,943,3,2,77,0,0,944,2668,945,1,1,0,0,0,947,1,0,0,0,2753,949,0,970,4,3,0,971,0,7,0,2769,972,4,1,0,2871,973,0,6,0,2781,974,4,1,1,0,0,2871,975,0,54,0,2795,976,4,1,1,0,1,0,0,2871,977,0,78,0,2807,978,4,1,2,0,0,2871,979,0,67,0,2817,980,4,2,0,2871,981,0,79,0,2829,982,4,2,1,0,0,2871,983,0,80,0,2843,984,4,2,1,0,1,0,0,2871,985,0,76,0,2859,986,4,2,1,0,1,0,1,0,0,2871,987,0,73,0,2871,988,4,1,3,0,0,2871,989,990,4,0,0,2877,992,0,0</bsch:cmdOperand>
+			<bsch:constant>SArray</bsch:constant>
+			<bsch:constant>S </bsch:constant>
+			<bsch:constant>SAdd</bsch:constant>
+			<bsch:constant>S</bsch:constant>
+			<bsch:constant>N0</bsch:constant>
+			<bsch:constant>N-1</bsch:constant>
+			<bsch:constant>N2</bsch:constant>
+			<bsch:constant>N1</bsch:constant>
+			<bsch:constant>SString</bsch:constant>
+			<bsch:constant>SMin,Max</bsch:constant>
+			<bsch:constant>N48</bsch:constant>
+			<bsch:constant>N57</bsch:constant>
+			<bsch:constant>SStructure</bsch:constant>
+			<bsch:constant>N65</bsch:constant>
+			<bsch:constant>N90</bsch:constant>
+			<bsch:constant>N97</bsch:constant>
+			<bsch:constant>N122</bsch:constant>
+			<bsch:constant>N95</bsch:constant>
+			<bsch:constant>SMin</bsch:constant>
+			<bsch:constant>SMax</bsch:constant>
+			<bsch:constant>S%</bsch:constant>
+			<bsch:constant>Sen='SubstitutionString source string has an invalid format: %'</bsch:constant>
+			<bsch:constant>S1</bsch:constant>
+			<bsch:constant>S2</bsch:constant>
+			<bsch:constant>S3</bsch:constant>
+			<bsch:constant>S4</bsch:constant>
+			<bsch:constant>S5</bsch:constant>
+			<bsch:constant>S6</bsch:constant>
+			<bsch:constant>S7</bsch:constant>
+			<bsch:constant>S8</bsch:constant>
+			<bsch:constant>S9</bsch:constant>
+			<bsch:constant>SCount</bsch:constant>
+			<bsch:constant>SNG=</bsch:constant>
+			<bsch:constant>S|</bsch:constant>
+			<bsch:constant>SValue</bsch:constant>
+			<bsch:constant>SProperty</bsch:constant>
+			<bsch:constant>SKey</bsch:constant>
+			<bsch:constant>S?{</bsch:constant>
+			<bsch:constant>S}</bsch:constant>
+			<bsch:constant>S{-</bsch:constant>
+			<bsch:constant>S{</bsch:constant>
+			<bsch:constant>N34</bsch:constant>
+			<bsch:constant>S;</bsch:constant>
+			<bsch:constant>S=</bsch:constant>
+			<bsch:constant>SInsert</bsch:constant>
+			<bsch:constant>SFind</bsch:constant>
+			<bsch:constant>S"</bsch:constant>
+			<bsch:constant>SXXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX</bsch:constant>
+			<bsch:constant>N88</bsch:constant>
+			<bsch:constant>N102</bsch:constant>
+			<bsch:constant>N45</bsch:constant>
+			<bsch:constant>S0</bsch:constant>
+			<bsch:constant>SLEFT</bsch:constant>
+			<bsch:constant>SRIGHT</bsch:constant>
+			<bsch:constant>N3</bsch:constant>
+			<bsch:constant>SI</bsch:constant>
+			<bsch:constant>SV</bsch:constant>
+			<bsch:constant>SX</bsch:constant>
+			<bsch:constant>SL</bsch:constant>
+			<bsch:constant>SC</bsch:constant>
+			<bsch:constant>SD</bsch:constant>
+			<bsch:constant>SM</bsch:constant>
+			<bsch:constant>N1000</bsch:constant>
+			<bsch:constant>N500</bsch:constant>
+			<bsch:constant>N100</bsch:constant>
+			<bsch:constant>N50</bsch:constant>
+			<bsch:constant>N10</bsch:constant>
+			<bsch:constant>N5</bsch:constant>
+			<bsch:constant>S&lt;body</bsch:constant>
+			<bsch:constant>S&gt;</bsch:constant>
+			<bsch:constant>S&lt;/body&gt;</bsch:constant>
+			<bsch:constant>S&lt;script</bsch:constant>
+			<bsch:constant>S&lt;/script&gt;</bsch:constant>
+			<bsch:constant>N9</bsch:constant>
+			<bsch:constant>S&lt;style</bsch:constant>
+			<bsch:constant>S&lt;/style&gt;</bsch:constant>
+			<bsch:constant>N8</bsch:constant>
+			<bsch:constant>S&lt;</bsch:constant>
+			<bsch:constant>N4</bsch:constant>
+			<bsch:constant>N6</bsch:constant>
+			<bsch:constant>N7</bsch:constant>
+			<bsch:procedure name="SplitStringIntoSubstringArray" isFunction="true" isExported="true" parametersCount="4" startAddr="0">
+				<bsch:variable name="String" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="Separator" isLocal="true" isParam="true"/>
+				<bsch:variable name="SkipEmptyStrings" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="QuoteChar" isLocal="true" isParam="true"/>
+				<bsch:variable name="Result" isLocal="true"/>
+				<bsch:variable name="UseQuotes" isLocal="true"/>
+				<bsch:variable name="QuotedStr" isLocal="true"/>
+				<bsch:variable name="QuoteCharLen" isLocal="true"/>
+				<bsch:variable name="SeparatorLen" isLocal="true"/>
+				<bsch:variable name="Position" isLocal="true"/>
+				<bsch:variable name="QuotedPosition" isLocal="true"/>
+				<bsch:variable name="Substring" isLocal="true"/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue>S,</bsch:paramsDefValue>
+				<bsch:paramsDefValue>U</bsch:paramsDefValue>
+				<bsch:paramsDefValue>S</bsch:paramsDefValue>
+			</bsch:procedure>
+			<bsch:procedure name="GetStringFromSubstringArray" isFunction="true" isExported="true" parametersCount="2" startAddr="350">
+				<bsch:variable name="Array" isLocal="true" isParam="true"/>
+				<bsch:variable name="Separator" isLocal="true" isParam="true"/>
+				<bsch:variable name="Result" isLocal="true"/>
+				<bsch:variable name="Element" isLocal="true"/>
+				<bsch:variable name="0Element" isLocal="true"/>
+				<bsch:variable name="Substring" isLocal="true"/>
+				<bsch:variable name="SubstringSeparator" isLocal="true"/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue>S,</bsch:paramsDefValue>
+			</bsch:procedure>
+			<bsch:procedure name="IsWordSeparator" isFunction="true" isExported="true" parametersCount="2" startAddr="419">
+				<bsch:variable name="CharCode" isLocal="true" isParam="true"/>
+				<bsch:variable name="WordSeparators" isLocal="true" isParam="true"/>
+				<bsch:variable name="Ranges" isLocal="true"/>
+				<bsch:variable name="Range" isLocal="true"/>
+				<bsch:variable name="0Range" isLocal="true"/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue>S</bsch:paramsDefValue>
+			</bsch:procedure>
+			<bsch:procedure name="SplitStringIntoWordArray" isFunction="true" isExported="true" parametersCount="2" startAddr="535">
+				<bsch:variable name="String" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="WordSeparators" isLocal="true" isParam="true"/>
+				<bsch:variable name="Words" isLocal="true"/>
+				<bsch:variable name="TextSize" isLocal="true"/>
+				<bsch:variable name="WordStart" isLocal="true"/>
+				<bsch:variable name="Position" isLocal="true"/>
+				<bsch:variable name="CharCode" isLocal="true"/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue>S</bsch:paramsDefValue>
+			</bsch:procedure>
+			<bsch:procedure name="SubstituteParametersInString" isFunction="true" isExported="true" parametersCount="10" startAddr="632">
+				<bsch:variable name="SubstitutionString" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="Parameter1" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="Parameter2" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="Parameter3" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="Parameter4" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="Parameter5" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="Parameter6" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="Parameter7" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="Parameter8" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="Parameter9" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="Result" isLocal="true"/>
+				<bsch:variable name="StartPosition" isLocal="true"/>
+				<bsch:variable name="Position" isLocal="true"/>
+				<bsch:variable name="StringChar" isLocal="true"/>
+				<bsch:variable name="ParameterNumber" isLocal="true"/>
+				<bsch:variable name="ParameterValue" isLocal="true"/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue>U</bsch:paramsDefValue>
+				<bsch:paramsDefValue>U</bsch:paramsDefValue>
+				<bsch:paramsDefValue>U</bsch:paramsDefValue>
+				<bsch:paramsDefValue>U</bsch:paramsDefValue>
+				<bsch:paramsDefValue>U</bsch:paramsDefValue>
+				<bsch:paramsDefValue>U</bsch:paramsDefValue>
+				<bsch:paramsDefValue>U</bsch:paramsDefValue>
+				<bsch:paramsDefValue>U</bsch:paramsDefValue>
+			</bsch:procedure>
+			<bsch:procedure name="NStr" isFunction="true" isExternal="true" parametersCount="2" startAddr="0"/>
+			<bsch:procedure name="SubstituteParametersInStringFromArray" isFunction="true" isExported="true" parametersCount="2" startAddr="923">
+				<bsch:variable name="SubstitutionString" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="ParameterArray" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="ResultString" isLocal="true"/>
+				<bsch:variable name="Index" isLocal="true"/>
+				<bsch:variable name="Value" isLocal="true"/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue/>
+			</bsch:procedure>
+			<bsch:procedure name="SubstituteParametersInStringByName" isFunction="true" isExported="true" parametersCount="3" startAddr="982">
+				<bsch:variable name="StringPattern" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="ValuesToInsert" isLocal="true" isParam="true"/>
+				<bsch:variable name="ValuesFormat" isLocal="true" isParam="true"/>
+				<bsch:variable name="Result" isLocal="true"/>
+				<bsch:variable name="FormatStr" isLocal="true"/>
+				<bsch:variable name="OptionalPartsDelimiterPosition" isLocal="true"/>
+				<bsch:variable name="OptionalPatterns" isLocal="true"/>
+				<bsch:variable name="OptionalPattern" isLocal="true"/>
+				<bsch:variable name="Parameter" isLocal="true"/>
+				<bsch:variable name="0Parameter" isLocal="true"/>
+				<bsch:variable name="ApplyFormat" isLocal="true"/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue>U</bsch:paramsDefValue>
+			</bsch:procedure>
+			<bsch:procedure name="GetParametersFromString" isFunction="true" isExported="true" parametersCount="1" startAddr="1209">
+				<bsch:variable name="ParameterString" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="Result" isLocal="true"/>
+				<bsch:variable name="DoubleQuoteChar" isLocal="true"/>
+				<bsch:variable name="SubstringArray" isLocal="true"/>
+				<bsch:variable name="CurParameterString" isLocal="true"/>
+				<bsch:variable name="0CurParameterString" isLocal="true"/>
+				<bsch:variable name="FirstEqualSignPosition" isLocal="true"/>
+				<bsch:variable name="ParameterName" isLocal="true"/>
+				<bsch:variable name="ParameterValue" isLocal="true"/>
+				<bsch:paramsDefValue/>
+			</bsch:procedure>
+			<bsch:procedure name="ValueIsFilled" isFunction="true" isExternal="true" parametersCount="1" startAddr="0"/>
+			<bsch:procedure name="OnlyDigitsInString" isFunction="true" isExported="true" parametersCount="3" startAddr="1327">
+				<bsch:variable name="CheckString" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="IncludingLeadingZeros" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="IncludingSpaces" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="FirstDigitNumber" isLocal="true"/>
+				<bsch:variable name="a" isLocal="true"/>
+				<bsch:variable name="CharCode" isLocal="true"/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue>Btrue</bsch:paramsDefValue>
+				<bsch:paramsDefValue>Btrue</bsch:paramsDefValue>
+			</bsch:procedure>
+			<bsch:procedure name="OnlyRomanString" isFunction="true" isExported="true" parametersCount="3" startAddr="1482">
+				<bsch:variable name="CheckString" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="WithWordSeparators" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="AllowedChars" isLocal="true" isParam="true"/>
+				<bsch:variable name="ValidCharacterCodes" isLocal="true"/>
+				<bsch:variable name="a" isLocal="true"/>
+				<bsch:variable name="CharCode" isLocal="true"/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue>Btrue</bsch:paramsDefValue>
+				<bsch:paramsDefValue>S</bsch:paramsDefValue>
+			</bsch:procedure>
+			<bsch:procedure name="RemoveDoubleQuotationMarks" isFunction="true" isExported="true" parametersCount="1" startAddr="1630">
+				<bsch:variable name="String" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:paramsDefValue/>
+			</bsch:procedure>
+			<bsch:procedure name="DeleteLastCharsInString" isExported="true" parametersCount="2" startAddr="1673">
+				<bsch:variable name="Text" isLocal="true" isParam="true"/>
+				<bsch:variable name="CharsCount" isLocal="true" isParam="true"/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue/>
+			</bsch:procedure>
+			<bsch:procedure name="FindCharFromEnd" isFunction="true" isExported="true" parametersCount="2" startAddr="1684">
+				<bsch:variable name="String" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="Char" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="Position" isLocal="true"/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue/>
+			</bsch:procedure>
+			<bsch:procedure name="IsUUID" isFunction="true" isExported="true" parametersCount="1" startAddr="1729">
+				<bsch:variable name="String" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="Pattern" isLocal="true"/>
+				<bsch:variable name="Position" isLocal="true"/>
+				<bsch:paramsDefValue/>
+			</bsch:procedure>
+			<bsch:procedure name="GenerateCharacterString" isFunction="true" isExported="true" parametersCount="2" startAddr="1829">
+				<bsch:variable name="Char" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="StringLength" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="Result" isLocal="true"/>
+				<bsch:variable name="Counter" isLocal="true"/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue/>
+			</bsch:procedure>
+			<bsch:procedure name="SupplementString" isFunction="true" isExported="true" parametersCount="4" startAddr="1864">
+				<bsch:variable name="String" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="StringLength" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="Char" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="Mode" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="CharToAddCount" isLocal="true"/>
+				<bsch:variable name="StringToAdd" isLocal="true"/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue>S0</bsch:paramsDefValue>
+				<bsch:paramsDefValue>SLeft</bsch:paramsDefValue>
+			</bsch:procedure>
+			<bsch:procedure name="DeleteDuplicatedChars" isFunction="true" isExported="true" parametersCount="3" startAddr="1942">
+				<bsch:variable name="String" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="Char" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="Mode" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue>SLeft</bsch:paramsDefValue>
+			</bsch:procedure>
+			<bsch:procedure name="ReplaceCharsWithAnother" isFunction="true" isExported="true" parametersCount="3" startAddr="2000">
+				<bsch:variable name="CharsToReplace" isLocal="true" isParam="true"/>
+				<bsch:variable name="String" isLocal="true" isParam="true"/>
+				<bsch:variable name="ReplacementChars" isLocal="true" isParam="true"/>
+				<bsch:variable name="Result" isLocal="true"/>
+				<bsch:variable name="CharacterNumber" isLocal="true"/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue/>
+			</bsch:procedure>
+			<bsch:procedure name="ConvertNumberIntoRomanNotation" isFunction="true" isExported="true" parametersCount="1" startAddr="2043">
+				<bsch:variable name="ArabicNumber" isLocal="true" isParam="true"/>
+				<bsch:variable name="RomanNumber" isLocal="true"/>
+				<bsch:variable name="c1" isLocal="true"/>
+				<bsch:variable name="c5" isLocal="true"/>
+				<bsch:variable name="c10" isLocal="true"/>
+				<bsch:variable name="c50" isLocal="true"/>
+				<bsch:variable name="c100" isLocal="true"/>
+				<bsch:variable name="c500" isLocal="true"/>
+				<bsch:variable name="c1000" isLocal="true"/>
+				<bsch:variable name="Units" isLocal="true"/>
+				<bsch:variable name="Tens" isLocal="true"/>
+				<bsch:variable name="Hundreds" isLocal="true"/>
+				<bsch:paramsDefValue/>
+			</bsch:procedure>
+			<bsch:procedure name="ConvertDigitIntoRomanNotation" isFunction="true" parametersCount="4" startAddr="2755">
+				<bsch:variable name="Digit" isLocal="true" isParam="true"/>
+				<bsch:variable name="RomanOne" isLocal="true" isParam="true"/>
+				<bsch:variable name="RomanFive" isLocal="true" isParam="true"/>
+				<bsch:variable name="RomanTen" isLocal="true" isParam="true"/>
+				<bsch:variable name="RomanDigit" isLocal="true"/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue/>
+			</bsch:procedure>
+			<bsch:procedure name="ConvertNumberIntoArabNotation" isFunction="true" isExported="true" parametersCount="1" startAddr="2154">
+				<bsch:variable name="RomanNumber" isLocal="true" isParam="true"/>
+				<bsch:variable name="ArabicNumber" isLocal="true"/>
+				<bsch:variable name="c1" isLocal="true"/>
+				<bsch:variable name="c5" isLocal="true"/>
+				<bsch:variable name="c10" isLocal="true"/>
+				<bsch:variable name="c50" isLocal="true"/>
+				<bsch:variable name="c100" isLocal="true"/>
+				<bsch:variable name="c500" isLocal="true"/>
+				<bsch:variable name="c1000" isLocal="true"/>
+				<bsch:variable name="CharsCount" isLocal="true"/>
+				<bsch:variable name="Cnt" isLocal="true"/>
+				<bsch:paramsDefValue/>
+			</bsch:procedure>
+			<bsch:procedure name="ExtractTextFromHTML" isFunction="true" isExported="true" parametersCount="1" startAddr="2426">
+				<bsch:variable name="SourceText" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="Result" isLocal="true"/>
+				<bsch:variable name="Text" isLocal="true"/>
+				<bsch:variable name="Position" isLocal="true"/>
+				<bsch:variable name="ClosingTagPosition" isLocal="true"/>
+				<bsch:paramsDefValue/>
+			</bsch:procedure>
+		</clientModule>
+		<serverModule version="1">
+			<bsch:cmdOpCode>1,3,18,51,16,1,3,8,33,40,1,3,3,4,33,40,7,39,6,16,1,3,65,40,1,3,4,33,40,1,3,4,18,20,1,39,1,1,3,17,45,39,39,1,39,1,1,3,3,65,29,16,1,3,4,16,1,3,3,53,16,1,3,3,53,16,1,3,3,3,60,16,1,3,4,35,1,40,1,3,40,1,3,3,4,34,40,3,39,3,3,60,16,1,3,4,35,30,3,3,36,69,40,1,3,3,4,34,40,3,39,3,3,3,24,4,59,16,1,3,3,3,60,16,1,3,4,35,1,40,1,3,53,3,3,24,37,30,3,3,3,24,3,59,3,33,69,40,1,3,3,3,4,3,26,24,4,59,16,39,1,3,3,3,3,24,4,59,16,1,39,1,1,3,3,3,60,16,1,39,1,3,3,3,60,16,1,3,4,33,40,1,39,39,1,39,1,39,1,1,3,4,34,40,1,3,3,3,53,3,53,25,24,16,1,3,4,16,39,1,39,1,1,3,3,3,4,25,57,16,1,3,29,31,3,65,29,69,40,1,3,30,3,4,57,3,33,69,30,3,4,58,3,33,69,40,1,3,3,4,3,53,4,25,59,18,20,1,39,1,3,3,18,20,1,1,39,1,1,3,3,3,3,24,4,59,16,1,3,3,3,60,16,1,39,1,3,29,31,3,65,29,69,40,1,3,30,3,4,57,3,33,69,30,3,4,58,3,33,69,40,1,3,3,4,3,53,4,25,59,18,20,1,39,1,3,3,18,20,1,1,39,1,1,3,17,45,39,1,22,1,3,4,16,1,48,49,3,14,16,1,3,49,16,3,15,40,3,3,16,3,8,16,1,3,3,107,4,108,33,40,3,39,3,71,16,1,3,3,65,40,4,39,3,16,1,3,3,3,24,3,24,16,1,39,50,3,8,16,3,8,16,1,3,17,45,39,1,22,1,3,65,29,40,1,3,3,63,60,4,35,17,45,39,39,1,3,18,51,16,1,3,4,4,4,18,51,18,20,1,1,3,4,4,4,18,51,18,20,1,1,3,4,4,4,18,51,18,20,1,1,3,4,4,4,18,51,18,20,1,1,48,49,3,14,16,1,3,49,16,3,15,40,3,3,16,3,8,16,1,3,3,12,37,30,3,3,12,38,69,40,1,6,17,45,39,39,1,1,39,50,3,8,16,3,8,16,1,7,17,45,39,1,1,22,1,3,18,51,16,1,3,3,53,16,1,3,4,16,1,3,4,16,48,49,3,16,1,49,3,37,40,1,3,3,3,64,16,1,3,3,18,19,5,1,40,1,3,3,34,40,1,3,3,3,3,3,25,59,18,20,1,39,1,1,3,3,4,24,16,39,1,1,3,43,39,50,1,3,3,34,40,1,3,3,3,3,3,25,59,18,20,1,39,1,1,3,17,45,39,1,22,1,3,8,33,31,3,53,4,33,69,40,1,4,17,45,39,39,1,1,3,4,16,1,3,4,16,1,3,4,16,1,3,3,53,38,1,40,1,3,3,3,4,59,16,1,3,4,34,40,1,3,3,4,24,16,1,39,39,1,1,3,3,3,3,3,3,25,59,24,16,1,3,3,4,24,16,1,3,3,3,4,59,16,1,3,4,33,40,1,3,3,4,24,16,1,3,3,16,1,3,3,4,24,16,1,39,39,1,44,1,3,3,70,16,1,45,39,1,4,3,24,18,19,5,1,47,1,46,1,3,4,33,40,1,3,3,16,39,1,3,4,33,40,1,3,3,16,39,1,3,4,33,40,1,3,3,16,39,1,3,4,33,40,1,3,3,16,39,1,3,4,33,40,1,3,3,16,39,1,3,4,33,40,1,3,3,16,39,1,3,4,33,40,1,3,3,16,39,1,3,4,33,40,1,3,3,16,39,1,3,4,33,40,1,3,3,16,39,1,4,3,24,18,19,5,1,47,1,1,3,8,33,40,1,3,4,16,39,1,3,3,71,16,1,1,3,3,3,24,16,1,3,3,4,24,16,1,3,3,16,1,39,1,3,3,53,38,40,1,3,3,3,3,3,53,3,25,4,24,59,24,16,39,1,1,3,17,45,39,1,22,1,3,3,16,1,3,3,18,21,5,1,16,1,3,4,35,1,40,1,3,3,3,4,25,13,16,1,3,65,29,40,1,3,3,4,3,4,110,24,3,100,16,39,1,1,3,3,4,25,16,1,39,1,3,17,45,39,1,22,1,3,3,16,1,3,4,16,1,3,3,4,60,16,1,3,4,35,40,1,3,3,3,4,24,4,59,18,19,5,1,16,1,3,4,16,1,3,3,3,4,25,57,16,1,48,49,3,14,16,1,3,49,16,3,15,40,3,3,16,3,8,16,1,3,12,18,19,5,1,30,3,3,12,3,18,21,5,1,69,40,1,3,3,4,3,12,24,4,24,3,100,16,39,1,3,3,4,3,12,24,4,24,4,100,16,1,1,39,50,3,8,16,3,8,16,39,1,1,48,49,3,14,16,1,3,49,16,3,15,40,3,3,16,3,8,16,1,3,3,18,19,5,1,30,3,3,12,3,18,21,5,1,69,16,1,3,4,3,12,24,4,24,60,4,35,40,1,3,3,4,3,12,24,4,24,3,40,3,12,23,3,110,39,3,12,23,100,16,39,1,1,3,3,4,3,12,24,4,24,3,40,3,12,3,110,39,3,12,100,16,1,39,50,3,8,16,3,8,16,1,3,17,45,39,1,22,1,3,18,51,16,1,3,4,63,16,1,3,3,4,18,19,5,1,16,1,48,49,3,14,16,1,3,49,16,3,15,40,3,3,16,3,8,16,1,3,3,4,60,16,1,3,3,3,4,25,57,56,16,1,3,3,3,4,24,4,59,56,16,1,3,4,57,3,33,30,3,4,58,3,33,69,40,1,3,3,4,3,53,4,25,59,16,39,1,44,1,3,3,3,18,20,1,1,45,39,1,46,1,39,50,3,8,16,3,8,16,1,3,17,45,39,1,22,1,3,107,4,108,34,40,1,6,17,45,39,39,1,1,3,18,19,5,1,29,40,1,7,17,45,39,39,1,1,3,29,40,1,3,3,4,4,100,16,39,1,1,3,29,40,1,3,4,16,1,3,4,16,48,49,3,53,16,1,49,3,37,40,1,3,3,4,24,16,1,3,3,3,4,59,4,64,16,1,3,4,34,40,1,39,39,1,1,3,43,39,50,1,3,3,3,4,59,16,39,1,1,3,4,16,48,49,3,53,16,1,49,3,37,40,1,3,3,3,4,59,4,64,16,1,3,4,37,30,3,4,38,69,29,40,1,6,17,45,39,39,1,1,3,43,39,50,1,7,17,45,39,1,22,1,3,107,4,108,34,40,1,6,17,45,39,39,1,1,3,18,19,5,1,29,40,1,7,17,45,39,39,1,1,3,18,51,16,1,3,4,16,48,49,3,53,16,1,49,3,37,40,1,3,3,3,4,59,4,64,18,20,1,1,3,43,39,50,1,3,4,16,48,49,3,53,16,1,49,3,37,40,1,3,3,3,4,59,4,64,16,1,3,4,36,31,3,4,35,30,3,4,36,69,69,31,3,4,35,69,30,3,3,18,21,5,1,8,33,69,30,3,29,30,3,18,19,5,1,69,29,69,40,1,6,17,45,39,39,1,1,3,43,39,50,1,7,17,45,39,1,22,1,3,4,57,4,33,1,40,1,3,3,4,4,59,16,1,39,1,3,4,58,4,33,1,40,1,3,3,3,53,4,25,57,16,1,39,1,3,17,45,39,1,22,1,3,3,3,53,3,25,57,16,1,22,1,3,3,53,23,16,48,49,4,23,16,1,49,3,37,40,1,3,3,23,4,59,3,33,40,1,3,23,17,45,39,39,1,1,3,43,39,50,1,4,17,45,39,1,22,1,3,4,16,1,3,53,3,53,34,40,1,6,17,45,39,39,1,1,3,4,16,48,49,3,53,16,1,49,3,37,40,1,3,3,64,4,33,30,3,3,64,4,36,31,3,3,64,4,35,69,30,3,3,64,4,36,31,3,3,64,4,35,69,69,69,31,3,3,64,4,33,30,3,3,64,4,34,69,69,40,1,6,17,45,39,39,1,1,3,43,39,50,1,7,17,45,39,1,22,1,3,4,16,1,3,4,16,48,49,3,16,1,49,3,37,40,1,3,3,3,24,16,1,3,43,39,50,1,3,17,45,39,1,22,1,3,65,40,1,3,4,16,39,1,1,3,3,4,57,16,1,3,3,56,16,1,3,3,3,53,25,16,1,3,4,35,40,1,3,3,3,18,19,5,1,16,1,3,61,4,33,40,1,3,3,3,24,16,39,1,3,61,4,33,40,1,3,3,3,24,16,39,1,39,1,1,3,17,45,39,1,22,1,3,61,4,33,40,1,3,4,57,3,33,1,40,1,3,3,4,4,59,16,1,39,39,1,3,61,4,33,40,1,3,4,58,3,33,1,40,1,3,3,3,53,4,25,57,16,1,39,39,1,1,3,17,45,39,1,22,1,3,3,16,1,3,4,16,48,49,3,53,16,1,49,3,37,40,1,3,3,3,3,4,59,3,3,4,59,100,16,1,3,43,39,50,1,3,17,45,39,1,22,1,3,4,16,1,3,3,4,18,19,5,1,16,1,3,4,16,1,3,4,16,1,3,4,16,1,3,4,16,1,3,4,16,1,3,4,16,1,3,4,16,1,3,3,4,4,59,70,16,1,3,3,4,4,59,70,16,1,3,3,4,4,59,70,16,1,3,3,3,3,3,3,18,19,5,1,24,16,1,3,3,3,3,3,3,18,19,5,1,24,16,1,3,3,3,3,3,3,18,19,5,1,24,16,1,3,17,45,39,1,22,1,3,4,16,1,3,4,16,1,3,4,16,1,3,4,16,1,3,4,16,1,3,4,16,1,3,4,16,1,3,4,16,1,3,3,56,16,1,3,3,53,16,1,3,4,16,48,49,3,16,1,49,3,37,40,1,3,3,4,59,3,33,40,1,3,3,4,24,16,39,1,3,3,4,59,3,33,40,1,3,3,4,24,16,39,1,3,3,4,59,3,33,40,1,3,3,36,30,3,3,4,24,4,59,3,33,31,3,3,4,24,4,59,3,33,69,69,40,1,3,3,4,25,16,39,1,3,3,4,24,16,1,39,1,3,3,4,59,3,33,40,1,3,3,4,24,16,39,1,3,3,4,59,3,33,40,1,3,3,36,30,3,3,4,24,4,59,3,33,31,3,3,4,24,4,59,3,33,69,69,40,1,3,3,4,25,16,39,1,3,3,4,24,16,1,39,1,3,3,4,59,3,33,40,1,3,3,4,24,16,39,1,3,3,4,59,3,33,40,1,3,3,36,30,3,3,4,24,4,59,3,33,31,3,3,4,24,4,59,3,33,69,69,40,1,3,3,4,25,16,39,1,3,3,4,24,16,1,39,1,1,3,43,39,50,1,3,17,45,39,1,22,1,3,4,16,1,3,3,62,16,1,3,3,4,60,16,1,3,4,35,40,1,3,3,3,4,24,4,59,16,1,3,3,3,4,24,4,59,16,1,3,3,4,60,16,1,3,4,35,40,1,3,3,3,4,24,4,59,16,1,3,3,3,4,24,4,59,16,39,1,39,1,1,3,3,4,60,16,1,3,4,35,40,1,3,3,3,4,25,57,16,1,3,3,3,4,25,57,16,39,1,1,3,3,4,60,16,1,3,4,35,1,40,1,3,3,4,60,16,1,3,4,33,40,1,3,3,53,16,39,1,1,3,3,3,4,25,57,3,3,4,24,4,59,24,16,1,3,3,3,4,25,57,3,3,4,24,4,59,24,16,1,3,3,4,60,16,1,39,1,3,3,4,60,16,1,3,4,35,1,40,1,3,3,4,60,16,1,3,4,33,40,1,3,3,53,16,39,1,1,3,3,3,4,25,57,3,3,4,24,4,59,24,16,1,3,3,3,4,25,57,3,3,4,24,4,59,24,16,1,3,3,4,60,16,1,39,1,3,3,4,60,16,1,3,4,35,1,40,1,3,3,3,3,4,25,57,24,16,1,3,3,3,4,24,4,59,16,1,3,3,3,4,24,4,59,16,1,3,3,4,60,16,1,3,4,35,40,1,3,3,3,4,24,4,59,16,1,3,3,3,4,24,4,59,16,39,1,1,3,3,4,60,16,1,39,1,3,3,3,24,16,1,3,56,17,45,39,1,22,1,3,4,16,1,3,4,33,40,1,3,3,16,39,1,3,4,33,40,1,3,3,3,24,16,39,1,3,4,33,40,1,3,3,3,24,3,24,16,39,1,3,4,33,40,1,3,3,3,24,16,39,1,3,4,33,40,1,3,3,16,39,1,3,4,33,40,1,3,3,3,24,16,39,1,3,4,33,40,1,3,3,3,24,3,24,16,39,1,3,4,33,40,1,3,3,3,24,3,24,3,24,16,39,1,3,4,33,40,1,3,3,3,24,16,39,1,1,3,17,45,39,1,22,22</bsch:cmdOpCode>
+			<bsch:cmdOperand>46,4,0,0,0,49,2,0,0,45,50,2,1,1,0,18,0,19,0,0,51,0,0,43,52,1,1,0,36,53,4,3,1,2,53,36,54,55,4,0,0,348,43,56,45,57,60,5,3,0,0,0,61,6,3,0,62,7,3,0,0,63,8,1,0,0,66,9,0,1,0,0,67,9,4,0,67,295,70,5,221,71,10,6,3,0,89,6,90,0,3,0,0,72,10,4,0,102,10,9,0,0,198,75,6,6,3,0,111,6,112,0,10,7,0,5,0,0,78,10,6,3,0,0,79,10,4,0,79,180,82,6,0,10,7,0,0,147,6,10,7,0,7,0,3,0,0,160,85,6,6,10,6,7,0,0,5,0,0,171,88,6,6,10,7,0,5,0,0,89,180,90,93,10,6,3,0,0,94,124,97,9,6,1,0,0,98,9,4,0,194,100,295,196,103,72,104,198,105,108,6,3,0,219,110,9,9,0,0,6,0,0,0,0,112,6,3,0,219,113,221,114,117,11,0,9,7,0,0,0,118,2,0,238,11,0,0,0,277,119,5,248,11,7,0,3,0,0,255,11,7,0,3,0,0,269,121,4,11,6,11,0,6,0,0,1,2,121,275,124,4,11,1,2,124,125,277,126,129,0,0,9,8,0,5,0,0,130,9,0,1,0,0,131,72,134,2,0,303,0,0,0,0,342,135,5,313,0,7,0,3,0,0,320,0,7,0,3,0,0,334,137,4,0,6,0,0,6,0,0,1,2,137,340,140,4,0,1,2,140,141,342,142,145,4,0,0,348,147,0,161,2,3,0,163,0,0,0,0,0,163,4,0,0,4,0,405,3,4,0,4,0,0,165,5,3,0,8,0,0,383,3,385,3,0,0,167,6,2,0,393,3,394,1,0,169,2,2,6,0,5,0,0,171,360,1,4,0,0,4,0,0,173,2,0,0,417,175,0,188,1,0,0,435,190,1,0,0,0,4,0,0,0,533,532,194,2,0,0,0,195,2,9,10,11,3,12,1,2,195,196,2,9,13,14,3,12,1,2,196,197,2,9,15,16,3,12,1,2,197,198,2,9,17,17,3,12,1,2,198,200,0,0,2,0,0,200,4,0,0,4,0,520,3,4,0,4,0,0,201,0,3,18,0,510,0,3,19,0,0,517,202,0,0,0,533,517,203,204,486,1,4,0,0,4,0,0,206,0,0,0,533,208,210,0,229,2,0,0,0,231,3,0,0,0,232,4,7,0,233,5,7,0,0,0,3,0,233,0,5,0,606,234,6,0,5,0,0,235,6,1,2,2,0,235,601,236,5,4,0,593,237,2,0,4,5,4,0,0,1,2,237,593,238,239,4,5,7,0,0,601,240,241,5,0,557,1,243,5,4,0,624,244,2,0,4,5,4,0,0,1,2,244,624,245,247,2,0,0,630,249,0,269,0,0,0,642,0,0,4,0,0,649,270,3,0,0,921,649,271,273,10,3,0,274,11,7,0,275,12,7,0,276,12,0,0,0,276,894,277,13,0,12,7,0,0,278,13,20,0,690,279,12,12,7,0,0,280,662,690,281,282,10,10,0,11,12,11,0,0,0,0,283,12,12,7,0,0,284,13,0,12,7,0,0,286,13,20,0,739,287,12,12,7,0,0,288,11,12,0,289,10,10,20,0,0,290,662,739,291,749,294,14,13,0,0,297,1,760,296,21,13,0,1,5,0,296,1,297,0,299,13,22,0,770,300,15,1,0,859,301,13,23,0,780,302,15,2,0,859,303,13,24,0,790,304,15,3,0,859,305,13,25,0,800,306,15,4,0,859,307,13,26,0,810,308,15,5,0,859,309,13,27,0,820,310,15,6,0,859,311,13,28,0,830,312,15,7,0,859,313,13,29,0,840,314,15,8,0,859,315,13,30,0,850,316,15,9,0,859,318,21,15,0,1,5,0,318,1,319,320,15,0,0,870,321,15,3,0,875,323,15,15,0,0,324,325,10,10,15,0,0,326,12,12,7,0,0,327,11,12,0,329,662,331,11,0,0,0,915,332,10,10,0,11,0,0,11,0,7,0,0,0,0,915,333,335,10,0,0,921,337,0,359,2,0,0,361,3,1,0,31,0,361,0,362,3,4,0,362,975,363,4,1,3,7,0,0,0,364,4,0,0,966,365,2,2,20,3,32,0,0,4,0,0,966,366,367,3,3,7,0,0,368,935,370,2,0,0,980,372,0,399,3,0,0,400,4,3,0,402,5,0,33,0,0,403,5,4,0,1099,406,6,0,5,7,0,5,0,1,8,0,406,0,407,7,3,0,408,3,0,5,7,0,0,0,411,0,0,1,0,0,411,9,0,0,9,0,1091,8,9,0,9,0,0,412,8,34,1,9,0,412,1062,6,8,36,7,2,35,0,412,0,1076,413,3,3,37,8,36,0,38,0,7,0,0,1088,415,3,3,37,8,36,0,38,0,3,0,0,416,417,1032,1,9,0,0,9,0,0,1099,418,420,0,0,1,0,0,420,9,0,0,9,0,1195,8,9,0,9,0,0,423,10,2,1,9,0,423,1136,2,8,36,4,2,35,0,423,0,0,426,3,39,8,36,0,38,0,0,4,0,1172,427,3,3,39,8,36,0,38,0,10,1166,8,34,0,4,0,1169,8,34,0,0,0,1172,428,431,3,3,40,8,36,0,38,0,10,1189,8,34,4,0,1191,8,34,0,0,432,1106,1,9,0,0,9,0,0,434,3,0,0,1207,436,0,453,1,0,12,0,455,2,41,0,0,457,3,0,42,2,0,0,457,0,459,0,0,3,0,0,459,5,0,0,5,0,1313,4,5,0,5,0,0,461,6,4,43,0,0,464,7,4,6,7,0,0,0,0,467,8,4,6,7,0,5,0,0,0,469,8,7,0,2,0,1285,8,7,0,2,0,0,1297,472,8,8,6,8,0,6,0,0,0,1297,474,1309,477,1,7,8,2,44,477,479,1,1311,479,0,481,1234,1,5,0,0,5,0,0,483,1,0,0,1325,485,0,500,0,0,8,0,0,1340,501,0,0,0,1480,1340,502,504,0,1,9,0,504,0,1355,505,0,0,0,1480,1355,506,508,2,0,1368,509,0,0,1,3,0,0,1368,510,512,1,0,1428,513,3,4,0,514,4,7,0,0,0,0,0,0,514,0,4,0,1419,515,3,3,7,0,0,516,5,0,4,7,0,7,0,0,517,5,10,0,1414,518,1419,1414,519,520,4,0,1386,1,521,0,0,3,5,0,0,1428,522,524,4,7,0,0,0,0,0,0,524,0,4,0,1474,525,5,0,4,7,0,7,0,0,526,5,10,0,1461,5,11,0,0,0,1469,527,0,0,0,1480,1469,528,529,4,0,1438,1,531,0,0,0,1480,533,0,548,0,0,8,0,0,1495,549,0,0,0,1628,1495,550,552,0,1,9,0,552,0,1510,553,0,0,0,1628,1510,554,556,3,0,0,0,558,4,7,0,0,0,2,0,0,558,0,4,0,1545,559,3,2,4,7,0,7,0,1,2,559,560,4,0,1525,1,562,4,7,0,0,0,0,0,0,562,0,4,0,1622,563,5,0,4,7,0,7,0,0,564,5,13,0,1583,5,14,0,1582,5,15,0,0,0,1588,5,16,0,0,1598,3,5,1,45,0,565,0,0,0,1610,1,0,1608,5,1,2,0,566,0,0,0,1617,567,0,0,0,1628,1617,568,569,4,0,1555,1,571,0,0,0,1628,573,0,585,0,7,0,46,0,585,1647,586,0,0,6,5,0,0,587,1630,589,0,7,0,46,0,589,1666,590,0,0,0,0,7,0,0,0,591,1647,593,0,0,0,1671,595,0,605,0,0,0,0,1,0,0,0,607,0,621,2,0,0,0,0,0,0,7,0,0,621,0,2,0,1721,622,0,2,0,7,0,1,0,1716,623,2,0,0,0,1727,1716,624,625,2,0,1695,1,627,4,0,0,1727,629,0,642,1,47,0,644,1,0,0,0,0,1746,645,0,0,0,1827,1746,646,647,2,7,0,0,0,0,0,0,647,0,2,0,1821,648,1,2,0,48,0,1795,0,2,0,10,0,1780,0,2,0,11,0,0,1794,0,2,0,15,0,1793,0,2,0,49,0,0,0,0,1809,1,2,0,50,0,1808,0,2,0,50,0,0,0,1816,650,0,0,0,1827,1816,651,652,2,0,1756,1,654,0,0,0,1827,656,0,669,2,3,0,670,3,7,0,0,0,1,0,670,0,3,0,1856,671,2,2,0,0,0,672,3,0,1841,1,674,2,0,0,1862,676,0,700,2,0,1873,701,2,51,0,1873,702,705,2,2,7,0,0,708,0,0,0,0,710,4,1,0,0,0,0,712,4,4,0,1934,714,5,2,4,2,16,0,714,0,716,3,0,52,0,1919,718,0,5,0,0,0,1932,720,3,0,53,0,1932,722,0,0,5,0,0,1932,724,1934,726,728,0,0,0,1940,730,0,743,2,0,52,0,1966,745,0,7,0,1,0,745,1965,747,0,0,6,5,0,0,749,1948,1992,751,2,0,53,0,1992,753,0,7,0,1,0,753,1991,755,0,0,0,0,7,0,0,0,757,1972,1992,759,761,0,0,0,1998,762,0,781,3,1,0,783,4,7,0,0,0,0,0,0,783,0,4,0,2035,784,3,3,0,4,7,0,2,4,7,0,0,0,785,4,0,2013,1,787,3,0,0,2041,789,0,804,1,3,0,805,0,0,54,2,17,0,805,0,807,2,55,0,807,3,56,0,807,4,57,0,807,5,58,0,807,6,59,0,807,7,60,0,807,8,61,0,809,9,0,54,7,0,0,0,810,10,0,6,7,0,0,0,811,11,0,7,7,0,0,0,813,1,1,11,6,7,8,4,21,0,813,0,0,814,1,1,10,4,5,6,4,21,0,814,0,0,815,1,1,9,2,3,4,4,21,0,815,0,0,817,1,0,0,2152,819,0,834,1,4,0,836,2,55,0,836,3,56,0,836,4,57,0,836,5,58,0,836,6,59,0,836,7,60,0,836,8,61,0,838,0,0,0,0,839,9,0,0,0,841,10,7,0,0,0,9,0,841,0,10,0,2418,842,0,10,7,0,8,0,2224,843,1,1,62,0,0,2413,844,0,10,7,0,7,0,2239,845,1,1,63,0,0,2413,846,0,10,7,0,6,0,2287,847,10,9,0,2271,0,10,7,0,7,0,7,0,2270,0,10,7,0,7,0,8,0,0,0,2279,848,1,1,64,0,0,2285,850,1,1,64,0,0,851,2413,852,0,10,7,0,5,0,2302,853,1,1,65,0,0,2413,854,0,10,7,0,4,0,2350,855,10,9,0,2334,0,10,7,0,7,0,5,0,2333,0,10,7,0,7,0,6,0,0,0,2342,856,1,1,66,0,0,2348,858,1,1,66,0,0,859,2413,860,0,10,7,0,3,0,2365,861,1,1,67,0,0,2413,862,0,10,7,0,2,0,2413,863,10,9,0,2397,0,10,7,0,7,0,3,0,2396,0,10,7,0,7,0,4,0,0,0,2405,864,1,1,7,0,0,2411,866,1,1,7,0,0,867,2413,868,869,10,0,2204,1,871,1,0,0,2424,873,0,884,1,3,0,886,2,0,0,0,889,3,2,68,0,0,890,3,4,0,2496,891,2,2,3,67,0,5,0,0,892,0,0,3,67,0,5,0,0,893,3,2,69,0,0,894,3,4,0,2494,895,2,2,3,7,0,5,0,0,896,0,0,3,7,0,5,0,0,2494,897,2496,898,900,3,2,70,0,0,901,3,4,0,2525,902,2,2,3,7,0,0,0,903,0,0,3,7,0,0,0,2525,904,907,3,2,71,0,0,908,3,4,0,908,2594,909,4,2,72,0,0,910,4,4,0,2555,912,4,2,0,0,2555,913,914,2,2,3,7,0,0,2,4,73,0,5,0,0,0,915,0,0,3,7,0,0,0,4,73,0,5,0,0,0,916,3,2,71,0,0,917,2532,920,3,2,74,0,0,921,3,4,0,921,2662,922,4,2,75,0,0,923,4,4,0,2623,925,4,2,0,0,2623,926,927,2,2,3,7,0,0,2,4,76,0,5,0,0,0,928,0,0,3,7,0,0,0,4,76,0,5,0,0,0,929,3,2,74,0,0,930,2600,933,3,2,77,0,0,934,3,4,0,934,2741,935,1,1,0,3,7,0,0,0,0,936,2,2,3,7,0,5,0,0,937,0,0,3,7,0,5,0,0,938,3,2,69,0,0,939,3,4,0,2732,940,2,2,3,7,0,5,0,0,941,0,0,3,7,0,5,0,0,2732,942,943,3,2,77,0,0,944,2668,945,1,1,0,0,0,947,1,0,0,0,2753,949,0,970,4,3,0,971,0,7,0,2769,972,4,1,0,2871,973,0,6,0,2781,974,4,1,1,0,0,2871,975,0,54,0,2795,976,4,1,1,0,1,0,0,2871,977,0,78,0,2807,978,4,1,2,0,0,2871,979,0,67,0,2817,980,4,2,0,2871,981,0,79,0,2829,982,4,2,1,0,0,2871,983,0,80,0,2843,984,4,2,1,0,1,0,0,2871,985,0,76,0,2859,986,4,2,1,0,1,0,1,0,0,2871,987,0,73,0,2871,988,4,1,3,0,0,2871,989,990,4,0,0,2877,992,0,0</bsch:cmdOperand>
+			<bsch:constant>SArray</bsch:constant>
+			<bsch:constant>S </bsch:constant>
+			<bsch:constant>SAdd</bsch:constant>
+			<bsch:constant>S</bsch:constant>
+			<bsch:constant>N0</bsch:constant>
+			<bsch:constant>N-1</bsch:constant>
+			<bsch:constant>N2</bsch:constant>
+			<bsch:constant>N1</bsch:constant>
+			<bsch:constant>SString</bsch:constant>
+			<bsch:constant>SMin,Max</bsch:constant>
+			<bsch:constant>N48</bsch:constant>
+			<bsch:constant>N57</bsch:constant>
+			<bsch:constant>SStructure</bsch:constant>
+			<bsch:constant>N65</bsch:constant>
+			<bsch:constant>N90</bsch:constant>
+			<bsch:constant>N97</bsch:constant>
+			<bsch:constant>N122</bsch:constant>
+			<bsch:constant>N95</bsch:constant>
+			<bsch:constant>SMin</bsch:constant>
+			<bsch:constant>SMax</bsch:constant>
+			<bsch:constant>S%</bsch:constant>
+			<bsch:constant>Sen='SubstitutionString source string has an invalid format: %'</bsch:constant>
+			<bsch:constant>S1</bsch:constant>
+			<bsch:constant>S2</bsch:constant>
+			<bsch:constant>S3</bsch:constant>
+			<bsch:constant>S4</bsch:constant>
+			<bsch:constant>S5</bsch:constant>
+			<bsch:constant>S6</bsch:constant>
+			<bsch:constant>S7</bsch:constant>
+			<bsch:constant>S8</bsch:constant>
+			<bsch:constant>S9</bsch:constant>
+			<bsch:constant>SCount</bsch:constant>
+			<bsch:constant>SNG=</bsch:constant>
+			<bsch:constant>S|</bsch:constant>
+			<bsch:constant>SValue</bsch:constant>
+			<bsch:constant>SProperty</bsch:constant>
+			<bsch:constant>SKey</bsch:constant>
+			<bsch:constant>S?{</bsch:constant>
+			<bsch:constant>S}</bsch:constant>
+			<bsch:constant>S{-</bsch:constant>
+			<bsch:constant>S{</bsch:constant>
+			<bsch:constant>N34</bsch:constant>
+			<bsch:constant>S;</bsch:constant>
+			<bsch:constant>S=</bsch:constant>
+			<bsch:constant>SInsert</bsch:constant>
+			<bsch:constant>SFind</bsch:constant>
+			<bsch:constant>S"</bsch:constant>
+			<bsch:constant>SXXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX</bsch:constant>
+			<bsch:constant>N88</bsch:constant>
+			<bsch:constant>N102</bsch:constant>
+			<bsch:constant>N45</bsch:constant>
+			<bsch:constant>S0</bsch:constant>
+			<bsch:constant>SLEFT</bsch:constant>
+			<bsch:constant>SRIGHT</bsch:constant>
+			<bsch:constant>N3</bsch:constant>
+			<bsch:constant>SI</bsch:constant>
+			<bsch:constant>SV</bsch:constant>
+			<bsch:constant>SX</bsch:constant>
+			<bsch:constant>SL</bsch:constant>
+			<bsch:constant>SC</bsch:constant>
+			<bsch:constant>SD</bsch:constant>
+			<bsch:constant>SM</bsch:constant>
+			<bsch:constant>N1000</bsch:constant>
+			<bsch:constant>N500</bsch:constant>
+			<bsch:constant>N100</bsch:constant>
+			<bsch:constant>N50</bsch:constant>
+			<bsch:constant>N10</bsch:constant>
+			<bsch:constant>N5</bsch:constant>
+			<bsch:constant>S&lt;body</bsch:constant>
+			<bsch:constant>S&gt;</bsch:constant>
+			<bsch:constant>S&lt;/body&gt;</bsch:constant>
+			<bsch:constant>S&lt;script</bsch:constant>
+			<bsch:constant>S&lt;/script&gt;</bsch:constant>
+			<bsch:constant>N9</bsch:constant>
+			<bsch:constant>S&lt;style</bsch:constant>
+			<bsch:constant>S&lt;/style&gt;</bsch:constant>
+			<bsch:constant>N8</bsch:constant>
+			<bsch:constant>S&lt;</bsch:constant>
+			<bsch:constant>N4</bsch:constant>
+			<bsch:constant>N6</bsch:constant>
+			<bsch:constant>N7</bsch:constant>
+			<bsch:procedure name="SplitStringIntoSubstringArray" isFunction="true" isExported="true" parametersCount="4" startAddr="0">
+				<bsch:variable name="String" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="Separator" isLocal="true" isParam="true"/>
+				<bsch:variable name="SkipEmptyStrings" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="QuoteChar" isLocal="true" isParam="true"/>
+				<bsch:variable name="Result" isLocal="true"/>
+				<bsch:variable name="UseQuotes" isLocal="true"/>
+				<bsch:variable name="QuotedStr" isLocal="true"/>
+				<bsch:variable name="QuoteCharLen" isLocal="true"/>
+				<bsch:variable name="SeparatorLen" isLocal="true"/>
+				<bsch:variable name="Position" isLocal="true"/>
+				<bsch:variable name="QuotedPosition" isLocal="true"/>
+				<bsch:variable name="Substring" isLocal="true"/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue>S,</bsch:paramsDefValue>
+				<bsch:paramsDefValue>U</bsch:paramsDefValue>
+				<bsch:paramsDefValue>S</bsch:paramsDefValue>
+			</bsch:procedure>
+			<bsch:procedure name="GetStringFromSubstringArray" isFunction="true" isExported="true" parametersCount="2" startAddr="350">
+				<bsch:variable name="Array" isLocal="true" isParam="true"/>
+				<bsch:variable name="Separator" isLocal="true" isParam="true"/>
+				<bsch:variable name="Result" isLocal="true"/>
+				<bsch:variable name="Element" isLocal="true"/>
+				<bsch:variable name="0Element" isLocal="true"/>
+				<bsch:variable name="Substring" isLocal="true"/>
+				<bsch:variable name="SubstringSeparator" isLocal="true"/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue>S,</bsch:paramsDefValue>
+			</bsch:procedure>
+			<bsch:procedure name="IsWordSeparator" isFunction="true" isExported="true" parametersCount="2" startAddr="419">
+				<bsch:variable name="CharCode" isLocal="true" isParam="true"/>
+				<bsch:variable name="WordSeparators" isLocal="true" isParam="true"/>
+				<bsch:variable name="Ranges" isLocal="true"/>
+				<bsch:variable name="Range" isLocal="true"/>
+				<bsch:variable name="0Range" isLocal="true"/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue>S</bsch:paramsDefValue>
+			</bsch:procedure>
+			<bsch:procedure name="SplitStringIntoWordArray" isFunction="true" isExported="true" parametersCount="2" startAddr="535">
+				<bsch:variable name="String" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="WordSeparators" isLocal="true" isParam="true"/>
+				<bsch:variable name="Words" isLocal="true"/>
+				<bsch:variable name="TextSize" isLocal="true"/>
+				<bsch:variable name="WordStart" isLocal="true"/>
+				<bsch:variable name="Position" isLocal="true"/>
+				<bsch:variable name="CharCode" isLocal="true"/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue>S</bsch:paramsDefValue>
+			</bsch:procedure>
+			<bsch:procedure name="SubstituteParametersInString" isFunction="true" isExported="true" parametersCount="10" startAddr="632">
+				<bsch:variable name="SubstitutionString" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="Parameter1" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="Parameter2" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="Parameter3" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="Parameter4" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="Parameter5" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="Parameter6" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="Parameter7" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="Parameter8" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="Parameter9" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="Result" isLocal="true"/>
+				<bsch:variable name="StartPosition" isLocal="true"/>
+				<bsch:variable name="Position" isLocal="true"/>
+				<bsch:variable name="StringChar" isLocal="true"/>
+				<bsch:variable name="ParameterNumber" isLocal="true"/>
+				<bsch:variable name="ParameterValue" isLocal="true"/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue>U</bsch:paramsDefValue>
+				<bsch:paramsDefValue>U</bsch:paramsDefValue>
+				<bsch:paramsDefValue>U</bsch:paramsDefValue>
+				<bsch:paramsDefValue>U</bsch:paramsDefValue>
+				<bsch:paramsDefValue>U</bsch:paramsDefValue>
+				<bsch:paramsDefValue>U</bsch:paramsDefValue>
+				<bsch:paramsDefValue>U</bsch:paramsDefValue>
+				<bsch:paramsDefValue>U</bsch:paramsDefValue>
+			</bsch:procedure>
+			<bsch:procedure name="NStr" isFunction="true" isExternal="true" parametersCount="2" startAddr="0"/>
+			<bsch:procedure name="SubstituteParametersInStringFromArray" isFunction="true" isExported="true" parametersCount="2" startAddr="923">
+				<bsch:variable name="SubstitutionString" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="ParameterArray" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="ResultString" isLocal="true"/>
+				<bsch:variable name="Index" isLocal="true"/>
+				<bsch:variable name="Value" isLocal="true"/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue/>
+			</bsch:procedure>
+			<bsch:procedure name="SubstituteParametersInStringByName" isFunction="true" isExported="true" parametersCount="3" startAddr="982">
+				<bsch:variable name="StringPattern" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="ValuesToInsert" isLocal="true" isParam="true"/>
+				<bsch:variable name="ValuesFormat" isLocal="true" isParam="true"/>
+				<bsch:variable name="Result" isLocal="true"/>
+				<bsch:variable name="FormatStr" isLocal="true"/>
+				<bsch:variable name="OptionalPartsDelimiterPosition" isLocal="true"/>
+				<bsch:variable name="OptionalPatterns" isLocal="true"/>
+				<bsch:variable name="OptionalPattern" isLocal="true"/>
+				<bsch:variable name="Parameter" isLocal="true"/>
+				<bsch:variable name="0Parameter" isLocal="true"/>
+				<bsch:variable name="ApplyFormat" isLocal="true"/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue>U</bsch:paramsDefValue>
+			</bsch:procedure>
+			<bsch:procedure name="GetParametersFromString" isFunction="true" isExported="true" parametersCount="1" startAddr="1209">
+				<bsch:variable name="ParameterString" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="Result" isLocal="true"/>
+				<bsch:variable name="DoubleQuoteChar" isLocal="true"/>
+				<bsch:variable name="SubstringArray" isLocal="true"/>
+				<bsch:variable name="CurParameterString" isLocal="true"/>
+				<bsch:variable name="0CurParameterString" isLocal="true"/>
+				<bsch:variable name="FirstEqualSignPosition" isLocal="true"/>
+				<bsch:variable name="ParameterName" isLocal="true"/>
+				<bsch:variable name="ParameterValue" isLocal="true"/>
+				<bsch:paramsDefValue/>
+			</bsch:procedure>
+			<bsch:procedure name="ValueIsFilled" isFunction="true" isExternal="true" parametersCount="1" startAddr="0"/>
+			<bsch:procedure name="OnlyDigitsInString" isFunction="true" isExported="true" parametersCount="3" startAddr="1327">
+				<bsch:variable name="CheckString" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="IncludingLeadingZeros" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="IncludingSpaces" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="FirstDigitNumber" isLocal="true"/>
+				<bsch:variable name="a" isLocal="true"/>
+				<bsch:variable name="CharCode" isLocal="true"/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue>Btrue</bsch:paramsDefValue>
+				<bsch:paramsDefValue>Btrue</bsch:paramsDefValue>
+			</bsch:procedure>
+			<bsch:procedure name="OnlyRomanString" isFunction="true" isExported="true" parametersCount="3" startAddr="1482">
+				<bsch:variable name="CheckString" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="WithWordSeparators" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="AllowedChars" isLocal="true" isParam="true"/>
+				<bsch:variable name="ValidCharacterCodes" isLocal="true"/>
+				<bsch:variable name="a" isLocal="true"/>
+				<bsch:variable name="CharCode" isLocal="true"/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue>Btrue</bsch:paramsDefValue>
+				<bsch:paramsDefValue>S</bsch:paramsDefValue>
+			</bsch:procedure>
+			<bsch:procedure name="RemoveDoubleQuotationMarks" isFunction="true" isExported="true" parametersCount="1" startAddr="1630">
+				<bsch:variable name="String" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:paramsDefValue/>
+			</bsch:procedure>
+			<bsch:procedure name="DeleteLastCharsInString" isExported="true" parametersCount="2" startAddr="1673">
+				<bsch:variable name="Text" isLocal="true" isParam="true"/>
+				<bsch:variable name="CharsCount" isLocal="true" isParam="true"/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue/>
+			</bsch:procedure>
+			<bsch:procedure name="FindCharFromEnd" isFunction="true" isExported="true" parametersCount="2" startAddr="1684">
+				<bsch:variable name="String" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="Char" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="Position" isLocal="true"/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue/>
+			</bsch:procedure>
+			<bsch:procedure name="IsUUID" isFunction="true" isExported="true" parametersCount="1" startAddr="1729">
+				<bsch:variable name="String" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="Pattern" isLocal="true"/>
+				<bsch:variable name="Position" isLocal="true"/>
+				<bsch:paramsDefValue/>
+			</bsch:procedure>
+			<bsch:procedure name="GenerateCharacterString" isFunction="true" isExported="true" parametersCount="2" startAddr="1829">
+				<bsch:variable name="Char" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="StringLength" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="Result" isLocal="true"/>
+				<bsch:variable name="Counter" isLocal="true"/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue/>
+			</bsch:procedure>
+			<bsch:procedure name="SupplementString" isFunction="true" isExported="true" parametersCount="4" startAddr="1864">
+				<bsch:variable name="String" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="StringLength" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="Char" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="Mode" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="CharToAddCount" isLocal="true"/>
+				<bsch:variable name="StringToAdd" isLocal="true"/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue>S0</bsch:paramsDefValue>
+				<bsch:paramsDefValue>SLeft</bsch:paramsDefValue>
+			</bsch:procedure>
+			<bsch:procedure name="DeleteDuplicatedChars" isFunction="true" isExported="true" parametersCount="3" startAddr="1942">
+				<bsch:variable name="String" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="Char" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="Mode" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue>SLeft</bsch:paramsDefValue>
+			</bsch:procedure>
+			<bsch:procedure name="ReplaceCharsWithAnother" isFunction="true" isExported="true" parametersCount="3" startAddr="2000">
+				<bsch:variable name="CharsToReplace" isLocal="true" isParam="true"/>
+				<bsch:variable name="String" isLocal="true" isParam="true"/>
+				<bsch:variable name="ReplacementChars" isLocal="true" isParam="true"/>
+				<bsch:variable name="Result" isLocal="true"/>
+				<bsch:variable name="CharacterNumber" isLocal="true"/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue/>
+			</bsch:procedure>
+			<bsch:procedure name="ConvertNumberIntoRomanNotation" isFunction="true" isExported="true" parametersCount="1" startAddr="2043">
+				<bsch:variable name="ArabicNumber" isLocal="true" isParam="true"/>
+				<bsch:variable name="RomanNumber" isLocal="true"/>
+				<bsch:variable name="c1" isLocal="true"/>
+				<bsch:variable name="c5" isLocal="true"/>
+				<bsch:variable name="c10" isLocal="true"/>
+				<bsch:variable name="c50" isLocal="true"/>
+				<bsch:variable name="c100" isLocal="true"/>
+				<bsch:variable name="c500" isLocal="true"/>
+				<bsch:variable name="c1000" isLocal="true"/>
+				<bsch:variable name="Units" isLocal="true"/>
+				<bsch:variable name="Tens" isLocal="true"/>
+				<bsch:variable name="Hundreds" isLocal="true"/>
+				<bsch:paramsDefValue/>
+			</bsch:procedure>
+			<bsch:procedure name="ConvertDigitIntoRomanNotation" isFunction="true" parametersCount="4" startAddr="2755">
+				<bsch:variable name="Digit" isLocal="true" isParam="true"/>
+				<bsch:variable name="RomanOne" isLocal="true" isParam="true"/>
+				<bsch:variable name="RomanFive" isLocal="true" isParam="true"/>
+				<bsch:variable name="RomanTen" isLocal="true" isParam="true"/>
+				<bsch:variable name="RomanDigit" isLocal="true"/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue/>
+			</bsch:procedure>
+			<bsch:procedure name="ConvertNumberIntoArabNotation" isFunction="true" isExported="true" parametersCount="1" startAddr="2154">
+				<bsch:variable name="RomanNumber" isLocal="true" isParam="true"/>
+				<bsch:variable name="ArabicNumber" isLocal="true"/>
+				<bsch:variable name="c1" isLocal="true"/>
+				<bsch:variable name="c5" isLocal="true"/>
+				<bsch:variable name="c10" isLocal="true"/>
+				<bsch:variable name="c50" isLocal="true"/>
+				<bsch:variable name="c100" isLocal="true"/>
+				<bsch:variable name="c500" isLocal="true"/>
+				<bsch:variable name="c1000" isLocal="true"/>
+				<bsch:variable name="CharsCount" isLocal="true"/>
+				<bsch:variable name="Cnt" isLocal="true"/>
+				<bsch:paramsDefValue/>
+			</bsch:procedure>
+			<bsch:procedure name="ExtractTextFromHTML" isFunction="true" isExported="true" parametersCount="1" startAddr="2426">
+				<bsch:variable name="SourceText" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="Result" isLocal="true"/>
+				<bsch:variable name="Text" isLocal="true"/>
+				<bsch:variable name="Position" isLocal="true"/>
+				<bsch:variable name="ClosingTagPosition" isLocal="true"/>
+				<bsch:paramsDefValue/>
+			</bsch:procedure>
+		</serverModule>
+		<serverCall>true</serverCall>
+	</commonModule>
+	<commonModule name="Serialization" id="79be558e-3a65-4f68-bcec-4abc27f78c0a">
+		<synonym>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Serialization</v8:content>
+			</v8:item>
+		</synonym>
+		<serverModule version="1">
+			<bsch:cmdOpCode>1,3,18,51,16,1,3,3,18,20,1,1,3,2,3,18,21,5,1,16,1,3,18,20,1,1,3,17,45,39,1,22,1,3,2,3,18,21,5,1,16,1,3,18,51,16,1,3,18,20,1,1,2,3,3,18,20,1,1,3,18,21,5,1,17,45,39,1,22,1,3,3,4,18,51,18,51,16,1,3,3,18,19,5,1,16,1,3,17,45,39,1,22,1,3,3,18,19,5,1,16,1,3,3,18,21,5,1,16,1,3,17,45,39,1,22,1,3,4,16,1,3,4,16,1,3,3,3,4,100,16,1,3,3,3,4,100,16,1,3,17,45,39,1,22,1,3,4,16,1,3,4,16,1,3,3,3,24,3,24,16,1,3,17,45,39,1,22,22</bsch:cmdOpCode>
+			<bsch:cmdOperand>3,1,0,0,0,4,1,0,1,1,4,5,2,0,1,1,2,0,5,0,6,1,0,3,6,7,2,0,0,30,8,0,11,1,0,0,1,4,0,11,0,12,2,0,5,0,13,2,0,1,13,14,1,2,1,2,6,14,15,2,0,3,0,15,0,0,67,16,0,22,1,0,7,1,8,2,9,0,23,2,1,1,1,0,23,0,25,2,0,0,91,27,0,31,1,0,1,0,0,31,0,32,2,1,0,10,0,32,0,34,2,0,0,114,36,0,40,1,11,0,41,2,12,0,43,0,0,1,13,0,0,44,0,0,2,13,0,0,46,0,0,0,143,48,0,52,1,11,0,53,2,12,0,55,0,1,0,0,2,0,0,57,0,0,0,166,59,0,0</bsch:cmdOperand>
+			<bsch:constant>SXMLReader</bsch:constant>
+			<bsch:constant>SSetString</bsch:constant>
+			<bsch:constant>SReadXML</bsch:constant>
+			<bsch:constant>SClose</bsch:constant>
+			<bsch:constant>SWriteXDTO</bsch:constant>
+			<bsch:constant>SXMLWriter</bsch:constant>
+			<bsch:constant>SWriteXML</bsch:constant>
+			<bsch:constant>N9</bsch:constant>
+			<bsch:constant>SDeflation</bsch:constant>
+			<bsch:constant>SValueStorage</bsch:constant>
+			<bsch:constant>SGet</bsch:constant>
+			<bsch:constant>S&lt;ValueStorage xmlns="http://v8.1c.ru/8.1/data/core" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;</bsch:constant>
+			<bsch:constant>S&lt;/ValueStorage&gt;</bsch:constant>
+			<bsch:constant>S</bsch:constant>
+			<bsch:variable name="XDTOSerializer" isExternal="true"/>
+			<bsch:variable name="XDTOFactory" isExternal="true"/>
+			<bsch:procedure name="Deserialize" isFunction="true" isExported="true" parametersCount="1" startAddr="0">
+				<bsch:variable name="XMLObjectStructure" isLocal="true" isParam="true"/>
+				<bsch:variable name="XMLReader" isLocal="true"/>
+				<bsch:variable name="VT" isLocal="true"/>
+				<bsch:paramsDefValue/>
+			</bsch:procedure>
+			<bsch:procedure name="Serialize" isFunction="true" isExported="true" parametersCount="1" startAddr="32">
+				<bsch:variable name="SerializationObject" isLocal="true" isParam="true"/>
+				<bsch:variable name="XDTOTree" isLocal="true"/>
+				<bsch:variable name="MyXML" isLocal="true"/>
+				<bsch:paramsDefValue/>
+			</bsch:procedure>
+			<bsch:procedure name="GetTransferString" isFunction="true" isExported="true" parametersCount="1" startAddr="69">
+				<bsch:variable name="Value" isLocal="true" isParam="true"/>
+				<bsch:variable name="TransferStorage" isLocal="true"/>
+				<bsch:variable name="TransferString" isLocal="true"/>
+				<bsch:paramsDefValue/>
+			</bsch:procedure>
+			<bsch:procedure name="GetDataFromString" isFunction="true" isExported="true" parametersCount="1" startAddr="93">
+				<bsch:variable name="DataString" isLocal="true" isParam="true"/>
+				<bsch:variable name="Storage" isLocal="true"/>
+				<bsch:variable name="Value" isLocal="true"/>
+				<bsch:paramsDefValue/>
+			</bsch:procedure>
+			<bsch:procedure name="RemoveValueTag" isFunction="true" isExported="true" parametersCount="1" startAddr="116">
+				<bsch:variable name="ValueString" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="Tag1" isLocal="true"/>
+				<bsch:variable name="Tag2" isLocal="true"/>
+				<bsch:paramsDefValue/>
+			</bsch:procedure>
+			<bsch:procedure name="AddValueTag" isFunction="true" isExported="true" parametersCount="1" startAddr="145">
+				<bsch:variable name="ValueString" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="Tag1" isLocal="true"/>
+				<bsch:variable name="Tag2" isLocal="true"/>
+				<bsch:paramsDefValue/>
+			</bsch:procedure>
+		</serverModule>
+	</commonModule>
+	<commonModule name="HTTPServices" id="4f5e3673-9125-4bc4-9fd4-1f48dc15cd9a">
+		<synonym>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>HTTPServices</v8:content>
+			</v8:item>
+		</synonym>
+		<serverModule version="1">
+			<bsch:cmdOpCode>1,3,18,51,16,1,3,4,2,12,18,21,5,1,56,18,20,1,1,3,4,2,12,18,21,5,1,56,18,20,1,1,3,4,2,12,18,21,5,1,56,18,20,1,1,3,4,2,12,18,21,5,1,56,18,20,1,1,3,4,2,12,18,21,5,1,56,18,20,1,1,3,4,2,12,18,21,5,1,56,18,20,1,1,3,17,45,39,1,22,1,18,19,1,1,3,18,19,5,1,16,1,3,12,40,1,3,18,51,16,39,1,3,8,16,1,1,3,3,12,8,3,12,3,12,8,8,3,18,51,16,1,3,3,12,3,12,24,18,51,16,1,3,4,3,3,18,51,16,1,3,17,45,39,1,22,1,3,2,18,21,5,1,2,12,33,29,16,1,3,17,45,39,1,22,44,1,18,19,5,1,29,40,1,6,17,45,39,39,1,1,3,18,51,16,1,3,4,8,8,8,8,8,3,18,51,16,1,3,18,51,16,1,3,12,4,4,18,20,1,1,3,3,4,3,18,21,5,1,16,1,3,3,12,4,18,21,5,1,16,1,3,2,3,4,18,21,5,1,16,1,2,4,3,4,13,69,18,20,1,1,2,4,3,4,13,18,20,1,1,2,4,3,4,13,18,20,1,1,2,4,3,4,13,18,20,1,1,7,17,45,39,1,45,39,1,3,106,16,1,6,17,45,39,1,46,1,22,1,18,19,5,1,29,40,1,2,12,4,18,20,1,1,2,12,4,18,20,1,1,2,12,7,18,20,1,1,2,12,4,18,20,1,39,1,1,22,22</bsch:cmdOpCode>
+			<bsch:cmdOperand>3,0,0,0,0,4,0,2,0,3,0,4,0,4,0,2,1,4,5,0,5,0,6,0,4,0,5,0,2,1,5,6,0,7,0,8,0,4,0,6,0,2,1,6,7,0,9,0,10,0,4,0,7,0,2,1,7,8,0,11,0,12,0,4,0,8,0,2,1,8,9,0,13,0,14,0,4,0,9,0,2,1,9,11,0,0,0,88,13,0,17,0,2,17,19,0,0,0,0,19,0,21,0,7,111,22,1,0,15,0,115,24,1,0,0,25,27,2,0,2,0,0,9,0,11,0,0,1,7,16,0,28,3,0,5,0,13,0,1,17,0,30,4,18,2,3,3,0,0,32,4,0,0,154,34,0,39,0,1,0,19,0,39,2,20,0,0,0,44,0,0,0,173,46,0,295,52,0,3,0,52,0,189,54,0,0,1,306,189,56,58,0,0,15,0,59,1,21,0,0,0,0,0,0,7,16,0,60,2,0,17,0,61,2,22,23,24,2,1,61,62,3,1,26,2,2,25,0,62,0,63,4,3,22,27,1,4,0,63,0,65,5,3,4,29,2,28,0,65,0,67,4,8,5,31,0,0,2,30,67,68,4,3,5,32,0,2,30,68,69,4,6,5,33,0,2,30,69,70,4,14,5,34,0,2,30,70,72,0,0,1,306,80,1,306,76,6,0,0,78,0,0,0,306,80,0,82,0,86,0,4,0,86,0,344,88,0,3,21,1,35,88,89,0,6,36,1,35,89,90,0,8,0,1,35,90,91,0,14,37,1,35,91,344,93,95,0,0</bsch:cmdOperand>
+			<bsch:constant>SStructure</bsch:constant>
+			<bsch:constant>SInsert</bsch:constant>
+			<bsch:constant>SAddress</bsch:constant>
+			<bsch:constant>SServerExchangeAddress</bsch:constant>
+			<bsch:constant>SGet</bsch:constant>
+			<bsch:constant>SBase</bsch:constant>
+			<bsch:constant>SServerExchangeBase</bsch:constant>
+			<bsch:constant>SUseSSL</bsch:constant>
+			<bsch:constant>SServerExchangeUseSSL</bsch:constant>
+			<bsch:constant>SLogin</bsch:constant>
+			<bsch:constant>SServerExchangeLogin</bsch:constant>
+			<bsch:constant>SPassword</bsch:constant>
+			<bsch:constant>SServerExchangePassword</bsch:constant>
+			<bsch:constant>SHTTPPath</bsch:constant>
+			<bsch:constant>SServerExchangeHTTPPath</bsch:constant>
+			<bsch:constant>SOpenSSLSecureConnection</bsch:constant>
+			<bsch:constant>SHTTPConnection</bsch:constant>
+			<bsch:constant>SHTTPRequest</bsch:constant>
+			<bsch:constant>SConnection, Request</bsch:constant>
+			<bsch:constant>SGetConnectionType</bsch:constant>
+			<bsch:constant>SNoConnection</bsch:constant>
+			<bsch:constant>Swww.mob1c.ru</bsch:constant>
+			<bsch:constant>SHeaders</bsch:constant>
+			<bsch:constant>SServerType</bsch:constant>
+			<bsch:constant>SAF</bsch:constant>
+			<bsch:constant>SCallHTTPMethod</bsch:constant>
+			<bsch:constant>SOPTIONS</bsch:constant>
+			<bsch:constant>SserverAF</bsch:constant>
+			<bsch:constant>SSplitStringIntoSubstringArray</bsch:constant>
+			<bsch:constant>S:</bsch:constant>
+			<bsch:constant>SSetConstantValue</bsch:constant>
+			<bsch:constant>N0</bsch:constant>
+			<bsch:constant>N1</bsch:constant>
+			<bsch:constant>N2</bsch:constant>
+			<bsch:constant>N3</bsch:constant>
+			<bsch:constant>SSet</bsch:constant>
+			<bsch:constant>Safmain</bsch:constant>
+			<bsch:constant>S/hs/history</bsch:constant>
+			<bsch:variable name="Constants" isExternal="true"/>
+			<bsch:variable name="InternetConnectionInformation" isExternal="true"/>
+			<bsch:variable name="InternetConnectionType" isExternal="true"/>
+			<bsch:variable name="StringFunctionsClientServer" isExternal="true"/>
+			<bsch:variable name="CommonUseServerCall" isExternal="true"/>
+			<bsch:procedure name="GetConnectionStructure" isFunction="true" isExported="true" parametersCount="0" startAddr="0">
+				<bsch:variable name="AuthStructure" isLocal="true"/>
+			</bsch:procedure>
+			<bsch:procedure name="GetHTTPRequest" isFunction="true" isExported="true" parametersCount="0" startAddr="90">
+				<bsch:variable name="AuthStructure" isLocal="true"/>
+				<bsch:variable name="SecureConnection" isLocal="true"/>
+				<bsch:variable name="Connection" isLocal="true"/>
+				<bsch:variable name="Request" isLocal="true"/>
+				<bsch:variable name="ConnectionStructure" isLocal="true"/>
+			</bsch:procedure>
+			<bsch:procedure name="SetConnectionStructure" isFunction="true" isExported="true" parametersCount="0" startAddr="308"/>
+			<bsch:procedure name="InternetAccess" isFunction="true" isExported="true" parametersCount="0" startAddr="156">
+				<bsch:variable name="InternetAccess" isLocal="true"/>
+			</bsch:procedure>
+			<bsch:procedure name="GetAddress" isFunction="true" isExported="true" parametersCount="0" startAddr="175">
+				<bsch:variable name="SecureConnection" isLocal="true"/>
+				<bsch:variable name="Connection" isLocal="true"/>
+				<bsch:variable name="Request" isLocal="true"/>
+				<bsch:variable name="Response" isLocal="true"/>
+				<bsch:variable name="ServerProduction" isLocal="true"/>
+				<bsch:variable name="ArrayProduction" isLocal="true"/>
+				<bsch:variable name="ErrorDescription" isLocal="true"/>
+			</bsch:procedure>
+		</serverModule>
+		<serverCall>true</serverCall>
+	</commonModule>
+	<commonModule name="CommonUseServerCall" id="17d86faf-f469-43d1-aed8-eb9fcc793c24">
+		<synonym>
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Common use server call</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Common use server call</v8:content>
+			</v8:item>
+		</synonym>
+		<serverModule version="1">
+			<bsch:cmdOpCode>1,2,12,17,45,39,1,22,1,2,12,17,45,39,1,22,1,2,12,17,45,39,1,22,1,2,12,17,45,39,1,22,1,2,12,17,45,39,1,22,1,2,3,13,18,21,5,1,17,45,39,1,22,1,2,3,13,3,18,20,1,1,22,1,3,2,12,18,19,5,1,17,45,39,1,22,22</bsch:cmdOpCode>
+			<bsch:cmdOperand>4,0,0,0,0,6,6,0,10,0,1,0,0,14,12,0,16,0,2,0,0,22,18,0,22,0,3,0,0,30,24,0,28,0,4,0,0,38,30,0,34,1,0,0,0,5,0,34,0,0,51,36,0,40,1,0,0,1,1,6,40,42,0,46,0,2,7,2,8,0,46,0,0,74,48,0,0</bsch:cmdOperand>
+			<bsch:constant>SOSVersion</bsch:constant>
+			<bsch:constant>SScreenHeight</bsch:constant>
+			<bsch:constant>SInterfaceFontSize</bsch:constant>
+			<bsch:constant>SScreenWidth</bsch:constant>
+			<bsch:constant>SSmartphone</bsch:constant>
+			<bsch:constant>SGet</bsch:constant>
+			<bsch:constant>SSet</bsch:constant>
+			<bsch:constant>SURLEncoding</bsch:constant>
+			<bsch:variable name="SessionParameters" isExternal="true"/>
+			<bsch:variable name="Constants" isExternal="true"/>
+			<bsch:variable name="StringEncodingMethod" isExternal="true"/>
+			<bsch:procedure name="OSVersion" isFunction="true" isExported="true" parametersCount="0" startAddr="0"/>
+			<bsch:procedure name="ScreenHeight" isFunction="true" isExported="true" parametersCount="0" startAddr="8"/>
+			<bsch:procedure name="InterfaceFontSize" isFunction="true" isExported="true" parametersCount="0" startAddr="16"/>
+			<bsch:procedure name="ScreenWidth" isFunction="true" isExported="true" parametersCount="0" startAddr="24"/>
+			<bsch:procedure name="IsSmartphone" isFunction="true" isExported="true" parametersCount="0" startAddr="32"/>
+			<bsch:procedure name="GetConstantValue" isFunction="true" isExported="true" parametersCount="1" startAddr="40">
+				<bsch:variable name="ConstantName" isLocal="true" isParam="true"/>
+				<bsch:paramsDefValue/>
+			</bsch:procedure>
+			<bsch:procedure name="SetConstantValue" isExported="true" parametersCount="2" startAddr="53">
+				<bsch:variable name="ConstantName" isLocal="true" isParam="true"/>
+				<bsch:variable name="Value" isLocal="true" isParam="true"/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue/>
+			</bsch:procedure>
+			<bsch:procedure name="Encode" isFunction="true" isExported="true" parametersCount="1" startAddr="63">
+				<bsch:variable name="String" isLocal="true" isParam="true"/>
+				<bsch:paramsDefValue/>
+			</bsch:procedure>
+			<bsch:procedure name="EncodeString" isFunction="true" isExternal="true" parametersCount="3" startAddr="0"/>
+		</serverModule>
+		<serverCall>true</serverCall>
+	</commonModule>
 	<commonForm name="Desktop" id="ba14910b-955a-4058-b3d5-2a4a89784a1c">
 		<synonym>
 			<v8:item>
@@ -95,7 +959,7 @@
 			</mf:serverModule>
 			<mf:clientModule version="1" startAddr="20">
 				<bsch:cmdOpCode>1,22,1,3,7,16,1,6,18,19,1,1,22,1,2,18,19,1,1,22,22,22</bsch:cmdOpCode>
-				<bsch:cmdOperand>5,0,9,0,0,0,10,0,1,2,10,11,0,20,0,1,4,20,21,0,0,0</bsch:cmdOperand>
+				<bsch:cmdOperand>5,0,9,0,0,0,10,0,1,2,10,11,0,32,0,1,4,32,33,0,0,0</bsch:cmdOperand>
 				<bsch:variable name="Number" isExternal="true"/>
 				<bsch:procedure name="OnClose" parametersCount="1" startAddr="0">
 					<bsch:variable name="Exit" isLocal="true" isParam="true"/>
@@ -119,10 +983,28 @@
 				<bsch:procedure name="SubmitAtServer" isExternal="true" parametersCount="1" startAddr="0"/>
 			</mf:clientModule>
 			<mf:serverWOContextModule version="1">
-				<bsch:cmdOpCode>1,22,22</bsch:cmdOpCode>
-				<bsch:cmdOperand>16,0,0</bsch:cmdOperand>
+				<bsch:cmdOpCode>1,3,2,18,21,5,1,16,1,3,12,12,3,12,12,4,24,3,24,4,24,16,1,3,3,12,3,12,18,21,5,1,16,1,3,7,16,1,3,3,18,21,5,1,16,1,3,2,3,18,21,5,1,16,1,3,2,3,18,21,5,1,16,1,3,7,16,1,22,22</bsch:cmdOpCode>
+				<bsch:cmdOperand>16,1,0,0,0,0,16,0,18,1,1,2,1,1,2,3,0,0,0,4,0,0,20,2,1,5,1,1,1,6,0,20,0,21,3,0,0,23,4,2,0,7,0,23,0,24,4,1,4,1,8,0,24,0,25,5,1,4,1,9,0,25,0,26,6,0,0,28,0,0</bsch:cmdOperand>
+				<bsch:constant>SGetHTTPRequest</bsch:constant>
+				<bsch:constant>SRequest</bsch:constant>
+				<bsch:constant>SResourceAddress</bsch:constant>
+				<bsch:constant>S/?chassisnumber=</bsch:constant>
+				<bsch:constant>S&amp;type=mob</bsch:constant>
+				<bsch:constant>SConnection</bsch:constant>
+				<bsch:constant>SGet</bsch:constant>
+				<bsch:constant>SGetBodyAsString</bsch:constant>
+				<bsch:constant>SAddValueTag</bsch:constant>
+				<bsch:constant>SGetDataFromString</bsch:constant>
+				<bsch:variable name="HTTPServices" isExternal="true"/>
+				<bsch:variable name="Serialization" isExternal="true"/>
 				<bsch:procedure name="SubmitAtServer" parametersCount="1" startAddr="0">
 					<bsch:variable name="ChassisNumber" isLocal="true" isParam="true"/>
+					<bsch:variable name="ConnectionStructure" isLocal="true"/>
+					<bsch:variable name="Response" isLocal="true"/>
+					<bsch:variable name="Connected" isLocal="true"/>
+					<bsch:variable name="BodyAsString" isLocal="true"/>
+					<bsch:variable name="BodyStructure" isLocal="true"/>
+					<bsch:variable name="Parsed" isLocal="true"/>
 					<bsch:paramsDefValue/>
 				</bsch:procedure>
 			</mf:serverWOContextModule>
@@ -293,6 +1175,175 @@
 		</form>
 		<useStandardCommands>false</useStandardCommands>
 	</commonForm>
+	<constant name="ServerExchangeLogin" id="74c26b9a-9b8f-4338-b0c0-080a847e7d4a">
+		<synonym>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Server exchange login</v8:content>
+			</v8:item>
+		</synonym>
+		<generatedType name="ConstantManager.ServerExchangeLogin" category="Manager">
+			<xr:TypeId>525a1501-cc42-477c-9f00-7b68ae68c803</xr:TypeId>
+			<xr:ValueId>e8ba2846-14e0-47dd-b2f4-2623cb76673b</xr:ValueId>
+		</generatedType>
+		<generatedType name="ConstantValueManager.ServerExchangeLogin" category="ValueManager">
+			<xr:TypeId>5ebb0dd4-9bed-4cbc-88cf-a95d79e96f59</xr:TypeId>
+			<xr:ValueId>07d715f5-ce88-4b6c-a903-0dd02f36ad82</xr:ValueId>
+		</generatedType>
+		<type>
+			<v8:Type>xs:string</v8:Type>
+			<v8:StringQualifiers>
+				<v8:Length>100</v8:Length>
+				<v8:AllowedLength>Variable</v8:AllowedLength>
+			</v8:StringQualifiers>
+		</type>
+		<valueManagerModule version="1" startAddr="0">
+			<bsch:cmdOpCode>22,22</bsch:cmdOpCode>
+			<bsch:cmdOperand>0,0</bsch:cmdOperand>
+		</valueManagerModule>
+		<useStandardCommands>false</useStandardCommands>
+	</constant>
+	<constant name="ServerExchangePassword" id="16ba3895-143a-4e1c-ac83-a12774c36ef5">
+		<synonym>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Server exchange password</v8:content>
+			</v8:item>
+		</synonym>
+		<generatedType name="ConstantManager.ServerExchangePassword" category="Manager">
+			<xr:TypeId>e061c9f5-1f25-4212-9a5f-55074f99c6a7</xr:TypeId>
+			<xr:ValueId>917d416b-4b57-48c6-8f6b-3c34ba84fe85</xr:ValueId>
+		</generatedType>
+		<generatedType name="ConstantValueManager.ServerExchangePassword" category="ValueManager">
+			<xr:TypeId>f0ac5279-452e-4b04-83bc-fc4a107979cb</xr:TypeId>
+			<xr:ValueId>35e31582-bc75-44dc-9442-59ceb83fa439</xr:ValueId>
+		</generatedType>
+		<type>
+			<v8:Type>xs:string</v8:Type>
+			<v8:StringQualifiers>
+				<v8:Length>100</v8:Length>
+				<v8:AllowedLength>Variable</v8:AllowedLength>
+			</v8:StringQualifiers>
+		</type>
+		<passwordMode>true</passwordMode>
+		<valueManagerModule version="1" startAddr="0">
+			<bsch:cmdOpCode>22,22</bsch:cmdOpCode>
+			<bsch:cmdOperand>0,0</bsch:cmdOperand>
+		</valueManagerModule>
+		<useStandardCommands>false</useStandardCommands>
+	</constant>
+	<constant name="ServerExchangeAddress" id="c12ce5b0-a626-4d3d-8380-55082e8b2fc9">
+		<synonym>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Server exchange address</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Server exchange address</v8:content>
+			</v8:item>
+		</synonym>
+		<generatedType name="ConstantManager.ServerExchangeAddress" category="Manager">
+			<xr:TypeId>ab01d56e-5d99-47ef-a0c7-a0e140c3aacf</xr:TypeId>
+			<xr:ValueId>d47ce58e-c976-4e85-ae0b-fa625964b127</xr:ValueId>
+		</generatedType>
+		<generatedType name="ConstantValueManager.ServerExchangeAddress" category="ValueManager">
+			<xr:TypeId>baf5b236-9c60-4ff1-989f-3a9817f6782b</xr:TypeId>
+			<xr:ValueId>53b6b716-db64-4d94-abe1-2818356dbdef</xr:ValueId>
+		</generatedType>
+		<type>
+			<v8:Type>xs:string</v8:Type>
+			<v8:StringQualifiers>
+				<v8:Length>100</v8:Length>
+				<v8:AllowedLength>Variable</v8:AllowedLength>
+			</v8:StringQualifiers>
+		</type>
+		<valueManagerModule version="1" startAddr="0">
+			<bsch:cmdOpCode>22,22</bsch:cmdOpCode>
+			<bsch:cmdOperand>0,0</bsch:cmdOperand>
+		</valueManagerModule>
+		<useStandardCommands>false</useStandardCommands>
+	</constant>
+	<constant name="ServerExchangeBase" id="100e06dc-f6b7-435b-89a6-851e24987260">
+		<synonym>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Server exchange base</v8:content>
+			</v8:item>
+		</synonym>
+		<generatedType name="ConstantManager.ServerExchangeBase" category="Manager">
+			<xr:TypeId>e983c6b3-4dc7-4eca-9e5c-4a67cf7f5444</xr:TypeId>
+			<xr:ValueId>fff1c53d-6c12-411f-a6e4-c1606a1176fb</xr:ValueId>
+		</generatedType>
+		<generatedType name="ConstantValueManager.ServerExchangeBase" category="ValueManager">
+			<xr:TypeId>f0f222f3-acec-4371-bb24-73d78bb28bb6</xr:TypeId>
+			<xr:ValueId>ee067c3d-f8aa-4e79-85f4-ec48082d30e9</xr:ValueId>
+		</generatedType>
+		<type>
+			<v8:Type>xs:string</v8:Type>
+			<v8:StringQualifiers>
+				<v8:Length>100</v8:Length>
+				<v8:AllowedLength>Variable</v8:AllowedLength>
+			</v8:StringQualifiers>
+		</type>
+		<valueManagerModule version="1" startAddr="0">
+			<bsch:cmdOpCode>22,22</bsch:cmdOpCode>
+			<bsch:cmdOperand>0,0</bsch:cmdOperand>
+		</valueManagerModule>
+		<useStandardCommands>false</useStandardCommands>
+	</constant>
+	<constant name="ServerExchangeHTTPPath" id="48bc8179-765a-4bf7-b251-ae93eeef2e69">
+		<synonym>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Server exchange HTTPPath</v8:content>
+			</v8:item>
+		</synonym>
+		<generatedType name="ConstantManager.ServerExchangeHTTPPath" category="Manager">
+			<xr:TypeId>48feb583-7e12-4d32-98f1-52151613ed4b</xr:TypeId>
+			<xr:ValueId>5e7e2b6d-f775-46ed-a561-62deb5e1ca2d</xr:ValueId>
+		</generatedType>
+		<generatedType name="ConstantValueManager.ServerExchangeHTTPPath" category="ValueManager">
+			<xr:TypeId>f48418be-1e49-465c-ad2c-d79a8cb5c0d7</xr:TypeId>
+			<xr:ValueId>a7b5671a-751a-487b-a4fe-7c5d342882f4</xr:ValueId>
+		</generatedType>
+		<type>
+			<v8:Type>xs:string</v8:Type>
+			<v8:StringQualifiers>
+				<v8:Length>100</v8:Length>
+				<v8:AllowedLength>Variable</v8:AllowedLength>
+			</v8:StringQualifiers>
+		</type>
+		<valueManagerModule version="1" startAddr="0">
+			<bsch:cmdOpCode>22,22</bsch:cmdOpCode>
+			<bsch:cmdOperand>0,0</bsch:cmdOperand>
+		</valueManagerModule>
+		<useStandardCommands>false</useStandardCommands>
+	</constant>
+	<constant name="ServerExchangeUseSSL" id="6e67a48b-e08d-4755-a35e-c67708b2feb2">
+		<synonym>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Server exchange use SSL</v8:content>
+			</v8:item>
+		</synonym>
+		<generatedType name="ConstantManager.ServerExchangeUseSSL" category="Manager">
+			<xr:TypeId>3412ddc2-9959-4b96-aea7-25d45032f728</xr:TypeId>
+			<xr:ValueId>6e02bb90-a80e-4dba-8e3d-9e88909a1a00</xr:ValueId>
+		</generatedType>
+		<generatedType name="ConstantValueManager.ServerExchangeUseSSL" category="ValueManager">
+			<xr:TypeId>60cb9d8c-930c-4b85-bbf6-181da0fbabf3</xr:TypeId>
+			<xr:ValueId>ec8f289d-3912-48eb-be71-75224bcf7c63</xr:ValueId>
+		</generatedType>
+		<type>
+			<v8:Type>xs:boolean</v8:Type>
+		</type>
+		<valueManagerModule version="1" startAddr="0">
+			<bsch:cmdOpCode>22,22</bsch:cmdOpCode>
+			<bsch:cmdOperand>0,0</bsch:cmdOperand>
+		</valueManagerModule>
+		<useStandardCommands>false</useStandardCommands>
+	</constant>
 	<requiredPermission>
 		<permission>Multimedia</permission>
 		<use>false</use>

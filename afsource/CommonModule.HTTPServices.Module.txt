@@ -1,0 +1,95 @@
+﻿Function GetConnectionStructure() Export
+
+	AuthStructure = New Structure;
+	AuthStructure.Insert("Address", TrimAll(Constants.ServerExchangeAddress.Get()));
+	AuthStructure.Insert("Base", TrimAll(Constants.ServerExchangeBase.Get()));
+	AuthStructure.Insert("UseSSL", TrimAll(Constants.ServerExchangeUseSSL.Get()));
+	AuthStructure.Insert("Login", TrimAll(Constants.ServerExchangeLogin.Get()));
+	AuthStructure.Insert("Password", TrimAll(Constants.ServerExchangePassword.Get()));
+	AuthStructure.Insert("HTTPPath", TrimAll(Constants.ServerExchangeHTTPPath.Get()));
+	
+	Return AuthStructure;
+	
+EndFunction // GetConnectionStructure()
+
+Function GetHTTPRequest() Export
+	
+	SetConnectionStructure();
+	
+	AuthStructure = GetConnectionStructure();
+	
+	If AuthStructure.UseSSL Then
+		SecureConnection = New OpenSSLSecureConnection();
+	Else
+		SecureConnection = Undefined;
+	EndIf;
+	
+	Connection = New HTTPConnection(AuthStructure.Address, , AuthStructure.Login, AuthStructure.Password, , , SecureConnection);
+	Request = New HTTPRequest(AuthStructure.Base + AuthStructure.HTTPPath);
+
+	ConnectionStructure = New Structure("Connection, Request", Connection, Request);
+	
+	Return ConnectionStructure;
+	
+EndFunction
+
+Function InternetAccess() Export
+	
+	#If MobileAppServer Then
+		InternetAccess = NOT InternetConnectionInformation.GetConnectionType() = InternetConnectionType.NoConnection;
+	#Else
+		InternetAccess = TRUE;
+	#EndIf
+	
+	Return InternetAccess;
+	
+EndFunction
+
+Function GetAddress() Export
+	
+	Try
+		
+		If NOT InternetAccess() Then
+			
+			Return False;
+			
+		EndIf;
+		
+		SecureConnection = New OpenSSLSecureConnection();
+		Connection = New HTTPConnection("www.mob1c.ru", , , , , , SecureConnection);
+		Request = New HTTPRequest();
+		Request.Headers.Insert("ServerType", "AF");
+		Response = Connection.CallHTTPMethod("OPTIONS", Request);
+		ServerProduction = Response.Headers.Get("serverAF");
+
+		ArrayProduction = StringFunctionsClientServer.SplitStringIntoSubstringArray(ServerProduction, ":");
+				
+		CommonUseServerCall.SetConstantValue("ServerExchangeUseSSL", Boolean(ArrayProduction[0]));
+		CommonUseServerCall.SetConstantValue("ServerExchangeAddress", ArrayProduction[1]);
+		CommonUseServerCall.SetConstantValue("ServerExchangeBase", ArrayProduction[2]);
+		CommonUseServerCall.SetConstantValue("ServerExchangeHTTPPath", ArrayProduction[3]);
+		
+		Return True;
+		
+	Except
+		
+		ErrorDescription = ErrorDescription();
+		
+		Return False;
+		
+	EndTry
+	
+EndFunction
+
+Function SetConnectionStructure() Export
+	
+	If Not GetAddress() Then
+				
+		Constants.ServerExchangeAddress.Set("www.mob1c.ru");
+		Constants.ServerExchangeBase.Set("afmain");
+		Constants.ServerExchangeUseSSL.Set(True);
+		Constants.ServerExchangeHTTPPath.Set("/hs/history");
+		
+	EndIf;
+	
+EndFunction

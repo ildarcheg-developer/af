@@ -154,6 +154,16 @@
 			<Language>English</Language>
 			<Language>Russian</Language>
 			<Language>Arabic</Language>
+			<CommonModule>StringFunctionsClientServer</CommonModule>
+			<CommonModule>Serialization</CommonModule>
+			<CommonModule>HTTPServices</CommonModule>
+			<CommonModule>CommonUseServerCall</CommonModule>
+			<Constant>ServerExchangeLogin</Constant>
+			<Constant>ServerExchangePassword</Constant>
+			<Constant>ServerExchangeAddress</Constant>
+			<Constant>ServerExchangeBase</Constant>
+			<Constant>ServerExchangeHTTPPath</Constant>
+			<Constant>ServerExchangeUseSSL</Constant>
 			<CommonForm>Desktop</CommonForm>
 		</ChildObjects>
 	</Configuration>

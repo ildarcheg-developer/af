@@ -1,0 +1,61 @@
+﻿#Region SerializationProcedure
+Function Deserialize(XMLObjectStructure) Export
+    XMLReader = New XMLReader;
+    XMLReader.SetString(XMLObjectStructure);
+    VT = XDTOSerializer.ReadXML(XMLReader);
+    XMLReader.Close();  
+    Return VT;
+EndFunction
+
+Function Serialize(SerializationObject) Export
+    XDTOTree = XDTOSerializer.WriteXDTO(SerializationObject);
+    MyXML = New XMLWriter;
+    MyXML.SetString();
+    XDTOFactory.WriteXML(MyXML, XDTOTree);
+    Return MyXML.Close();
+EndFunction
+#EndRegion
+
+#Region TransferValuePreparation
+Function GetTransferString(Value) Export
+
+	TransferStorage = New ValueStorage(Value, New Deflation(9));
+	TransferString = Serialize(TransferStorage);
+
+	Return TransferString;
+	
+EndFunction
+
+Function GetDataFromString(DataString) Export
+
+	Storage = Deserialize(DataString);
+	Value = Storage.Get();
+
+	Return Value;
+	
+EndFunction
+
+Function RemoveValueTag(Val ValueString) Export
+	
+	Tag1 = "<ValueStorage xmlns=""http://v8.1c.ru/8.1/data/core"" xmlns:xs=""http://www.w3.org/2001/XMLSchema"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"">";
+	Tag2 = "</ValueStorage>";
+	
+	ValueString = StrReplace(ValueString, Tag1, "");
+	ValueString = StrReplace(ValueString, Tag2, "");
+	
+	Return ValueString;
+	
+EndFunction
+
+Function AddValueTag(Val ValueString) Export
+	
+	Tag1 = "<ValueStorage xmlns=""http://v8.1c.ru/8.1/data/core"" xmlns:xs=""http://www.w3.org/2001/XMLSchema"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"">";
+	Tag2 = "</ValueStorage>";
+	
+	ValueString = Tag1 + ValueString + Tag2;
+	
+	Return ValueString;
+	
+EndFunction
+
+#EndRegion
