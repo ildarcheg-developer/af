@@ -45,6 +45,9 @@ EndFunction
 Function GetHistory(Number, RequestDate) Export
 		
 	// links request
+	
+	ExitCode = Undefined;
+	RunApp("python " + "car-report.py " + Number, GetWD(), True, ExitCode);
 	ExitCode = Undefined;
 	RunApp("""" + GetR() + """ " + GetWD() + "\templateScript.R " + Number, "C:\Program Files\R\R-3.3.2\bin", True, ExitCode);
 	
@@ -96,7 +99,7 @@ Function GetHistory(Number, RequestDate) Export
 	EndDo;
 	
 	
-	LogFileName = Number + "_" + RequestDate + "_" + TrimAll(New UUID()) + ".txt";
+	LogFileName = GetWD() + "\log\" + Number + "_" + RequestDate + "_" + TrimAll(New UUID()) + ".txt";
 	ValueToFile(LogFileName, VT);
 	
 	Return VT;
