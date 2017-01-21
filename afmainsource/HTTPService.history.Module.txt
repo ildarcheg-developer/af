@@ -11,7 +11,7 @@ Function getGET(Request)
 				
 	BodyStructureResponse = New Structure;
 	BodyStructureResponse.Insert("Error", "");
-	BodyStructureResponse.Insert("VT", "");
+	BodyStructureResponse.Insert("VT", New ValueTable);
 	BodyStructureResponse.Insert("WebResult", "");
 	
 	If ChassisNumber = Undefined Then

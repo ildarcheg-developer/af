@@ -1,5 +1,28 @@
 ﻿
 &AtClient
+Procedure NumberAutoComplete(Item, Text, ChoiceData, DataGetParameters, Wait, StandardProcessing)
+	// Insert handler contents.
+EndProcedure
+
+&AtClient
+Procedure NumberEditTextChange(Item, Text, StandardProcessing)
+	//Items.Number.Mask ="UUUUUUUUUUUUUUUUU";
+EndProcedure
+
+&AtClient
+Procedure NumberTextEditEnd(Item, Text, ChoiceData, DataGetParameters, StandardProcessing)
+	//Items.Number.Mask = "";
+EndProcedure
+
+&AtClient
+Procedure Back(Command)
+	
+	Items.GroupVertical.Visible = True;
+	Items.GroupVerticalResult.Visible = False;
+
+EndProcedure
+
+&AtClient
 Procedure OnClose(Exit)
 	//Insert handler contents
 EndProcedure
@@ -11,7 +34,7 @@ Procedure BeforeClose(Cancel, Exit, MessageText, StandardProcessing)
 EndProcedure
 
 &AtServerNoContext
-Procedure SubmitAtServer(ChassisNumber)
+Function SubmitAtServer(ChassisNumber)
 	
 	ConnectionStructure = HTTPServices.GetHTTPRequest();
 	
@@ -21,13 +44,103 @@ Procedure SubmitAtServer(ChassisNumber)
 	Connected = TRUE;
 	
 	BodyAsString = Response.GetBodyAsString();
+	//BodyAsString = GetBBB();
 	BodyAsString = Serialization.AddValueTag(BodyAsString);
 	BodyStructure = Serialization.GetDataFromString(BodyAsString);
 	Parsed = TRUE;
+
+	AccidentArray = New Array;
 	
-EndProcedure
+	For Each Accident In BodyStructure.VT Do
+		
+		AccidentText = Accident.ReportDate + " " + Accident.Emirate;
+		AccidentArray.Add(AccidentText);
+		
+	EndDo;
+	
+	Return New Structure("Error, AccidentArray", BodyStructure.Error, AccidentArray);
+	
+EndFunction
 
 &AtClient
 Procedure Submit(Command)
-	SubmitAtServer(Number);
+	
+	Result = SubmitAtServer(Number);
+	
+	Items.GroupVertical.Visible = False;
+	Items.GroupVerticalResult.Visible = True;
+
+	If ValueIsFilled(Result.Error) Then
+		
+		Error = Result.Error;
+		Items.Error.Visible = True;
+		AccidentArray = New Array;
+		Items.Status.Visible = False;
+		
+	Else
+		
+		Error = "";
+		Items.Error.Visible = False;
+		AccidentArray = Result.AccidentArray;
+		Items.Status.Visible = True;
+		
+	EndIf;
+	
+	NumberOfAccident = AccidentArray.Count();
+	Status = ?(NumberOfAccident = 0, "Accident Free", "Accidents found");
+	
+	N = 1;
+	Text1 = ?(N<=NumberOfAccident, AccidentArray[N-1], "");
+	Items["Text"+N].Visible = N<=NumberOfAccident;
+	N = 2;
+	Text2 = ?(N<=NumberOfAccident, AccidentArray[N-1], "");
+	Items["Text"+N].Visible = N<=NumberOfAccident;
+	N = 3;
+	Text3 = ?(N<=NumberOfAccident, AccidentArray[N-1], "");
+	Items["Text"+N].Visible = N<=NumberOfAccident;
+	N = 4;
+	Text4 = ?(N<=NumberOfAccident, AccidentArray[N-1], "");
+	Items["Text"+N].Visible = N<=NumberOfAccident;
+	N = 5;
+	Text5 = ?(N<=NumberOfAccident, AccidentArray[N-1], "");
+	Items["Text"+N].Visible = N<=NumberOfAccident;
+	N = 6;
+	Text6 = ?(N<=NumberOfAccident, AccidentArray[N-1], "");
+	Items["Text"+N].Visible = N<=NumberOfAccident;
+	N = 7;
+	Text7 = ?(N<=NumberOfAccident, AccidentArray[N-1], "");
+	Items["Text"+N].Visible = N<=NumberOfAccident;
+	N = 8;
+	Text8 = ?(N<=NumberOfAccident, AccidentArray[N-1], "");
+	Items["Text"+N].Visible = N<=NumberOfAccident;
+	N = 9;
+	Text9 = ?(N<=NumberOfAccident, AccidentArray[N-1], "");
+	Items["Text"+N].Visible = N<=NumberOfAccident;
+	
 EndProcedure
+
+&AtServerNoContext
+Function GetBBB()
+	Return "AgFTS2/0iI3BTqDV67a9oKcNzVbNbptAEO61kfIOq+2llRZll//1zbJJ7MTFEbiJcsR4nSLVJgJSqYryPH2IHvpIfYUOu4uNC44aqYcyIxLm+77ZnxnWfH/7Rl6/fvx8wu8wsU3Lp4yvDE/Y3LDXKTc4Wy2NpbvkDls56doX5PTkyapv4DjGBAdFkRf4mTTP+Pn05LlNuFloFEZI0rXLuCkMn6WJYbtibXArcQ0ncbnrLz3fdWVyXt9MVt8pweHjZikKLJNcJ1Ulii2kxJhQmZgRHImHvKiO8BSIGlSJzCY+TipxTKIwJbAIXmSbLlUFFccmeJim2Upsq8W3hy63AZFClcgheFTkZZlt7+OqEKLqyBoYNbgSugSPs7JKtqlYF/lmnRVllW1BVIq0yvJtJ0/DRjUdST46FKjEnp5pBlONq6R6LPtXUuOoISipT/D0pSlMe4bjBM+y+8/ddeuorjI0wixPk1rZu7kNeLC5DJoj2GRFX5F3cU3dtURvet0SB8mhJ+5E0u04FdQkaIpYFF+zVIxEvfoOW6OogbUO+iJ+EGI1yzZZd28khDSmFdAQRzrosHGY10RG+XaV9RZK4ahF0FqocAjLq/KOpA6jOq6ZfN/wkUjKfFsefyF2BP12QrHHyUbci/IaxuoKNYg0SptDxyRwalAwBgYPxAKzwRwwF8wD88E4GLRU7Uy6Kd2Sbkt3pLvSPem+dF47zBBcnj6mGpgSdWDJQ+/yo3cxscxznzNmUpf7rRPScSj1GKXM47wVpt4ZZWcmhNtBPqBW6zkKhpERhGM0ms9m03g6D1ugYbSVrf+Ho8X0Jjhgdq4W+im8Cue34YuReDKMLoeTY6P/sYx4OAzGyEBdlU3R1eZskj8W3eSvndPBDHqWiAboJphMR7MAnUfzcEHUHxRNLyYLNAwvZoHRe4Gw3ng0C841DwZqfkfYa+ruMNNxHNNphS16Rv267s5BMwxss/U8X0yCCL2Pr4PR9Pzuw39bdOevim7+06K/tKr+YsrdjPfb2dMIssD1oQJvOXtWHyIyoLz9gXMrlpEoH79UrXFHnxP4yS71R8cAdfri9GT/vjc7dHqy74X9ru3G/A0="
+EndFunction
+
+&AtClient
+Procedure NothingToDo(Command)
+	// Insert handler contents.
+EndProcedure
+
+&AtServer
+Procedure OnCreateAtServer(Cancel, StandardProcessing)
+	
+	Items.GroupVertical.Visible = True;
+	Items.GroupVerticalResult.Visible = False;
+	
+	Status = "Accident free";
+
+EndProcedure    
+
+&AtClient
+Procedure NumberStartChoice(Item, ChoiceData, StandardProcessing)
+	// Insert handler contents.
+EndProcedure
+
