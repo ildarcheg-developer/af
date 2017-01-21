@@ -1,0 +1,45 @@
+﻿
+Function getGET(Request)
+	
+	RequestDate = CurrentDate();
+	RequestDateAsString = Format(RequestDate, "DF=yyyyMMddHHmmss");
+	
+	ChassisNumber = Request.QueryOptions.Get("chassisnumber");
+	
+	Response = New HTTPServiceResponse(200);
+				
+	BodyStructureResponse = New Structure;
+	BodyStructureResponse.Insert("Error", "");
+	BodyStructureResponse.Insert("VT", "");
+
+	If ChassisNumber = Undefined Then
+		
+		//ERROR
+		BodyStructureResponse.Error = "Chassis number is not provided.";	
+		
+	Else
+		
+		Try 
+			
+			//WORK
+			ChassisNumber = "JM7GH32F891120698";
+			BodyStructureResponse.VT = Service.GetHistory(ChassisNumber, RequestDateAsString);
+			
+		Except
+			
+			//ERROR
+			ErrorDescription = ErrorDescription();
+			Commentaries = "" + ChassisNumber + Chars.LF + RequestDateAsString + Chars.LF + ErrorDescription; 
+			WriteLogEvent("HistoryGet", EventLogLevel.Error, , , Commentaries, );
+			BodyStructureResponse.Insert("Error", "Please try again late.");
+			
+		EndTry;
+		
+	EndIf;
+	
+	BodyAsString = Serialization.GetTransferString(BodyStructureResponse);
+	Response.SetBodyFromString(BodyAsString);
+	
+	Return Response;
+	
+EndFunction

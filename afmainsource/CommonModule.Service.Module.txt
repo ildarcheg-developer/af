@@ -1,0 +1,104 @@
+﻿Function GetWD()
+	
+	WD = "C:\PUB\ForR";
+	
+	Return WD;
+	
+EndFunction
+
+Function GetR()
+	
+	RPath = "C:\Program Files\R\R-3.3.2\bin\Rscript.exe";
+	
+	Return RPath;
+	
+EndFunction
+
+Function GetCaptionList()
+	
+	Array = New Array;
+	Array.Add("Report Number");
+	Array.Add("Report Date");
+	Array.Add("Time");
+	Array.Add("Accident Type");
+	Array.Add("Crossing Street");
+	Array.Add("Distance from first intersection");
+	Array.Add("Accidient Status");
+	Array.Add("Intersection");
+	Array.Add("Light");
+	Array.Add("Location Type");
+	Array.Add("Emirate");
+	Array.Add("Report Type");
+	Array.Add("Year");
+	Array.Add("Service Center");
+	Array.Add("Speed Limit");
+	Array.Add("Street");
+	Array.Add("Street Condition");
+	Array.Add("Near to");
+	Array.Add("Accident Reasons");
+	Array.Add("Dameges Parts");
+	
+	Return Array;
+	
+EndFunction
+
+Function GetHistory(Number, RequestDate) Export
+		
+	// links request
+	ExitCode = Undefined;
+	RunApp("""" + GetR() + """ " + GetWD() + "\templateScript.R " + Number, "C:\Program Files\R\R-3.3.2\bin", True, ExitCode);
+	
+	Files = FindFiles(GetWD(), Number + "_history_*");
+	
+	VT = New ValueTable;
+	VT.Columns.Add("Number");
+	CaptionArray = GetCaptionList();
+	
+	For Each Caption In CaptionArray Do
+		
+		VT.Columns.Add(StrReplace(Caption, " ", ""), , Caption);
+
+	EndDo;
+	
+	For Each File In Files Do
+		
+		TextDocument = New TextDocument;
+		TextDocument.Read(File.FullName);
+		Text = TextDocument.GetText();
+		
+		
+		Array = StringFunctionsClientServer.SplitStringIntoSubstringArray(Text, Chars.LF);
+		NewLine = VT.Add();
+		NewLine.Number = Number;
+		
+		For Each Str In Array Do
+			
+			Str = StrReplace(Str, """", "");
+			
+			ArrayCaprion = StringFunctionsClientServer.SplitStringIntoSubstringArray(Str, ";");
+			
+			If ArrayCaprion.Count() < 3 Then
+				
+				Continue;
+				
+			EndIf;
+			
+			If Not CaptionArray.Find(ArrayCaprion[1]) = Undefined Then
+				
+				NewLine[StrReplace(ArrayCaprion[1], " ", "")] = ArrayCaprion[2];
+				
+			EndIf;
+						
+		EndDo;
+		
+		DeleteFiles(File.FullName);
+		
+	EndDo;
+	
+	
+	LogFileName = Number + "_" + RequestDate + "_" + TrimAll(New UUID()) + ".txt";
+	ValueToFile(LogFileName, VT);
+	
+	Return VT;
+	
+EndFunction

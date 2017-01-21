@@ -1,0 +1,37 @@
+﻿#Region SerializationProcedure
+Function Deserialize(XMLObjectStructure) Export
+    XMLReader = New XMLReader;
+    XMLReader.SetString(XMLObjectStructure);
+    VT = XDTOSerializer.ReadXML(XMLReader);
+    XMLReader.Close();  
+    Return VT;
+EndFunction
+
+Function Serialize(SerializationObject) Export
+    XDTOTree = XDTOSerializer.WriteXDTO(SerializationObject);
+    MyXML = New XMLWriter;
+    MyXML.SetString();
+    XDTOFactory.WriteXML(MyXML, XDTOTree);
+    Return MyXML.Close();
+EndFunction
+#EndRegion
+
+#Region TransferValuePreparation
+Function GetTransferString(Value) Export
+
+	TransferStorage = New ValueStorage(Value, New Deflation(9));
+	TransferString = Serialize(TransferStorage);
+
+	Return TransferString;
+	
+EndFunction
+
+Function GetDataFromString(DataString) Export
+
+	Storage = Deserialize(DataString);
+	Value = Storage.Get();
+
+	Return Value;
+	
+EndFunction
+#EndRegion
