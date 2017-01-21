@@ -34,4 +34,28 @@ Function GetDataFromString(DataString) Export
 	Return Value;
 	
 EndFunction
+
+Function RemoveValueTag(Val ValueString) Export
+	
+	Tag1 = "<ValueStorage xmlns=""http://v8.1c.ru/8.1/data/core"" xmlns:xs=""http://www.w3.org/2001/XMLSchema"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"">";
+	Tag2 = "</ValueStorage>";
+	
+	ValueString = StrReplace(ValueString, Tag1, "");
+	ValueString = StrReplace(ValueString, Tag2, "");
+	
+	Return ValueString;
+	
+EndFunction
+
+Function AddValueTag(Val ValueString) Export
+	
+	Tag1 = "<ValueStorage xmlns=""http://v8.1c.ru/8.1/data/core"" xmlns:xs=""http://www.w3.org/2001/XMLSchema"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"">";
+	Tag2 = "</ValueStorage>";
+	
+	ValueString = Tag1 + ValueString + Tag2;
+	
+	Return ValueString;
+	
+EndFunction
+
 #EndRegion

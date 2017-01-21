@@ -5,13 +5,15 @@ Function getGET(Request)
 	RequestDateAsString = Format(RequestDate, "DF=yyyyMMddHHmmss");
 	
 	ChassisNumber = Request.QueryOptions.Get("chassisnumber");
+	Type = Request.QueryOptions.Get("type");
 	
 	Response = New HTTPServiceResponse(200);
 				
 	BodyStructureResponse = New Structure;
 	BodyStructureResponse.Insert("Error", "");
 	BodyStructureResponse.Insert("VT", "");
-
+	BodyStructureResponse.Insert("WebResult", "");
+	
 	If ChassisNumber = Undefined Then
 		
 		//ERROR
@@ -25,6 +27,24 @@ Function getGET(Request)
 			ChassisNumber = "JM7GH32F891120698";
 			BodyStructureResponse.VT = Service.GetHistory(ChassisNumber, RequestDateAsString);
 			
+			WebResult = "Chassis Number: " + ChassisNumber;
+			
+			If BodyStructureResponse.VT.Count() = 0 Then
+				
+				WebResult = WebResult + Chars.LF + "No accident history found.";	
+				
+			Else
+				
+				For Each Record In BodyStructureResponse.VT Do
+					
+					WebResult = WebResult + Chars.LF + Record.ReportDate + " " + Record.Emirate;	
+					
+				EndDo;
+				
+			EndIf;
+			
+			BodyStructureResponse.WebResult = WebResult;
+			
 		Except
 			
 			//ERROR
@@ -37,8 +57,32 @@ Function getGET(Request)
 		
 	EndIf;
 	
-	BodyAsString = Serialization.GetTransferString(BodyStructureResponse);
-	Response.SetBodyFromString(BodyAsString);
+	BodyAsString = Undefined;
+	
+	If Type = "web" Then
+		
+		If ValueIsFilled(BodyStructureResponse.Error) Then
+			
+			BodyAsString = BodyStructureResponse.Error;
+			
+		Else
+			
+			BodyAsString = BodyStructureResponse.WebResult;
+			
+		EndIf;		
+		
+	ElsIf Type = "mob" Then
+		
+		BodyAsString = Serialization.GetTransferString(BodyStructureResponse);
+		BodyAsString = Serialization.RemoveValueTag(BodyAsString);
+		
+	EndIf;		
+	
+	If Not BodyAsString = Undefined Then
+		
+		Response.SetBodyFromString(BodyAsString);
+		
+	EndIf;
 	
 	Return Response;
 	

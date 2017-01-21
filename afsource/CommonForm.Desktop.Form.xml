@@ -23,16 +23,6 @@
 		<Event name="OnClose">OnClose</Event>
 	</Events>
 	<ChildItems>
-		<LabelDecoration name="jghjg" id="35">
-			<Title formatted="false">
-				<v8:item>
-					<v8:lang>en</v8:lang>
-					<v8:content>Jghjgg</v8:content>
-				</v8:item>
-			</Title>
-			<ContextMenu name="jghjgContextMenu" id="36"/>
-			<ExtendedTooltip name="jghjgExtendedTooltip" id="37"/>
-		</LabelDecoration>
 		<UsualGroup name="GroupVertical" id="1">
 			<Title>
 				<v8:item>
@@ -126,6 +116,7 @@
 						<Button name="Submit" id="33">
 							<Type>UsualButton</Type>
 							<CommandName>Form.Command.Submit</CommandName>
+							<TextColor>style:FormTextColor</TextColor>
 							<Font ref="style:NormalTextFont" height="14" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
 							<ExtendedTooltip name="SubmitExtendedTooltip" id="34"/>
 						</Button>
