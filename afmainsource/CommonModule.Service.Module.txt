@@ -42,15 +42,20 @@ Function GetCaptionList()
 	
 EndFunction
 
-Function GetHistory(Number, RequestDate) Export
+Function GetHistory(Number, RequestDate, Timer) Export
 		
 	// links request
-	
 	ExitCode = Undefined;
-	RunApp("python " + "car-report.py " + Number, GetWD(), True, ExitCode);
-	ExitCode = Undefined;
-	RunApp("""" + GetR() + """ " + GetWD() + "\templateScript.R " + Number, "C:\Program Files\R\R-3.3.2\bin", True, ExitCode);
+	SrtingApp = """" + GetR() + """ " + GetWD() + "\templateScript.R " + Number;
+	WriteLogEvent("GetHistory", EventLogLevel.Information, , , Number + Chars.LF + "Starting script R: " + SrtingApp);
 	
+	Timer.Time.Add(CurrentDate()-Timer.LastTime);
+	Timer.LastTime = CurrentDate();
+	Timer.Stage.Add("Begin R script");
+	
+	RunApp(SrtingApp, , True, ExitCode);
+	
+	WriteLogEvent("GetHistory", EventLogLevel.Information, , , Number + Chars.LF + "Internal script");
 	Files = FindFiles(GetWD(), Number + "_history_*");
 	
 	VT = New ValueTable;
@@ -63,6 +68,10 @@ Function GetHistory(Number, RequestDate) Export
 
 	EndDo;
 	
+	Timer.Time.Add(CurrentDate()-Timer.LastTime);
+	Timer.LastTime = CurrentDate();
+	Timer.Stage.Add("Begin file reading");
+
 	For Each File In Files Do
 		
 		TextDocument = New TextDocument;
@@ -98,8 +107,11 @@ Function GetHistory(Number, RequestDate) Export
 		
 	EndDo;
 	
-	
-	LogFileName = GetWD() + "\log\" + Number + "_" + RequestDate + "_" + TrimAll(New UUID()) + ".txt";
+	Timer.Time.Add(CurrentDate()-Timer.LastTime);
+	Timer.LastTime = CurrentDate();
+	Timer.Stage.Add("Begin table packing");
+
+	LogFileName = GetWD() + "\log\" + Number + "_" + Format(RequestDate, "DF=yyyyMMddHHmmss") + "_" + TrimAll(New UUID()) + ".txt";
 	ValueToFile(LogFileName, VT);
 	
 	Return VT;

@@ -1,14 +1,17 @@
 ﻿
 Function getGET(Request)
-	
+		
 	RequestDate = CurrentDate();
-	RequestDateAsString = Format(RequestDate, "DF=yyyyMMddHHmmss");
+	//RequestDateAsString = Format(RequestDate, "DF=yyyyMMddHHmmss");
+	Timer = New Structure("StartTime, LastTime, Time, Stage", RequestDate, RequestDate, New Array, New Array);
+	Timer.Time.Add(0);
+	Timer.Stage.Add("Begin");
 	
 	ChassisNumber = Request.QueryOptions.Get("chassisnumber");
 	Type = Request.QueryOptions.Get("type");
 	
 	Response = New HTTPServiceResponse(200);
-				
+		
 	BodyStructureResponse = New Structure;
 	BodyStructureResponse.Insert("Error", "");
 	BodyStructureResponse.Insert("VT", New ValueTable);
@@ -24,8 +27,8 @@ Function getGET(Request)
 		Try 
 			
 			//WORK
-			ChassisNumber = "JM7GH32F891120698";
-			BodyStructureResponse.VT = Service.GetHistory(ChassisNumber, RequestDateAsString);
+			//ChassisNumber = "JM7GH32F891120698";
+			BodyStructureResponse.VT = Service.GetHistory(ChassisNumber, RequestDate, Timer);
 			
 			WebResult = "Chassis Number: " + ChassisNumber;
 			
@@ -49,7 +52,7 @@ Function getGET(Request)
 			
 			//ERROR
 			ErrorDescription = ErrorDescription();
-			Commentaries = "" + ChassisNumber + Chars.LF + RequestDateAsString + Chars.LF + ErrorDescription; 
+			Commentaries = "" + ChassisNumber + Chars.LF + Format(RequestDate, "DF=yyyyMMddHHmmss") + Chars.LF + ErrorDescription; 
 			WriteLogEvent("HistoryGet", EventLogLevel.Error, , , Commentaries, );
 			BodyStructureResponse.Insert("Error", "Please try again late.");
 			
@@ -84,6 +87,20 @@ Function getGET(Request)
 		
 	EndIf;
 	
+	Timer.Time.Add(CurrentDate()-Timer.LastTime);
+	Timer.LastTime = CurrentDate();
+	Timer.Stage.Add("Finish");
+
+	Str = ""+Timer.StartTime;
+	
+	
+	For i = 1 To Timer.Time.Count() Do
+		
+		Str = Str + Chars.LF + "Time: " + Timer.Time[i-1] + " " + Timer.Stage[i-1];
+		
+	EndDo;
+	
+	WriteLogEvent("HistoryGet", EventLogLevel.Information, , , Str, );
 	Return Response;
 	
 EndFunction
