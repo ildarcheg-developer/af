@@ -84,6 +84,7 @@
 							<HorizontalAlign>Center</HorizontalAlign>
 							<TextColor>#C8C8C8</TextColor>
 							<Font ref="style:NormalTextFont" height="11" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+							<AutoCapitalizationOnTextInput>AllCharacters</AutoCapitalizationOnTextInput>
 							<InputHint>
 								<v8:item>
 									<v8:lang>en</v8:lang>

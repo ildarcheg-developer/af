@@ -1447,6 +1447,7 @@
 							<mf:titleLocation>None</mf:titleLocation>
 							<mf:horizontalAlign>Center</mf:horizontalAlign>
 							<mf:inputData>
+								<mf:autoCapitalizationOnTextInput>AllCharacters</mf:autoCapitalizationOnTextInput>
 								<mf:textColor>#C8C8C8</mf:textColor>
 								<mf:font ref="style:NormalTextFont" height="11" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
 								<mf:inputHint>
