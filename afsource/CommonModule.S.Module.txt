@@ -3,3 +3,14 @@
 	Return Format(Number, "L=en_US; ND=10");
 	
 EndFunction
+
+Function P(English, Russian, Arabic) Export
+	
+	PString = "en = '%English'; ru = '%Russian'; ar = '%Arabic'";
+	PString = StrReplace(PString, "%English", English);
+	PString = StrReplace(PString, "%Russian", Russian);
+	PString = StrReplace(PString, "%Arabic", Arabic);
+	
+	Return Nstr(PString);
+	
+EndFunction

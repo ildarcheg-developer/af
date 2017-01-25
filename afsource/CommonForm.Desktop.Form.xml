@@ -272,16 +272,20 @@
 							<ContextMenu name="Decoration8ContextMenu" id="43"/>
 							<ExtendedTooltip name="Decoration8ExtendedTooltip" id="44"/>
 						</LabelDecoration>
-						<InputField name="Status" id="45">
+						<InputField name="status1" id="125">
+							<DataPath>status1</DataPath>
+							<Visible>false</Visible>
+							<ContextMenu name="status1ContextMenu" id="126"/>
+							<ExtendedTooltip name="status1ExtendedTooltip" id="127"/>
+						</InputField>
+						<LabelField name="Status" id="45">
 							<DataPath>Status</DataPath>
 							<ReadOnly>true</ReadOnly>
 							<TitleLocation>None</TitleLocation>
 							<HorizontalAlign>Center</HorizontalAlign>
-							<TextColor>#C8C8C8</TextColor>
-							<Font ref="style:NormalTextFont" height="11" kind="StyleItem" scale="100"/>
 							<ContextMenu name="StatusContextMenu" id="46"/>
 							<ExtendedTooltip name="StatusExtendedTooltip" id="47"/>
-						</InputField>
+						</LabelField>
 						<LabelDecoration name="Decoration9" id="48">
 							<HorizontalStretch>true</HorizontalStretch>
 							<ContextMenu name="Decoration9ContextMenu" id="49"/>
@@ -308,106 +312,86 @@
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="GroupHorizontal5ExtendedTooltip" id="83"/>
 					<ChildItems>
-						<InputField name="Error" id="120">
+						<LabelField name="Error" id="120">
 							<DataPath>Error</DataPath>
 							<ReadOnly>true</ReadOnly>
 							<TitleLocation>None</TitleLocation>
 							<HorizontalAlign>Center</HorizontalAlign>
-							<TextColor>#C8C8C8</TextColor>
-							<Font ref="style:NormalTextFont" height="7" kind="StyleItem"/>
 							<ContextMenu name="ErrorContextMenu" id="121"/>
 							<ExtendedTooltip name="ErrorExtendedTooltip" id="122"/>
-						</InputField>
-						<InputField name="Text1" id="93">
+						</LabelField>
+						<LabelField name="Text1" id="93">
 							<DataPath>Text1</DataPath>
 							<ReadOnly>true</ReadOnly>
 							<TitleLocation>None</TitleLocation>
 							<HorizontalAlign>Center</HorizontalAlign>
-							<TextColor>#C8C8C8</TextColor>
-							<Font ref="style:NormalTextFont" height="7" kind="StyleItem"/>
 							<ContextMenu name="Text1ContextMenu" id="94"/>
 							<ExtendedTooltip name="Text1ExtendedTooltip" id="95"/>
-						</InputField>
-						<InputField name="Text2" id="96">
+						</LabelField>
+						<LabelField name="Text2" id="96">
 							<DataPath>Text2</DataPath>
 							<ReadOnly>true</ReadOnly>
 							<TitleLocation>None</TitleLocation>
 							<HorizontalAlign>Center</HorizontalAlign>
-							<TextColor>#C8C8C8</TextColor>
-							<Font ref="style:NormalTextFont" height="7" kind="StyleItem"/>
 							<ContextMenu name="Text2ContextMenu" id="97"/>
 							<ExtendedTooltip name="Text2ExtendedTooltip" id="98"/>
-						</InputField>
-						<InputField name="Text3" id="99">
+						</LabelField>
+						<LabelField name="Text3" id="99">
 							<DataPath>Text3</DataPath>
 							<ReadOnly>true</ReadOnly>
 							<TitleLocation>None</TitleLocation>
 							<HorizontalAlign>Center</HorizontalAlign>
-							<TextColor>#C8C8C8</TextColor>
-							<Font ref="style:NormalTextFont" height="7" kind="StyleItem"/>
 							<ContextMenu name="Text3ContextMenu" id="100"/>
 							<ExtendedTooltip name="Text3ExtendedTooltip" id="101"/>
-						</InputField>
-						<InputField name="Text4" id="102">
+						</LabelField>
+						<LabelField name="Text4" id="102">
 							<DataPath>Text4</DataPath>
 							<ReadOnly>true</ReadOnly>
 							<TitleLocation>None</TitleLocation>
 							<HorizontalAlign>Center</HorizontalAlign>
-							<TextColor>#C8C8C8</TextColor>
-							<Font ref="style:NormalTextFont" height="7" kind="StyleItem"/>
 							<ContextMenu name="Text4ContextMenu" id="103"/>
 							<ExtendedTooltip name="Text4ExtendedTooltip" id="104"/>
-						</InputField>
-						<InputField name="Text5" id="105">
+						</LabelField>
+						<LabelField name="Text5" id="105">
 							<DataPath>Text5</DataPath>
 							<ReadOnly>true</ReadOnly>
 							<TitleLocation>None</TitleLocation>
 							<HorizontalAlign>Center</HorizontalAlign>
-							<TextColor>#C8C8C8</TextColor>
-							<Font ref="style:NormalTextFont" height="7" kind="StyleItem"/>
 							<ContextMenu name="Text5ContextMenu" id="106"/>
 							<ExtendedTooltip name="Text5ExtendedTooltip" id="107"/>
-						</InputField>
-						<InputField name="Text6" id="108">
+						</LabelField>
+						<LabelField name="Text6" id="108">
 							<DataPath>Text6</DataPath>
 							<ReadOnly>true</ReadOnly>
 							<TitleLocation>None</TitleLocation>
 							<HorizontalAlign>Center</HorizontalAlign>
-							<TextColor>#C8C8C8</TextColor>
-							<Font ref="style:NormalTextFont" height="7" kind="StyleItem"/>
 							<ContextMenu name="Text6ContextMenu" id="109"/>
 							<ExtendedTooltip name="Text6ExtendedTooltip" id="110"/>
-						</InputField>
-						<InputField name="Text7" id="111">
+						</LabelField>
+						<LabelField name="Text7" id="111">
 							<DataPath>Text7</DataPath>
 							<ReadOnly>true</ReadOnly>
 							<TitleLocation>None</TitleLocation>
 							<HorizontalAlign>Center</HorizontalAlign>
-							<TextColor>#C8C8C8</TextColor>
-							<Font ref="style:NormalTextFont" height="7" kind="StyleItem"/>
 							<ContextMenu name="Text7ContextMenu" id="112"/>
 							<ExtendedTooltip name="Text7ExtendedTooltip" id="113"/>
-						</InputField>
-						<InputField name="Text8" id="114">
+						</LabelField>
+						<LabelField name="Text8" id="114">
 							<DataPath>Text8</DataPath>
 							<ReadOnly>true</ReadOnly>
 							<TitleLocation>None</TitleLocation>
 							<HorizontalAlign>Center</HorizontalAlign>
-							<TextColor>#C8C8C8</TextColor>
-							<Font ref="style:NormalTextFont" height="7" kind="StyleItem"/>
 							<ContextMenu name="Text8ContextMenu" id="115"/>
 							<ExtendedTooltip name="Text8ExtendedTooltip" id="116"/>
-						</InputField>
-						<InputField name="Text9" id="117">
+						</LabelField>
+						<LabelField name="Text9" id="117">
 							<DataPath>Text9</DataPath>
 							<ReadOnly>true</ReadOnly>
 							<TitleLocation>None</TitleLocation>
 							<HorizontalAlign>Center</HorizontalAlign>
-							<TextColor>#C8C8C8</TextColor>
-							<Font ref="style:NormalTextFont" height="7" kind="StyleItem"/>
 							<ContextMenu name="Text9ContextMenu" id="118"/>
 							<ExtendedTooltip name="Text9ExtendedTooltip" id="119"/>
-						</InputField>
+						</LabelField>
 					</ChildItems>
 				</UsualGroup>
 				<UsualGroup name="GroupHorizontal4" id="67">
@@ -643,11 +627,7 @@
 				</v8:item>
 			</Title>
 			<Type>
-				<v8:Type>xs:string</v8:Type>
-				<v8:StringQualifiers>
-					<v8:Length>0</v8:Length>
-					<v8:AllowedLength>Variable</v8:AllowedLength>
-				</v8:StringQualifiers>
+				<v8:Type>v8ui:FormattedString</v8:Type>
 			</Type>
 		</Attribute>
 		<Attribute name="TestA" id="13">
@@ -658,7 +638,26 @@
 				</v8:item>
 			</Title>
 			<Type>
-				<v8:Type>v8ui:FormattedString</v8:Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="status1" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Status1</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
 		<ConditionalAppearance>

@@ -55,11 +55,42 @@ Function SubmitAtServer(ChassisNumber)
 	For Each Accident In BodyStructure.VT Do
 		
 		AccidentText = Accident.ReportDate + " " + Accident.Emirate;
-		AccidentArray.Add(AccidentText);
+		AccidentArray.Add(GetFormattedStringForAccident(AccidentText));
 		
 	EndDo;
 	
 	Return New Structure("Error, AccidentArray", BodyStructure.Error, AccidentArray);
+	
+EndFunction
+
+&AtClientAtServerNoContext
+Function GetFormattedStringForAccident(Text)
+
+	FormattedStringArray = Новый Массив();
+	FormattedStringArray.Add(New FormattedString(Text, New Font(, 8)));
+
+	FormattedString = New FormattedString(FormattedStringArray);
+
+	Return FormattedString;
+	
+EndFunction
+
+&AtClientAtServerNoContext
+Function GetFormattedStringForStatus(Text)
+
+	FormattedStringArray = Новый Массив();
+	FormattedStringArray.Add(New FormattedString(Text, New Font(, 8)));
+
+	FormattedString = New FormattedString(FormattedStringArray);
+
+	Return FormattedString;
+	
+EndFunction
+
+&AtServerNoContext
+Function Locale()
+
+	Return CurrentLocaleCode();
 	
 EndFunction
 
@@ -89,9 +120,16 @@ Procedure Submit(Command)
 	
 	NumberOfAccident = AccidentArray.Count();
 	
-	NoAccidentText = NStr("en = 'The number of registered accidents: 0'; ru = 'Количество зарегистрированных ДТП: 0'; ar = 'عدد الحوادث المسجلة: 0'");;
-	AccidentsFoundText = NStr("en = 'The number of registered accidents: '; ru = 'Количество зарегистрированных ДТП:'; ar = 'دد الحوادث المسجلة: 0'");;
-	Status = ?(NumberOfAccident = 0, NoAccidentText, AccidentsFoundText + NumberOfAccident);
+	//NoAccidentText = NStr("en = '*Accidents: 0'; ru = '*ДТП: 0'; ar = 'الحوادث: 0'"); 	CurrentLocaleCode = Locale();    
+	
+	//AccidentsFoundText = S.P("Accident: "+NumberOfAccident, "ДТП: "+NumberOfAccident,StrReplace("الحوادث: 5557", "5557", Format(NumberOfAccident, "L=ar; ND=10")));
+	//AccidentsFoundText = S.P("Accident: "+NumberOfAccident, "ДТП: "+NumberOfAccident, "الحااا اا ننوادث: 0");
+	//StatusText = ?(NumberOfAccident = 0, NoAccidentText, AccidentsFoundText);
+	//Status = GetFormattedStringForStatus(StatusText);
+	//Status1 = Status;
+	//Status = New FormattedString(Status1);
+	
+	Status = S.P("*Accidents: "+NumberOfAccident, "*ДТП: "+NumberOfAccident, StrReplace("الحوادث: 5557*", "5557", Format(NumberOfAccident, "L=ar; ND=10")));
 	
 	N = 1;
 	Text1 = ?(N<=NumberOfAccident, AccidentArray[N-1], "");
