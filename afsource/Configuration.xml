@@ -42,10 +42,6 @@
 					<v8:lang>ar</v8:lang>
 					<v8:content>Accident Free 3</v8:content>
 				</v8:item>
-				<v8:item>
-					<v8:lang>ar_AE</v8:lang>
-					<v8:content>Accident Free 4</v8:content>
-				</v8:item>
 			</Synonym>
 			<Comment/>
 			<NamePrefix/>
@@ -57,7 +53,7 @@
 			<ScriptVariant>English</ScriptVariant>
 			<DefaultRoles/>
 			<Vendor>Ildar Gabdrakhmanov</Vendor>
-			<Version>1.0.6</Version>
+			<Version>1.0.7</Version>
 			<UpdateCatalogAddress/>
 			<IncludeHelpInContents>false</IncludeHelpInContents>
 			<UseManagedFormInOrdinaryApplication>false</UseManagedFormInOrdinaryApplication>
@@ -158,7 +154,6 @@
 			<Language>English</Language>
 			<Language>Russian</Language>
 			<Language>Arabic</Language>
-			<Language>ArabicAR</Language>
 			<CommonModule>StringFunctionsClientServer</CommonModule>
 			<CommonModule>Serialization</CommonModule>
 			<CommonModule>HTTPServices</CommonModule>
