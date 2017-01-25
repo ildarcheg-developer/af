@@ -1,5 +1,38 @@
 ﻿
 &AtClient
+Procedure BackFromDetails(Command)
+	
+	Items.GroupVertical.Visible = False;
+	Items.GroupVerticalResult.Visible = True;
+	Items.GroupDetailsResult.Visible = False;
+
+EndProcedure
+
+&AtClient
+Procedure TextClick(Item, StandardProcessing)
+	
+	StandardProcessing = False;
+	
+	Items.GroupVertical.Visible = False;
+	Items.GroupVerticalResult.Visible = False;
+	Items.GroupDetailsResult.Visible = True;
+	
+	AccidentNumber = StrReplace(Item.Name, "Text", "");
+	AccidentNumber = Number(AccidentNumber);
+	
+	Lang = Left(CurrentSystemLanguage(), 2);
+	Column = "English";
+	Items.Details.HorizontalAlign = ItemHorizontalLocation.Left;
+	If Lang = "ar" Then
+		Column = "Arabic";	
+		Items.Details.HorizontalAlign = ItemHorizontalLocation.Right;
+	EndIf;
+
+	Details = GetDetailedHistory(AccidentNumber, Column);
+	
+EndProcedure
+
+&AtClient
 Procedure NumberAutoComplete(Item, Text, ChoiceData, DataGetParameters, Wait, StandardProcessing)
 	// Insert handler contents.
 EndProcedure
@@ -33,13 +66,74 @@ Procedure BeforeClose(Cancel, Exit, MessageText, StandardProcessing)
 	Exit(False);
 EndProcedure
 
-&AtServerNoContext
+
+&AtServer
+Function GetCaption(Name, Column, CaptionList)
+	
+	Row = CaptionList.Find(Name, "Name");
+	
+	Return Row[Column];
+	
+EndFunction
+
+&AtServer
+Function GetDetailedHistory(AccidentNumber, Column)
+	
+	//Number	ReportNumber	ReportDate	Time	AccidentType
+	//CrossingStreet	Distancefromfirstintersection	AccidientStatus	
+	//Intersection	Light	LocationType	Emirate	ReportType	Year	
+	//ServiceCenter	SpeedLimit	Street	StreetCondition	
+	//Nearto	AccidentReasons	DamegesParts
+	
+	CaptionArray = New Array;
+	CaptionArray.Add("ReportDate");
+	CaptionArray.Add("AccidentType");
+	CaptionArray.Add("Emirate");
+	CaptionArray.Add("Year");
+	CaptionArray.Add("DamegesParts");
+	
+	VT = GetFromTempStorage(VTStorageAddress);
+	CaptionList = GetFromTempStorage(CaptionStorageAddress);
+	
+	Row = VT[AccidentNumber - 1];
+	
+	DetailedText = "";
+	
+	For Each Caption In CaptionArray Do
+		
+		DetailedText = DetailedText + GetCaption(Caption, Column, CaptionList) + ":" + Row[Caption] + Chars.LF;
+		
+	EndDo;
+		
+	Return DetailedText;
+	
+EndFunction
+
+&AtServer
+Function GetShortHistory()
+	
+	VT = GetFromTempStorage(VTStorageAddress);
+	
+	AccidentArray = New Array;
+	
+	For Each Accident In VT Do
+		
+		AccidentText = Accident.ReportDate + " " + Accident.Emirate;
+		AccidentArray.Add(GetFormattedStringForAccident(AccidentText));
+		
+	EndDo;
+	
+	Return AccidentArray;
+	
+EndFunction
+
+&AtServer
 Function SubmitAtServer(ChassisNumber)
 	
 	ConnectionStructure = HTTPServices.GetHTTPRequest();
 	
 	ConnectionStructure.Request.ResourceAddress = ConnectionStructure.Request.ResourceAddress + "/?chassisnumber="+ChassisNumber+"&type=mob";
-	ConnectionStructure.Request.ResourceAddress = ConnectionStructure.Request.ResourceAddress + "&lang="+CurrentSystemLanguage()+"&l="+CurrentLanguage()+"&ls="+CurrentSystemLanguage()+"&lc="+CurrentLocaleCode();
+	ConnectionStructure.Request.ResourceAddress = ConnectionStructure.Request.ResourceAddress + "&lang="+Left(CurrentSystemLanguage(), 2)+"&l="+CurrentLanguage()+"&ls="+CurrentSystemLanguage()+"&lc="+CurrentLocaleCode();
 	
 	Response = ConnectionStructure.Connection.Get(ConnectionStructure.Request);
 	Connected = TRUE;
@@ -49,17 +143,11 @@ Function SubmitAtServer(ChassisNumber)
 	BodyAsString = Serialization.AddValueTag(BodyAsString);
 	BodyStructure = Serialization.GetDataFromString(BodyAsString);
 	Parsed = TRUE;
-
-	AccidentArray = New Array;
 	
-	For Each Accident In BodyStructure.VT Do
-		
-		AccidentText = Accident.ReportDate + " " + Accident.Emirate;
-		AccidentArray.Add(GetFormattedStringForAccident(AccidentText));
-		
-	EndDo;
+	VTStorageAddress = PutToTempStorage(BodyStructure.VT, New UUID);
+	CaptionStorageAddress = PutToTempStorage(BodyStructure.CaptionList, New UUID);
 	
-	Return New Structure("Error, AccidentArray", BodyStructure.Error, AccidentArray);
+	Return New Structure("Error, AccidentArray", BodyStructure.Error, "");
 	
 EndFunction
 
@@ -101,7 +189,8 @@ Procedure Submit(Command)
 	
 	Items.GroupVertical.Visible = False;
 	Items.GroupVerticalResult.Visible = True;
-
+	Items.GroupDetailsResult.Visible = False;
+	
 	If ValueIsFilled(Result.Error) Then
 		
 		Error = Result.Error;
@@ -113,7 +202,7 @@ Procedure Submit(Command)
 		
 		Error = "";
 		Items.Error.Visible = False;
-		AccidentArray = Result.AccidentArray;
+		AccidentArray = GetShortHistory();
 		Items.Status.Visible = True;
 		
 	EndIf;
@@ -176,6 +265,7 @@ Procedure OnCreateAtServer(Cancel, StandardProcessing)
 	
 	Items.GroupVertical.Visible = True;
 	Items.GroupVerticalResult.Visible = False;
+	Items.GroupDetailsResult.Visible = False;
 	
 	Status = "Accident free";
 	

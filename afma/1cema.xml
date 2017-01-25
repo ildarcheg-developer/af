@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<MobileApp xmlns="http://v8.1c.ru/8.3/mobile-application/app" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:bsch="http://v8.1c.ru/8.2/data/bsl" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:chm="http://v8.1c.ru/8.2/data/chart" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:dl="http://v8.1c.ru/8.2/managed-application/dynamic-list" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:mf="http://v8.1c.ru/8.3/mobile-application/form" xmlns:mxl="http://v8.1c.ru/8.2/data/spreadsheet" xmlns:role="http://v8.1c.ru/8.2/roles" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="AccidentFree" id="48070c24-aa74-44c9-9448-059a0bb76aed" formatVersion="1" containerID="03e74c40-cd87-4b00-9226-76468b1282e9" defaultLanguage="Language.English" version="1.0.7" scriptVariant="English">
+<MobileApp xmlns="http://v8.1c.ru/8.3/mobile-application/app" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:bsch="http://v8.1c.ru/8.2/data/bsl" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:chm="http://v8.1c.ru/8.2/data/chart" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:dl="http://v8.1c.ru/8.2/managed-application/dynamic-list" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:mf="http://v8.1c.ru/8.3/mobile-application/form" xmlns:mxl="http://v8.1c.ru/8.2/data/spreadsheet" xmlns:role="http://v8.1c.ru/8.2/roles" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="AccidentFree" id="48070c24-aa74-44c9-9448-059a0bb76aed" formatVersion="1" containerID="03e74c40-cd87-4b00-9226-76468b1282e9" defaultLanguage="Language.English" version="1.0.8" scriptVariant="English">
 	<synonym>
 		<v8:item>
 			<v8:lang>en</v8:lang>
@@ -1010,12 +1010,48 @@
 			</v8:item>
 		</synonym>
 		<form>
-			<mf:serverModule version="1" startAddr="82">
-				<bsch:cmdOpCode>1,2,12,12,7,16,1,2,12,12,6,16,1,2,4,16,1,3,4,16,1,3,18,51,16,1,3,4,18,20,1,1,3,3,8,8,7,18,51,18,51,18,20,1,1,3,4,18,20,1,1,3,2,12,18,20,1,1,3,3,8,4,7,18,51,18,51,18,20,1,1,3,3,18,51,16,1,2,3,16,1,22,22,22</bsch:cmdOpCode>
-				<bsch:cmdOperand>177,0,0,1,0,0,178,0,2,1,0,0,180,1,3,0,182,2,4,0,183,3,0,5,0,184,3,7,1,6,184,185,3,2,0,0,0,3,8,2,9,1,6,185,188,3,10,1,6,188,189,3,2,11,1,6,189,190,3,2,0,12,0,3,8,2,9,1,6,190,194,4,3,1,9,0,195,3,4,0,197,0,0,0</bsch:cmdOperand>
+			<mf:serverModule version="1" startAddr="433">
+				<bsch:cmdOpCode>1,3,3,3,4,18,21,5,1,16,1,3,3,13,17,45,39,1,22,1,3,18,51,16,1,3,4,18,20,1,1,3,4,18,20,1,1,3,4,18,20,1,1,3,4,18,20,1,1,3,4,18,20,1,1,3,2,18,19,5,1,16,1,3,2,18,19,5,1,16,1,3,3,3,4,25,13,16,1,3,4,16,1,48,49,3,14,16,1,3,49,16,3,15,40,3,3,16,3,8,16,1,3,3,3,3,3,18,19,5,1,24,4,24,3,3,13,24,2,12,24,16,1,39,50,3,8,16,3,8,16,1,3,17,45,39,1,22,1,3,2,18,19,5,1,16,1,3,18,51,16,1,48,49,3,14,16,1,3,49,16,3,15,40,3,3,16,3,8,16,1,3,3,12,4,24,3,12,24,16,1,3,3,18,19,5,1,18,20,1,1,39,50,3,8,16,3,8,16,1,3,17,45,39,1,22,1,3,2,18,21,5,1,16,1,3,12,12,3,12,12,4,24,3,24,4,24,16,1,3,12,12,3,12,12,4,24,18,19,5,1,4,57,24,4,24,18,19,5,1,24,4,24,18,19,5,1,24,4,24,18,19,5,1,24,16,1,3,3,12,3,12,18,21,5,1,16,1,3,7,16,1,3,3,18,21,5,1,16,1,3,2,3,18,21,5,1,16,1,3,2,3,18,21,5,1,16,1,3,7,16,1,2,3,12,18,51,18,19,5,1,16,1,2,3,12,18,51,18,19,5,1,16,1,4,3,12,4,18,51,17,45,39,1,22,1,2,12,12,7,16,1,2,12,12,6,16,1,2,12,12,6,16,1,2,4,16,1,3,4,16,1,3,18,51,16,1,3,4,18,20,1,1,3,3,8,8,7,18,51,18,51,18,20,1,1,3,4,18,20,1,1,3,2,12,18,20,1,1,3,3,8,4,7,18,51,18,51,18,20,1,1,3,3,18,51,16,1,2,3,16,1,22,22,22</bsch:cmdOpCode>
+				<bsch:cmdOperand>73,3,2,0,1,2,0,0,73,0,75,3,1,0,0,0,17,77,0,88,2,0,2,0,89,2,4,1,3,89,90,2,5,1,3,90,91,2,6,1,3,91,92,2,7,1,3,92,93,2,8,1,3,93,95,3,0,1,2,0,95,0,96,4,1,1,2,0,96,0,98,5,3,0,9,0,0,0,100,6,10,0,102,0,0,2,0,0,102,8,0,0,8,0,124,7,8,0,8,0,0,104,6,6,7,1,4,3,0,0,104,0,11,0,5,7,0,0,2,12,0,0,106,88,1,8,0,0,8,0,0,108,6,0,0,136,110,0,115,0,0,1,2,0,115,0,117,1,0,2,0,119,0,0,0,0,0,119,3,0,0,3,0,192,2,3,0,3,0,0,121,4,2,4,13,0,2,6,0,0,122,1,4,1,4,0,122,1,3,122,124,157,1,3,0,0,3,0,0,126,1,0,0,204,128,0,133,1,3,0,14,0,133,0,135,1,15,16,1,15,16,17,0,0,0,18,0,0,136,1,15,16,1,15,16,19,0,0,6,0,136,20,0,0,21,0,0,7,0,136,0,22,0,0,6,0,136,0,23,0,0,8,0,136,0,0,138,2,1,24,1,15,1,25,0,138,0,139,3,0,0,141,4,2,0,26,0,141,0,143,4,4,4,1,27,0,143,0,144,5,4,4,1,28,0,144,0,145,6,0,0,147,0,5,29,0,30,2,9,0,147,0,148,1,5,31,0,30,2,9,0,148,0,150,32,5,33,10,3,34,0,0,343,152,0,266,5,35,36,0,0,267,5,37,36,0,0,268,5,38,36,0,0,270,6,39,0,272,2,40,0,273,3,0,41,0,274,3,43,1,42,274,275,3,2,0,0,0,3,44,2,45,1,42,275,278,3,46,1,42,278,279,3,2,12,1,42,279,280,3,2,0,47,0,3,44,2,45,1,42,280,284,4,3,1,45,0,285,7,4,0,287,0,0,0</bsch:cmdOperand>
+				<bsch:constant>SFind</bsch:constant>
+				<bsch:constant>SName</bsch:constant>
+				<bsch:constant>SArray</bsch:constant>
+				<bsch:constant>SAdd</bsch:constant>
+				<bsch:constant>SReportDate</bsch:constant>
+				<bsch:constant>SAccidentType</bsch:constant>
+				<bsch:constant>SEmirate</bsch:constant>
+				<bsch:constant>SYear</bsch:constant>
+				<bsch:constant>SDamegesParts</bsch:constant>
+				<bsch:constant>N1</bsch:constant>
+				<bsch:constant>S</bsch:constant>
+				<bsch:constant>S:</bsch:constant>
+				<bsch:constant>SLF</bsch:constant>
+				<bsch:constant>S </bsch:constant>
+				<bsch:constant>SGetHTTPRequest</bsch:constant>
+				<bsch:constant>SRequest</bsch:constant>
+				<bsch:constant>SResourceAddress</bsch:constant>
+				<bsch:constant>S/?chassisnumber=</bsch:constant>
+				<bsch:constant>S&amp;type=mob</bsch:constant>
+				<bsch:constant>S&amp;lang=</bsch:constant>
+				<bsch:constant>N2</bsch:constant>
+				<bsch:constant>S&amp;l=</bsch:constant>
+				<bsch:constant>S&amp;ls=</bsch:constant>
+				<bsch:constant>S&amp;lc=</bsch:constant>
+				<bsch:constant>SConnection</bsch:constant>
+				<bsch:constant>SGet</bsch:constant>
+				<bsch:constant>SGetBodyAsString</bsch:constant>
+				<bsch:constant>SAddValueTag</bsch:constant>
+				<bsch:constant>SGetDataFromString</bsch:constant>
+				<bsch:constant>SVT</bsch:constant>
+				<bsch:constant>SUUID</bsch:constant>
+				<bsch:constant>SCaptionList</bsch:constant>
+				<bsch:constant>SError, AccidentArray</bsch:constant>
+				<bsch:constant>SError</bsch:constant>
+				<bsch:constant>SStructure</bsch:constant>
 				<bsch:constant>SGroupVertical</bsch:constant>
 				<bsch:constant>SVisible</bsch:constant>
 				<bsch:constant>SGroupVerticalResult</bsch:constant>
+				<bsch:constant>SGroupDetailsResult</bsch:constant>
 				<bsch:constant>SAccident free</bsch:constant>
 				<bsch:constant>Sdetails</bsch:constant>
 				<bsch:constant>SМассив</bsch:constant>
@@ -1024,13 +1060,61 @@
 				<bsch:constant>SШрифт</bsch:constant>
 				<bsch:constant>SФорматированнаяСтрока</bsch:constant>
 				<bsch:constant>S закончился</bsch:constant>
-				<bsch:constant>SLF</bsch:constant>
 				<bsch:constant>N5</bsch:constant>
+				<bsch:variable name="VTStorageAddress" isExternal="true"/>
+				<bsch:variable name="CaptionStorageAddress" isExternal="true"/>
+				<bsch:variable name="Chars" isExternal="true"/>
+				<bsch:variable name="HTTPServices" isExternal="true"/>
+				<bsch:variable name="Serialization" isExternal="true"/>
 				<bsch:variable name="Items" isExternal="true"/>
 				<bsch:variable name="Status" isExternal="true"/>
-				<bsch:variable name="Chars" isExternal="true"/>
 				<bsch:variable name="TestA" isExternal="true"/>
-				<bsch:procedure name="OnCreateAtServer" parametersCount="2" startAddr="0">
+				<bsch:procedure name="GetCaption" isFunction="true" parametersCount="3" startAddr="0">
+					<bsch:variable name="Name" isLocal="true" isParam="true"/>
+					<bsch:variable name="Column" isLocal="true" isParam="true"/>
+					<bsch:variable name="CaptionList" isLocal="true" isParam="true"/>
+					<bsch:variable name="Row" isLocal="true"/>
+					<bsch:paramsDefValue/>
+					<bsch:paramsDefValue/>
+					<bsch:paramsDefValue/>
+				</bsch:procedure>
+				<bsch:procedure name="GetDetailedHistory" isFunction="true" parametersCount="2" startAddr="19">
+					<bsch:variable name="AccidentNumber" isLocal="true" isParam="true"/>
+					<bsch:variable name="Column" isLocal="true" isParam="true"/>
+					<bsch:variable name="CaptionArray" isLocal="true"/>
+					<bsch:variable name="VT" isLocal="true"/>
+					<bsch:variable name="CaptionList" isLocal="true"/>
+					<bsch:variable name="Row" isLocal="true"/>
+					<bsch:variable name="DetailedText" isLocal="true"/>
+					<bsch:variable name="Caption" isLocal="true"/>
+					<bsch:variable name="0Caption" isLocal="true"/>
+					<bsch:paramsDefValue/>
+					<bsch:paramsDefValue/>
+				</bsch:procedure>
+				<bsch:procedure name="GetFromTempStorage" isFunction="true" isExternal="true" parametersCount="1" startAddr="0"/>
+				<bsch:procedure name="GetShortHistory" isFunction="true" parametersCount="0" startAddr="138">
+					<bsch:variable name="VT" isLocal="true"/>
+					<bsch:variable name="AccidentArray" isLocal="true"/>
+					<bsch:variable name="Accident" isLocal="true"/>
+					<bsch:variable name="0Accident" isLocal="true"/>
+					<bsch:variable name="AccidentText" isLocal="true"/>
+				</bsch:procedure>
+				<bsch:procedure name="GetFormattedStringForAccident" isFunction="true" isExternal="true" parametersCount="1" startAddr="0"/>
+				<bsch:procedure name="SubmitAtServer" isFunction="true" parametersCount="1" startAddr="206">
+					<bsch:variable name="ChassisNumber" isLocal="true" isParam="true"/>
+					<bsch:variable name="ConnectionStructure" isLocal="true"/>
+					<bsch:variable name="Response" isLocal="true"/>
+					<bsch:variable name="Connected" isLocal="true"/>
+					<bsch:variable name="BodyAsString" isLocal="true"/>
+					<bsch:variable name="BodyStructure" isLocal="true"/>
+					<bsch:variable name="Parsed" isLocal="true"/>
+					<bsch:paramsDefValue/>
+				</bsch:procedure>
+				<bsch:procedure name="CurrentSystemLanguage" isFunction="true" isExternal="true" parametersCount="0" startAddr="0"/>
+				<bsch:procedure name="CurrentLanguage" isFunction="true" isExternal="true" parametersCount="0" startAddr="0"/>
+				<bsch:procedure name="CurrentLocaleCode" isFunction="true" isExternal="true" parametersCount="0" startAddr="0"/>
+				<bsch:procedure name="PutToTempStorage" isFunction="true" isExternal="true" parametersCount="2" startAddr="0"/>
+				<bsch:procedure name="OnCreateAtServer" parametersCount="2" startAddr="345">
 					<bsch:variable name="Cancel" isLocal="true" isParam="true"/>
 					<bsch:variable name="StandardProcessing" isLocal="true" isParam="true"/>
 					<bsch:variable name="Наименование" isLocal="true"/>
@@ -1040,17 +1124,27 @@
 					<bsch:paramsDefValue/>
 				</bsch:procedure>
 			</mf:serverModule>
-			<mf:clientModule version="1" startAddr="446">
-				<bsch:cmdOpCode>1,22,1,22,1,22,1,2,12,12,7,16,1,2,12,12,6,16,1,22,1,22,1,3,7,16,1,6,18,19,1,1,22,1,3,2,18,19,5,1,16,1,2,12,12,6,16,1,2,12,12,7,16,1,3,12,18,19,5,1,40,1,2,3,12,16,1,2,12,12,7,16,1,3,18,51,16,1,2,12,12,6,16,39,1,2,4,16,1,2,12,12,6,16,1,3,3,12,16,1,2,12,12,7,16,1,1,3,3,18,21,5,1,16,1,2,2,4,3,24,4,3,24,4,4,3,4,110,100,18,21,5,1,16,1,3,4,16,1,2,3,3,38,40,3,3,4,25,13,39,4,16,1,2,4,2,3,18,21,5,1,24,13,12,3,3,38,16,1,3,4,16,1,2,3,3,38,40,3,3,4,25,13,39,4,16,1,2,4,2,3,18,21,5,1,24,13,12,3,3,38,16,1,3,4,16,1,2,3,3,38,40,3,3,4,25,13,39,4,16,1,2,4,2,3,18,21,5,1,24,13,12,3,3,38,16,1,3,4,16,1,2,3,3,38,40,3,3,4,25,13,39,4,16,1,2,4,2,3,18,21,5,1,24,13,12,3,3,38,16,1,3,4,16,1,2,3,3,38,40,3,3,4,25,13,39,4,16,1,2,4,2,3,18,21,5,1,24,13,12,3,3,38,16,1,3,4,16,1,2,3,3,38,40,3,3,4,25,13,39,4,16,1,2,4,2,3,18,21,5,1,24,13,12,3,3,38,16,1,3,4,16,1,2,3,3,38,40,3,3,4,25,13,39,4,16,1,2,4,2,3,18,21,5,1,24,13,12,3,3,38,16,1,3,4,16,1,2,3,3,38,40,3,3,4,25,13,39,4,16,1,2,4,2,3,18,21,5,1,24,13,12,3,3,38,16,1,3,4,16,1,2,3,3,38,40,3,3,4,25,13,39,4,16,1,2,4,2,3,18,21,5,1,24,13,12,3,3,38,16,1,22,1,22,1,22,22,22</bsch:cmdOpCode>
-				<bsch:cmdOperand>5,0,10,0,15,0,20,0,0,1,0,0,21,0,2,1,0,0,23,0,28,0,32,0,0,0,33,0,1,6,33,34,0,100,1,1,1,8,0,100,0,102,0,0,1,0,0,103,0,2,1,0,0,105,1,3,1,9,0,105,84,107,2,1,3,0,108,0,3,1,0,0,109,2,0,4,0,110,0,5,1,0,0,105,114,2,6,0,115,0,3,1,0,0,116,2,1,7,0,117,0,5,1,0,0,119,121,3,2,0,8,0,121,0,132,3,4,10,3,0,11,3,0,12,13,3,14,0,0,3,9,0,132,0,134,4,15,0,135,5,4,3,0,150,2,4,15,0,0,151,6,0,136,0,16,4,4,1,17,0,136,0,0,1,4,3,0,0,137,4,18,0,138,6,4,3,0,184,2,4,15,0,0,185,6,0,139,0,16,4,4,1,17,0,139,0,0,1,4,3,0,0,140,4,19,0,141,7,4,3,0,218,2,4,15,0,0,219,6,0,142,0,16,4,4,1,17,0,142,0,0,1,4,3,0,0,143,4,20,0,144,8,4,3,0,252,2,4,15,0,0,253,6,0,145,0,16,4,4,1,17,0,145,0,0,1,4,3,0,0,146,4,21,0,147,9,4,3,0,286,2,4,15,0,0,287,6,0,148,0,16,4,4,1,17,0,148,0,0,1,4,3,0,0,149,4,22,0,150,10,4,3,0,320,2,4,15,0,0,321,6,0,151,0,16,4,4,1,17,0,151,0,0,1,4,3,0,0,152,4,23,0,153,11,4,3,0,354,2,4,15,0,0,355,6,0,154,0,16,4,4,1,17,0,154,0,0,1,4,3,0,0,155,4,24,0,156,12,4,3,0,388,2,4,15,0,0,389,6,0,157,0,16,4,4,1,17,0,157,0,0,1,4,3,0,0,158,4,25,0,159,13,4,3,0,422,2,4,15,0,0,423,6,0,160,0,16,4,4,1,17,0,160,0,0,1,4,3,0,0,162,0,172,0,202,0,0,0</bsch:cmdOperand>
+			<mf:clientModule version="1" startAddr="558">
+				<bsch:cmdOpCode>1,2,12,12,6,16,1,2,12,12,7,16,1,2,12,12,6,16,1,22,1,3,6,16,1,2,12,12,6,16,1,2,12,12,6,16,1,2,12,12,7,16,1,3,3,12,4,4,100,16,1,3,3,70,16,1,3,18,19,5,1,4,57,16,1,3,4,16,1,2,12,12,2,12,16,1,3,4,33,40,1,3,4,16,1,2,12,12,2,12,16,39,1,1,2,3,3,18,19,5,1,16,1,22,1,22,1,22,1,22,1,2,12,12,7,16,1,2,12,12,6,16,1,22,1,22,1,3,7,16,1,6,18,19,1,1,22,1,3,2,18,19,5,1,16,1,2,12,12,6,16,1,2,12,12,7,16,1,2,12,12,6,16,1,3,12,18,19,5,1,40,1,2,3,12,16,1,2,12,12,7,16,1,3,18,51,16,1,2,12,12,6,16,39,1,2,4,16,1,2,12,12,6,16,1,3,18,19,5,1,16,1,2,12,12,7,16,1,1,3,3,18,21,5,1,16,1,2,2,4,3,24,4,3,24,4,4,3,4,110,100,18,21,5,1,16,1,3,4,16,1,2,3,3,38,40,3,3,4,25,13,39,4,16,1,2,4,2,3,18,21,5,1,24,13,12,3,3,38,16,1,3,4,16,1,2,3,3,38,40,3,3,4,25,13,39,4,16,1,2,4,2,3,18,21,5,1,24,13,12,3,3,38,16,1,3,4,16,1,2,3,3,38,40,3,3,4,25,13,39,4,16,1,2,4,2,3,18,21,5,1,24,13,12,3,3,38,16,1,3,4,16,1,2,3,3,38,40,3,3,4,25,13,39,4,16,1,2,4,2,3,18,21,5,1,24,13,12,3,3,38,16,1,3,4,16,1,2,3,3,38,40,3,3,4,25,13,39,4,16,1,2,4,2,3,18,21,5,1,24,13,12,3,3,38,16,1,3,4,16,1,2,3,3,38,40,3,3,4,25,13,39,4,16,1,2,4,2,3,18,21,5,1,24,13,12,3,3,38,16,1,3,4,16,1,2,3,3,38,40,3,3,4,25,13,39,4,16,1,2,4,2,3,18,21,5,1,24,13,12,3,3,38,16,1,3,4,16,1,2,3,3,38,40,3,3,4,25,13,39,4,16,1,2,4,2,3,18,21,5,1,24,13,12,3,3,38,16,1,3,4,16,1,2,3,3,38,40,3,3,4,25,13,39,4,16,1,2,4,2,3,18,21,5,1,24,13,12,3,3,38,16,1,22,1,22,1,22,22,22</bsch:cmdOpCode>
+				<bsch:cmdOperand>5,0,0,1,0,0,6,0,2,1,0,0,7,0,3,1,0,0,9,0,14,1,0,0,16,0,0,1,0,0,17,0,2,1,0,0,18,0,3,1,0,0,20,2,0,4,5,6,0,0,21,2,2,0,0,23,3,0,2,0,23,7,0,0,24,4,8,0,25,0,9,10,1,11,0,26,3,12,0,92,27,4,13,0,28,0,9,10,1,14,0,92,29,31,2,2,4,2,3,0,31,0,33,0,38,0,43,0,48,0,53,0,0,1,0,0,54,0,2,1,0,0,56,0,61,0,65,0,0,0,66,0,1,10,66,67,0,188,1,3,1,12,0,188,0,190,0,0,1,0,0,191,0,2,1,0,0,192,0,3,1,0,0,194,1,15,1,13,0,194,194,196,4,1,15,0,197,0,15,1,0,0,198,2,0,16,0,199,0,17,1,0,0,217,203,4,6,0,204,0,15,1,0,0,205,2,0,14,0,205,0,206,0,17,1,0,0,208,210,3,2,0,18,0,210,0,221,5,6,20,3,0,21,3,0,22,23,3,24,0,0,3,19,0,221,0,223,4,25,0,224,7,4,3,0,262,2,4,25,0,0,263,6,0,225,0,5,6,4,1,26,0,225,0,0,1,4,3,0,0,226,4,7,0,227,8,4,3,0,296,2,4,25,0,0,297,6,0,228,0,5,6,4,1,26,0,228,0,0,1,4,3,0,0,229,4,27,0,230,9,4,3,0,330,2,4,25,0,0,331,6,0,231,0,5,6,4,1,26,0,231,0,0,1,4,3,0,0,232,4,28,0,233,10,4,3,0,364,2,4,25,0,0,365,6,0,234,0,5,6,4,1,26,0,234,0,0,1,4,3,0,0,235,4,29,0,236,11,4,3,0,398,2,4,25,0,0,399,6,0,237,0,5,6,4,1,26,0,237,0,0,1,4,3,0,0,238,4,30,0,239,12,4,3,0,432,2,4,25,0,0,433,6,0,240,0,5,6,4,1,26,0,240,0,0,1,4,3,0,0,241,4,31,0,242,13,4,3,0,466,2,4,25,0,0,467,6,0,243,0,5,6,4,1,26,0,243,0,0,1,4,3,0,0,244,4,32,0,245,14,4,3,0,500,2,4,25,0,0,501,6,0,246,0,5,6,4,1,26,0,246,0,0,1,4,3,0,0,247,4,33,0,248,15,4,3,0,534,2,4,25,0,0,535,6,0,249,0,5,6,4,1,26,0,249,0,0,1,4,3,0,0,251,0,261,0,292,0,0,0</bsch:cmdOperand>
 				<bsch:constant>SGroupVertical</bsch:constant>
 				<bsch:constant>SVisible</bsch:constant>
 				<bsch:constant>SGroupVerticalResult</bsch:constant>
+				<bsch:constant>SGroupDetailsResult</bsch:constant>
+				<bsch:constant>SName</bsch:constant>
+				<bsch:constant>SText</bsch:constant>
+				<bsch:constant>S</bsch:constant>
+				<bsch:constant>N2</bsch:constant>
+				<bsch:constant>SEnglish</bsch:constant>
+				<bsch:constant>SDetails</bsch:constant>
+				<bsch:constant>SHorizontalAlign</bsch:constant>
+				<bsch:constant>SLeft</bsch:constant>
+				<bsch:constant>Sar</bsch:constant>
+				<bsch:constant>SArabic</bsch:constant>
+				<bsch:constant>SRight</bsch:constant>
 				<bsch:constant>SError</bsch:constant>
 				<bsch:constant>SArray</bsch:constant>
 				<bsch:constant>SStatus</bsch:constant>
-				<bsch:constant>S</bsch:constant>
-				<bsch:constant>SAccidentArray</bsch:constant>
 				<bsch:constant>SCount</bsch:constant>
 				<bsch:constant>SP</bsch:constant>
 				<bsch:constant>S*Accidents: </bsch:constant>
@@ -1059,9 +1153,7 @@
 				<bsch:constant>S5557</bsch:constant>
 				<bsch:constant>SL=ar; ND=10</bsch:constant>
 				<bsch:constant>N1</bsch:constant>
-				<bsch:constant>SText</bsch:constant>
 				<bsch:constant>SS</bsch:constant>
-				<bsch:constant>N2</bsch:constant>
 				<bsch:constant>N3</bsch:constant>
 				<bsch:constant>N4</bsch:constant>
 				<bsch:constant>N5</bsch:constant>
@@ -1070,6 +1162,8 @@
 				<bsch:constant>N8</bsch:constant>
 				<bsch:constant>N9</bsch:constant>
 				<bsch:variable name="Items" isExternal="true"/>
+				<bsch:variable name="ItemHorizontalLocation" isExternal="true"/>
+				<bsch:variable name="Details" isExternal="true"/>
 				<bsch:variable name="Number" isExternal="true"/>
 				<bsch:variable name="Error" isExternal="true"/>
 				<bsch:variable name="Status" isExternal="true"/>
@@ -1083,7 +1177,22 @@
 				<bsch:variable name="Text7" isExternal="true"/>
 				<bsch:variable name="Text8" isExternal="true"/>
 				<bsch:variable name="Text9" isExternal="true"/>
-				<bsch:procedure name="NumberAutoComplete" parametersCount="6" startAddr="0">
+				<bsch:procedure name="BackFromDetails" parametersCount="1" startAddr="0">
+					<bsch:variable name="Command" isLocal="true" isParam="true"/>
+					<bsch:paramsDefValue/>
+				</bsch:procedure>
+				<bsch:procedure name="TextClick" parametersCount="2" startAddr="20">
+					<bsch:variable name="Item" isLocal="true" isParam="true"/>
+					<bsch:variable name="StandardProcessing" isLocal="true" isParam="true"/>
+					<bsch:variable name="AccidentNumber" isLocal="true"/>
+					<bsch:variable name="Lang" isLocal="true"/>
+					<bsch:variable name="Column" isLocal="true"/>
+					<bsch:paramsDefValue/>
+					<bsch:paramsDefValue/>
+				</bsch:procedure>
+				<bsch:procedure name="CurrentSystemLanguage" isFunction="true" isExternal="true" parametersCount="0" startAddr="0"/>
+				<bsch:procedure name="GetDetailedHistory" isFunction="true" isExternal="true" parametersCount="2" startAddr="0"/>
+				<bsch:procedure name="NumberAutoComplete" parametersCount="6" startAddr="104">
 					<bsch:variable name="Item" isLocal="true" isParam="true"/>
 					<bsch:variable name="Text" isLocal="true" isParam="true"/>
 					<bsch:variable name="ChoiceData" isLocal="true" isParam="true"/>
@@ -1097,7 +1206,7 @@
 					<bsch:paramsDefValue/>
 					<bsch:paramsDefValue/>
 				</bsch:procedure>
-				<bsch:procedure name="NumberEditTextChange" parametersCount="3" startAddr="2">
+				<bsch:procedure name="NumberEditTextChange" parametersCount="3" startAddr="106">
 					<bsch:variable name="Item" isLocal="true" isParam="true"/>
 					<bsch:variable name="Text" isLocal="true" isParam="true"/>
 					<bsch:variable name="StandardProcessing" isLocal="true" isParam="true"/>
@@ -1105,7 +1214,7 @@
 					<bsch:paramsDefValue/>
 					<bsch:paramsDefValue/>
 				</bsch:procedure>
-				<bsch:procedure name="NumberTextEditEnd" parametersCount="5" startAddr="4">
+				<bsch:procedure name="NumberTextEditEnd" parametersCount="5" startAddr="108">
 					<bsch:variable name="Item" isLocal="true" isParam="true"/>
 					<bsch:variable name="Text" isLocal="true" isParam="true"/>
 					<bsch:variable name="ChoiceData" isLocal="true" isParam="true"/>
@@ -1117,15 +1226,15 @@
 					<bsch:paramsDefValue/>
 					<bsch:paramsDefValue/>
 				</bsch:procedure>
-				<bsch:procedure name="Back" parametersCount="1" startAddr="6">
+				<bsch:procedure name="Back" parametersCount="1" startAddr="110">
 					<bsch:variable name="Command" isLocal="true" isParam="true"/>
 					<bsch:paramsDefValue/>
 				</bsch:procedure>
-				<bsch:procedure name="OnClose" parametersCount="1" startAddr="20">
+				<bsch:procedure name="OnClose" parametersCount="1" startAddr="124">
 					<bsch:variable name="Exit" isLocal="true" isParam="true"/>
 					<bsch:paramsDefValue/>
 				</bsch:procedure>
-				<bsch:procedure name="BeforeClose" parametersCount="4" startAddr="22">
+				<bsch:procedure name="BeforeClose" parametersCount="4" startAddr="126">
 					<bsch:variable name="Cancel" isLocal="true" isParam="true"/>
 					<bsch:variable name="Exit" isLocal="true" isParam="true"/>
 					<bsch:variable name="MessageText" isLocal="true" isParam="true"/>
@@ -1136,7 +1245,7 @@
 					<bsch:paramsDefValue/>
 				</bsch:procedure>
 				<bsch:procedure name="Exit" isExternal="true" parametersCount="3" startAddr="0"/>
-				<bsch:procedure name="Submit" parametersCount="1" startAddr="33">
+				<bsch:procedure name="Submit" parametersCount="1" startAddr="137">
 					<bsch:variable name="Command" isLocal="true" isParam="true"/>
 					<bsch:variable name="Result" isLocal="true"/>
 					<bsch:variable name="AccidentArray" isLocal="true"/>
@@ -1146,11 +1255,12 @@
 				</bsch:procedure>
 				<bsch:procedure name="SubmitAtServer" isFunction="true" isExternal="true" parametersCount="1" startAddr="0"/>
 				<bsch:procedure name="ValueIsFilled" isFunction="true" isExternal="true" parametersCount="1" startAddr="0"/>
-				<bsch:procedure name="NothingToDo" parametersCount="1" startAddr="442">
+				<bsch:procedure name="GetShortHistory" isFunction="true" isExternal="true" parametersCount="0" startAddr="0"/>
+				<bsch:procedure name="NothingToDo" parametersCount="1" startAddr="554">
 					<bsch:variable name="Command" isLocal="true" isParam="true"/>
 					<bsch:paramsDefValue/>
 				</bsch:procedure>
-				<bsch:procedure name="NumberStartChoice" parametersCount="3" startAddr="444">
+				<bsch:procedure name="NumberStartChoice" parametersCount="3" startAddr="556">
 					<bsch:variable name="Item" isLocal="true" isParam="true"/>
 					<bsch:variable name="ChoiceData" isLocal="true" isParam="true"/>
 					<bsch:variable name="StandardProcessing" isLocal="true" isParam="true"/>
@@ -1160,73 +1270,33 @@
 				</bsch:procedure>
 			</mf:clientModule>
 			<mf:serverWOContextModule version="1">
-				<bsch:cmdOpCode>1,3,2,18,21,5,1,16,1,3,12,12,3,12,12,4,24,3,24,4,24,16,1,3,12,12,3,12,12,4,24,18,19,5,1,24,4,24,18,19,5,1,24,4,24,18,19,5,1,24,4,24,18,19,5,1,24,16,1,3,3,12,3,12,18,21,5,1,16,1,3,7,16,1,3,3,18,21,5,1,16,1,3,2,3,18,21,5,1,16,1,3,2,3,18,21,5,1,16,1,3,7,16,1,3,18,51,16,1,48,49,3,12,14,16,1,3,49,16,3,15,40,3,3,16,3,8,16,1,3,3,12,4,24,3,12,24,16,1,3,3,18,19,5,1,18,20,1,1,39,50,3,8,16,3,8,16,1,4,3,12,3,18,51,17,45,39,1,22,1,3,18,51,16,1,3,3,8,4,18,51,18,51,18,20,1,1,3,3,18,51,16,1,3,17,45,39,1,22,1,3,18,51,16,1,3,3,8,4,18,51,18,51,18,20,1,1,3,3,18,51,16,1,3,17,45,39,1,22,1,18,19,5,1,17,45,39,1,22,1,4,17,45,39,1,22,22</bsch:cmdOpCode>
-				<bsch:cmdOperand>39,1,0,0,0,0,39,0,41,1,1,2,1,1,2,3,0,0,0,4,0,0,42,1,1,2,1,1,2,5,0,0,1,0,42,0,6,0,0,2,0,42,0,7,0,0,1,0,42,0,8,0,0,3,0,42,0,0,44,2,1,9,1,1,1,10,0,44,0,45,3,0,0,47,4,2,0,11,0,47,0,49,4,1,4,1,12,0,49,0,50,5,1,4,1,13,0,50,0,51,6,0,0,53,7,0,14,0,55,0,0,5,15,0,0,55,9,0,0,9,0,150,8,9,0,9,0,0,57,10,8,16,17,0,8,18,0,0,58,7,10,1,4,0,58,1,19,58,60,115,1,9,0,0,9,0,0,62,20,5,21,7,3,22,0,0,167,64,0,69,1,0,23,0,70,1,0,0,24,2,25,2,26,1,19,70,72,2,1,1,26,0,74,2,0,0,197,76,0,81,1,0,23,0,82,1,0,0,24,2,25,2,26,1,19,82,84,2,1,1,26,0,86,2,0,0,227,88,0,93,0,3,0,93,0,0,237,95,0,166,27,0,0,244,167,0,0</bsch:cmdOperand>
-				<bsch:constant>SGetHTTPRequest</bsch:constant>
-				<bsch:constant>SRequest</bsch:constant>
-				<bsch:constant>SResourceAddress</bsch:constant>
-				<bsch:constant>S/?chassisnumber=</bsch:constant>
-				<bsch:constant>S&amp;type=mob</bsch:constant>
-				<bsch:constant>S&amp;lang=</bsch:constant>
-				<bsch:constant>S&amp;l=</bsch:constant>
-				<bsch:constant>S&amp;ls=</bsch:constant>
-				<bsch:constant>S&amp;lc=</bsch:constant>
-				<bsch:constant>SConnection</bsch:constant>
-				<bsch:constant>SGet</bsch:constant>
-				<bsch:constant>SGetBodyAsString</bsch:constant>
-				<bsch:constant>SAddValueTag</bsch:constant>
-				<bsch:constant>SGetDataFromString</bsch:constant>
-				<bsch:constant>SArray</bsch:constant>
-				<bsch:constant>SVT</bsch:constant>
-				<bsch:constant>SReportDate</bsch:constant>
-				<bsch:constant>S </bsch:constant>
-				<bsch:constant>SEmirate</bsch:constant>
-				<bsch:constant>SAdd</bsch:constant>
-				<bsch:constant>SError, AccidentArray</bsch:constant>
-				<bsch:constant>SError</bsch:constant>
-				<bsch:constant>SStructure</bsch:constant>
+				<bsch:cmdOpCode>1,3,18,51,16,1,3,3,8,4,18,51,18,51,18,20,1,1,3,3,18,51,16,1,3,17,45,39,1,22,1,3,18,51,16,1,3,3,8,4,18,51,18,51,18,20,1,1,3,3,18,51,16,1,3,17,45,39,1,22,1,18,19,5,1,17,45,39,1,22,1,4,17,45,39,1,22,22</bsch:cmdOpCode>
+				<bsch:cmdOperand>157,1,0,0,0,158,1,0,0,2,2,3,2,4,1,1,158,160,2,1,1,4,0,162,2,0,0,28,164,0,169,1,0,0,0,170,1,0,0,2,2,3,2,4,1,1,170,172,2,1,1,4,0,174,2,0,0,58,176,0,181,0,3,0,181,0,0,68,183,0,255,5,0,0,75,256,0,0</bsch:cmdOperand>
 				<bsch:constant>SМассив</bsch:constant>
+				<bsch:constant>SAdd</bsch:constant>
 				<bsch:constant>N8</bsch:constant>
 				<bsch:constant>SFont</bsch:constant>
 				<bsch:constant>SFormattedString</bsch:constant>
 				<bsch:constant>SAgFTS2/0iI3BTqDV67a9oKcNzVbNbptAEO61kfIOq+2llRZll//1zbJJ7MTFEbiJcsR4nSLVJgJSqYryPH2IHvpIfYUOu4uNC44aqYcyIxLm+77ZnxnWfH/7Rl6/fvx8wu8wsU3Lp4yvDE/Y3LDXKTc4Wy2NpbvkDls56doX5PTkyapv4DjGBAdFkRf4mTTP+Pn05LlNuFloFEZI0rXLuCkMn6WJYbtibXArcQ0ncbnrLz3fdWVyXt9MVt8pweHjZikKLJNcJ1Ulii2kxJhQmZgRHImHvKiO8BSIGlSJzCY+TipxTKIwJbAIXmSbLlUFFccmeJim2Upsq8W3hy63AZFClcgheFTkZZlt7+OqEKLqyBoYNbgSugSPs7JKtqlYF/lmnRVllW1BVIq0yvJtJ0/DRjUdST46FKjEnp5pBlONq6R6LPtXUuOoISipT/D0pSlMe4bjBM+y+8/ddeuorjI0wixPk1rZu7kNeLC5DJoj2GRFX5F3cU3dtURvet0SB8mhJ+5E0u04FdQkaIpYFF+zVIxEvfoOW6OogbUO+iJ+EGI1yzZZd28khDSmFdAQRzrosHGY10RG+XaV9RZK4ahF0FqocAjLq/KOpA6jOq6ZfN/wkUjKfFsefyF2BP12QrHHyUbci/IaxuoKNYg0SptDxyRwalAwBgYPxAKzwRwwF8wD88E4GLRU7Uy6Kd2Sbkt3pLvSPem+dF47zBBcnj6mGpgSdWDJQ+/yo3cxscxznzNmUpf7rRPScSj1GKXM47wVpt4ZZWcmhNtBPqBW6zkKhpERhGM0ms9m03g6D1ugYbSVrf+Ho8X0Jjhgdq4W+im8Cue34YuReDKMLoeTY6P/sYx4OAzGyEBdlU3R1eZskj8W3eSvndPBDHqWiAboJphMR7MAnUfzcEHUHxRNLyYLNAwvZoHRe4Gw3ng0C841DwZqfkfYa+ruMNNxHNNphS16Rv267s5BMwxss/U8X0yCCL2Pr4PR9Pzuw39bdOevim7+06K/tKr+YsrdjPfb2dMIssD1oQJvOXtWHyIyoLz9gXMrlpEoH79UrXFHnxP4yS71R8cAdfri9GT/vjc7dHqy74X9ru3G/A0=</bsch:constant>
-				<bsch:variable name="HTTPServices" isExternal="true"/>
-				<bsch:variable name="Serialization" isExternal="true"/>
-				<bsch:procedure name="SubmitAtServer" isFunction="true" parametersCount="1" startAddr="0">
-					<bsch:variable name="ChassisNumber" isLocal="true" isParam="true"/>
-					<bsch:variable name="ConnectionStructure" isLocal="true"/>
-					<bsch:variable name="Response" isLocal="true"/>
-					<bsch:variable name="Connected" isLocal="true"/>
-					<bsch:variable name="BodyAsString" isLocal="true"/>
-					<bsch:variable name="BodyStructure" isLocal="true"/>
-					<bsch:variable name="Parsed" isLocal="true"/>
-					<bsch:variable name="AccidentArray" isLocal="true"/>
-					<bsch:variable name="Accident" isLocal="true"/>
-					<bsch:variable name="0Accident" isLocal="true"/>
-					<bsch:variable name="AccidentText" isLocal="true"/>
+				<bsch:procedure name="GetFormattedStringForAccident" isFunction="true" parametersCount="1" startAddr="0">
+					<bsch:variable name="Text" isLocal="true" isParam="true"/>
+					<bsch:variable name="FormattedStringArray" isLocal="true"/>
+					<bsch:variable name="FormattedString" isLocal="true"/>
 					<bsch:paramsDefValue/>
 				</bsch:procedure>
-				<bsch:procedure name="CurrentSystemLanguage" isFunction="true" isExternal="true" parametersCount="0" startAddr="0"/>
-				<bsch:procedure name="CurrentLanguage" isFunction="true" isExternal="true" parametersCount="0" startAddr="0"/>
+				<bsch:procedure name="GetFormattedStringForStatus" isFunction="true" parametersCount="1" startAddr="30">
+					<bsch:variable name="Text" isLocal="true" isParam="true"/>
+					<bsch:variable name="FormattedStringArray" isLocal="true"/>
+					<bsch:variable name="FormattedString" isLocal="true"/>
+					<bsch:paramsDefValue/>
+				</bsch:procedure>
+				<bsch:procedure name="Locale" isFunction="true" parametersCount="0" startAddr="60"/>
 				<bsch:procedure name="CurrentLocaleCode" isFunction="true" isExternal="true" parametersCount="0" startAddr="0"/>
-				<bsch:procedure name="GetFormattedStringForAccident" isFunction="true" parametersCount="1" startAddr="169">
-					<bsch:variable name="Text" isLocal="true" isParam="true"/>
-					<bsch:variable name="FormattedStringArray" isLocal="true"/>
-					<bsch:variable name="FormattedString" isLocal="true"/>
-					<bsch:paramsDefValue/>
-				</bsch:procedure>
-				<bsch:procedure name="GetFormattedStringForStatus" isFunction="true" parametersCount="1" startAddr="199">
-					<bsch:variable name="Text" isLocal="true" isParam="true"/>
-					<bsch:variable name="FormattedStringArray" isLocal="true"/>
-					<bsch:variable name="FormattedString" isLocal="true"/>
-					<bsch:paramsDefValue/>
-				</bsch:procedure>
-				<bsch:procedure name="Locale" isFunction="true" parametersCount="0" startAddr="229"/>
-				<bsch:procedure name="GetBBB" isFunction="true" parametersCount="0" startAddr="239"/>
+				<bsch:procedure name="GetBBB" isFunction="true" parametersCount="0" startAddr="70"/>
 			</mf:serverWOContextModule>
 			<mf:clientServerWOContextModule version="1">
 				<bsch:cmdOpCode>1,3,18,51,16,1,3,3,8,4,18,51,18,51,18,20,1,1,3,3,18,51,16,1,3,17,45,39,1,22,1,3,18,51,16,1,3,3,8,4,18,51,18,51,18,20,1,1,3,3,18,51,16,1,3,17,45,39,1,22,22</bsch:cmdOpCode>
-				<bsch:cmdOperand>69,1,0,0,0,70,1,0,0,2,2,3,2,4,1,1,70,72,2,1,1,4,0,74,2,0,0,28,76,0,81,1,0,0,0,82,1,0,0,2,2,3,2,4,1,1,82,84,2,1,1,4,0,86,2,0,0,58,88,0,0</bsch:cmdOperand>
+				<bsch:cmdOperand>157,1,0,0,0,158,1,0,0,2,2,3,2,4,1,1,158,160,2,1,1,4,0,162,2,0,0,28,164,0,169,1,0,0,0,170,1,0,0,2,2,3,2,4,1,1,170,172,2,1,1,4,0,174,2,0,0,58,176,0,0</bsch:cmdOperand>
 				<bsch:constant>SМассив</bsch:constant>
 				<bsch:constant>SAdd</bsch:constant>
 				<bsch:constant>N8</bsch:constant>
@@ -1452,6 +1522,45 @@
 						</v8:StringQualifiers>
 					</mf:type>
 				</mf:attribute>
+				<mf:attribute name="VTStorageAddress">
+					<mf:title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>VTStorage address</v8:content>
+						</v8:item>
+					</mf:title>
+					<mf:type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</mf:type>
+				</mf:attribute>
+				<mf:attribute name="Details">
+					<mf:type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</mf:type>
+				</mf:attribute>
+				<mf:attribute name="CaptionStorageAddress">
+					<mf:title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>VTStorage address</v8:content>
+						</v8:item>
+					</mf:title>
+					<mf:type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</mf:type>
+				</mf:attribute>
 				<mf:conditionalAppearance>
 					<dcsset:item>
 						<dcsset:selection/>
@@ -1521,6 +1630,21 @@
 					<v8:item>
 						<v8:lang>en</v8:lang>
 						<v8:content>Back</v8:content>
+					</v8:item>
+				</mf:tooltip>
+			</mf:command>
+			<mf:command name="BackFromDetails">
+				<mf:title>
+					<v8:item>
+						<v8:lang>en</v8:lang>
+						<v8:content>Back from details</v8:content>
+					</v8:item>
+				</mf:title>
+				<mf:handlerName>BackFromDetails</mf:handlerName>
+				<mf:tooltip>
+					<v8:item>
+						<v8:lang>en</v8:lang>
+						<v8:content>Back from details</v8:content>
 					</v8:item>
 				</mf:tooltip>
 			</mf:command>
@@ -1798,48 +1922,74 @@
 						</mf:field>
 						<mf:field name="Text1" kind="LabelField" dataPath="Text1">
 							<mf:titleLocation>None</mf:titleLocation>
-							<mf:readOnly>true</mf:readOnly>
 							<mf:horizontalAlign>Center</mf:horizontalAlign>
+							<mf:textData hyperlink="true">
+								<mf:event handler="TextClick" name="Click"/>
+							</mf:textData>
 						</mf:field>
 						<mf:field name="Text2" kind="LabelField" dataPath="Text2">
 							<mf:titleLocation>None</mf:titleLocation>
 							<mf:readOnly>true</mf:readOnly>
 							<mf:horizontalAlign>Center</mf:horizontalAlign>
+							<mf:textData hyperlink="true">
+								<mf:event handler="TextClick" name="Click"/>
+							</mf:textData>
 						</mf:field>
 						<mf:field name="Text3" kind="LabelField" dataPath="Text3">
 							<mf:titleLocation>None</mf:titleLocation>
 							<mf:readOnly>true</mf:readOnly>
 							<mf:horizontalAlign>Center</mf:horizontalAlign>
+							<mf:textData hyperlink="true">
+								<mf:event handler="TextClick" name="Click"/>
+							</mf:textData>
 						</mf:field>
 						<mf:field name="Text4" kind="LabelField" dataPath="Text4">
 							<mf:titleLocation>None</mf:titleLocation>
 							<mf:readOnly>true</mf:readOnly>
 							<mf:horizontalAlign>Center</mf:horizontalAlign>
+							<mf:textData hyperlink="true">
+								<mf:event handler="TextClick" name="Click"/>
+							</mf:textData>
 						</mf:field>
 						<mf:field name="Text5" kind="LabelField" dataPath="Text5">
 							<mf:titleLocation>None</mf:titleLocation>
 							<mf:readOnly>true</mf:readOnly>
 							<mf:horizontalAlign>Center</mf:horizontalAlign>
+							<mf:textData hyperlink="true">
+								<mf:event handler="TextClick" name="Click"/>
+							</mf:textData>
 						</mf:field>
 						<mf:field name="Text6" kind="LabelField" dataPath="Text6">
 							<mf:titleLocation>None</mf:titleLocation>
 							<mf:readOnly>true</mf:readOnly>
 							<mf:horizontalAlign>Center</mf:horizontalAlign>
+							<mf:textData hyperlink="true">
+								<mf:event handler="TextClick" name="Click"/>
+							</mf:textData>
 						</mf:field>
 						<mf:field name="Text7" kind="LabelField" dataPath="Text7">
 							<mf:titleLocation>None</mf:titleLocation>
 							<mf:readOnly>true</mf:readOnly>
 							<mf:horizontalAlign>Center</mf:horizontalAlign>
+							<mf:textData hyperlink="true">
+								<mf:event handler="TextClick" name="Click"/>
+							</mf:textData>
 						</mf:field>
 						<mf:field name="Text8" kind="LabelField" dataPath="Text8">
 							<mf:titleLocation>None</mf:titleLocation>
 							<mf:readOnly>true</mf:readOnly>
 							<mf:horizontalAlign>Center</mf:horizontalAlign>
+							<mf:textData hyperlink="true">
+								<mf:event handler="TextClick" name="Click"/>
+							</mf:textData>
 						</mf:field>
 						<mf:field name="Text9" kind="LabelField" dataPath="Text9">
 							<mf:titleLocation>None</mf:titleLocation>
 							<mf:readOnly>true</mf:readOnly>
 							<mf:horizontalAlign>Center</mf:horizontalAlign>
+							<mf:textData hyperlink="true">
+								<mf:event handler="TextClick" name="Click"/>
+							</mf:textData>
 						</mf:field>
 					</mf:group>
 					<mf:group name="GroupHorizontal4" type="UsualGroup">
@@ -1884,6 +2034,108 @@
 						</mf:decoration>
 					</mf:group>
 					<mf:decoration name="Decoration12" type="Label">
+						<mf:verticalStretch>true</mf:verticalStretch>
+					</mf:decoration>
+				</mf:group>
+				<mf:group name="GroupDetailsResult" type="UsualGroup">
+					<mf:title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Group details result</v8:content>
+						</v8:item>
+					</mf:title>
+					<mf:tooltip>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Group details result</v8:content>
+						</v8:item>
+					</mf:tooltip>
+					<mf:usualData group="Vertical" representation="None">
+						<mf:showTitle>false</mf:showTitle>
+					</mf:usualData>
+					<mf:decoration name="Decoration15" type="Label">
+						<mf:verticalStretch>true</mf:verticalStretch>
+					</mf:decoration>
+					<mf:group name="GroupHorizontal7" type="UsualGroup">
+						<mf:title>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Group horizontal</v8:content>
+							</v8:item>
+						</mf:title>
+						<mf:tooltip>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Group horizontal</v8:content>
+							</v8:item>
+						</mf:tooltip>
+						<mf:usualData group="Horizontal" representation="None">
+							<mf:showTitle>false</mf:showTitle>
+						</mf:usualData>
+						<mf:decoration name="Decoration19" type="Label">
+							<mf:horizontalStretch>true</mf:horizontalStretch>
+						</mf:decoration>
+						<mf:field name="Number3" kind="InputField" dataPath="Number">
+							<mf:titleLocation>None</mf:titleLocation>
+							<mf:readOnly>true</mf:readOnly>
+							<mf:horizontalAlign>Center</mf:horizontalAlign>
+							<mf:inputData>
+								<mf:font ref="style:NormalTextFont" height="11" kind="StyleItem" scale="100"/>
+							</mf:inputData>
+						</mf:field>
+						<mf:decoration name="Decoration20" type="Label">
+							<mf:horizontalStretch>true</mf:horizontalStretch>
+						</mf:decoration>
+					</mf:group>
+					<mf:field name="Details" kind="InputField" dataPath="Details">
+						<mf:titleLocation>None</mf:titleLocation>
+						<mf:readOnly>true</mf:readOnly>
+						<mf:inputData>
+							<mf:multiLine>true</mf:multiLine>
+						</mf:inputData>
+					</mf:field>
+					<mf:group name="GroupHorizontal6" type="UsualGroup">
+						<mf:title>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Group horizontal</v8:content>
+							</v8:item>
+						</mf:title>
+						<mf:tooltip>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Group horizontal</v8:content>
+							</v8:item>
+						</mf:tooltip>
+						<mf:usualData group="Horizontal" representation="None">
+							<mf:showTitle>false</mf:showTitle>
+						</mf:usualData>
+						<mf:decoration name="Decoration17" type="Label">
+							<mf:horizontalStretch>true</mf:horizontalStretch>
+						</mf:decoration>
+						<mf:button name="BackFromDetails" type="UsualButton" commandName="Form.Command.BackFromDetails">
+							<mf:title>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Back</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Назад</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ar</v8:lang>
+									<v8:content>رجع</v8:content>
+								</v8:item>
+							</mf:title>
+							<mf:textColor>style:FormTextColor</mf:textColor>
+							<mf:font ref="style:NormalTextFont" height="11" kind="StyleItem"/>
+						</mf:button>
+						<mf:decoration name="Decoration18" type="Label">
+							<mf:horizontalStretch>true</mf:horizontalStretch>
+						</mf:decoration>
+					</mf:group>
+					<mf:decoration name="Decoration16" type="Label">
 						<mf:verticalStretch>true</mf:verticalStretch>
 					</mf:decoration>
 				</mf:group>
