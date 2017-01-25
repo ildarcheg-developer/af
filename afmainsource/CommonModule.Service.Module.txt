@@ -14,70 +14,161 @@ Function GetR()
 	
 EndFunction
 
-Function GetCaptionList()
+Function GetCaptionList() Export
 	
-	Array = New Array;
-	Array.Add("Report Number");
-	Array.Add("Report Date");
-	Array.Add("Time");
-	Array.Add("Accident Type");
-	Array.Add("Crossing Street");
-	Array.Add("Distance from first intersection");
-	Array.Add("Accidient Status");
-	Array.Add("Intersection");
-	Array.Add("Light");
-	Array.Add("Location Type");
-	Array.Add("Emirate");
-	Array.Add("Report Type");
-	Array.Add("Year");
-	Array.Add("Service Center");
-	Array.Add("Speed Limit");
-	Array.Add("Street");
-	Array.Add("Street Condition");
-	Array.Add("Near to");
-	Array.Add("Accident Reasons");
-	Array.Add("Dameges Parts");
+	VT = New ValueTable;
+	VT.Columns.Add("Name");
+	VT.Columns.Add("English");
+	VT.Columns.Add("Arabic");
 	
-	Return Array;
+	NewRow = VT.Add();
+	NewRow.Name = "ReportNumber";
+	NewRow.English = ("Report Number");
+	NewRow.Arabic = ("رقم التقرير");
+	
+	NewRow = VT.Add();
+	NewRow.Name = "ReportDate";
+	NewRow.English = ("Report Date");
+	NewRow.Arabic = ("تاريغ التقرير");
+	
+	NewRow = VT.Add();
+	NewRow.Name = "Time";
+	NewRow.English = ("Time");
+	NewRow.Arabic = ("الوقت");
+	
+	NewRow = VT.Add();
+	NewRow.Name = "AccidentType";
+	NewRow.English = ("Accident Type");
+	NewRow.Arabic = ("نوع الحادث");
+	
+	NewRow = VT.Add();
+	NewRow.Name = "CrossingStreet";
+	NewRow.English = ("Crossing Street");
+	NewRow.Arabic = ("الشارع المقابل");
+	
+	NewRow = VT.Add();
+	NewRow.Name = "Distancefromfirstintersection";
+	NewRow.English = ("Distance from first intersection");
+	NewRow.Arabic = ("المسافة من اول تقاطع");
+	
+	NewRow = VT.Add();
+	NewRow.Name = "AccidientStatus";
+	NewRow.English = ("Accidient Status");
+	NewRow.Arabic = ("حالة الحادث");
+	
+	NewRow = VT.Add();
+	NewRow.Name = "Intersection";
+	NewRow.English = ("Intersection");
+	NewRow.Arabic = ("التقاطع");
+	
+	NewRow = VT.Add();
+	NewRow.Name = "Light";
+	NewRow.English = ("Light");
+	NewRow.Arabic = ("الإضاءة");
+	
+	NewRow = VT.Add();
+	NewRow.Name = "LocationType";
+	NewRow.English = ("Location Type");
+	NewRow.Arabic = ("نوع المنطقة");
+	
+	NewRow = VT.Add();
+	NewRow.Name = "Emirate";
+	NewRow.English = ("Emirate");
+	NewRow.Arabic = ("الإمارة");
+	
+	NewRow = VT.Add();
+	NewRow.Name = "ReportType";
+	NewRow.English = ("Report Type");
+	NewRow.Arabic = ("نوع التقرير");
+	
+	NewRow = VT.Add();
+	NewRow.Name = "Year";
+	NewRow.English = ("Year");
+	NewRow.Arabic = ("السنة");
+	
+	NewRow = VT.Add();
+	NewRow.Name = "ServiceCenter";
+	NewRow.English = ("Service Center");
+	NewRow.Arabic = ("مركز الخدمة");
+	
+	NewRow = VT.Add();
+	NewRow.Name = "SpeedLimit";
+	NewRow.English = ("Speed Limit");
+	NewRow.Arabic = ("حد السرعة");
+	
+	NewRow = VT.Add();
+	NewRow.Name = "Street";
+	NewRow.English = ("Street");
+	NewRow.Arabic = ("الشارع");
+	
+	NewRow = VT.Add();
+	NewRow.Name = "StreetCondition";
+	NewRow.English = ("Street Condition");
+	NewRow.Arabic = ("ظروف خاصة للشارع");
+	
+	NewRow = VT.Add();
+	NewRow.Name = "Nearto";
+	NewRow.English = ("Near to");
+	NewRow.Arabic = ("المكان بالقرب من");
+	
+	NewRow = VT.Add();
+	NewRow.Name = "AccidentReasons";
+	NewRow.English = ("Accident Reasons");
+	NewRow.Arabic = ("سبب الحادث");
+	
+	NewRow = VT.Add();
+	NewRow.Name = "DamegesParts";
+	NewRow.English = ("Dameges Parts");
+	NewRow.Arabic = ("الأجزاء المتضررة");
+	
+	Return VT;
 	
 EndFunction
 
-Function GetHistory(Number, RequestDate, Timer) Export
+Function GetCaption(VT, Name, Column = "English")
+
+	Row = VT.Find(Name, Column);
+	
+	Return ?(Row = Undefined, Row, Row.Name);
+	
+EndFunction
+
+Function GetHistory(Number, Lang, RequestDate) Export
 		
 	// links request
 	ExitCode = Undefined;
-	SrtingApp = """" + GetR() + """ " + GetWD() + "\templateScript.R " + Number;
+	If Lang = "ar" Then
+		SrtingApp = """" + GetR() + """ " + GetWD() + "\templateScriptAR.R " + Number;
+		Language = "Arabic";
+	Else 
+		SrtingApp = """" + GetR() + """ " + GetWD() + "\templateScript.R " + Number;
+		Language = "English";
+	EndIf;
+
 	WriteLogEvent("GetHistory", EventLogLevel.Information, , , Number + Chars.LF + "Starting script R: " + SrtingApp);
-	
-	Timer.Time.Add(CurrentDate()-Timer.LastTime);
-	Timer.LastTime = CurrentDate();
-	Timer.Stage.Add("Begin R script");
-	
+		
 	RunApp(SrtingApp, , True, ExitCode);
 	
 	WriteLogEvent("GetHistory", EventLogLevel.Information, , , Number + Chars.LF + "Internal script");
+	
 	Files = FindFiles(GetWD(), Number + "_history_*");
+	
+	CaptionList = GetCaptionList();
 	
 	VT = New ValueTable;
 	VT.Columns.Add("Number");
-	CaptionArray = GetCaptionList();
 	
-	For Each Caption In CaptionArray Do
+	For Each Caption In CaptionList Do
 		
-		VT.Columns.Add(StrReplace(Caption, " ", ""), , Caption);
+		VT.Columns.Add(Caption.Name);
 
 	EndDo;
 	
-	Timer.Time.Add(CurrentDate()-Timer.LastTime);
-	Timer.LastTime = CurrentDate();
-	Timer.Stage.Add("Begin file reading");
-
 	For Each File In Files Do
 		
 		TextDocument = New TextDocument;
-		TextDocument.Read(File.FullName);
+		TextDocument.Read(File.FullName, "windows-1256");
 		Text = TextDocument.GetText();
-		
 		
 		Array = StringFunctionsClientServer.SplitStringIntoSubstringArray(Text, Chars.LF);
 		NewLine = VT.Add();
@@ -95,9 +186,11 @@ Function GetHistory(Number, RequestDate, Timer) Export
 				
 			EndIf;
 			
-			If Not CaptionArray.Find(ArrayCaprion[1]) = Undefined Then
+			Column = GetCaption(CaptionList, ArrayCaprion[1], Language);
+			
+			If Not Column = Undefined Then
 				
-				NewLine[StrReplace(ArrayCaprion[1], " ", "")] = ArrayCaprion[2];
+				NewLine[Column] = ArrayCaprion[2];
 				
 			EndIf;
 						
@@ -107,10 +200,6 @@ Function GetHistory(Number, RequestDate, Timer) Export
 		
 	EndDo;
 	
-	Timer.Time.Add(CurrentDate()-Timer.LastTime);
-	Timer.LastTime = CurrentDate();
-	Timer.Stage.Add("Begin table packing");
-
 	LogFileName = GetWD() + "\log\" + Number + "_" + Format(RequestDate, "DF=yyyyMMddHHmmss") + "_" + TrimAll(New UUID()) + ".txt";
 	ValueToFile(LogFileName, VT);
 	

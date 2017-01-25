@@ -39,6 +39,7 @@ Function SubmitAtServer(ChassisNumber)
 	ConnectionStructure = HTTPServices.GetHTTPRequest();
 	
 	ConnectionStructure.Request.ResourceAddress = ConnectionStructure.Request.ResourceAddress + "/?chassisnumber="+ChassisNumber+"&type=mob";
+	ConnectionStructure.Request.ResourceAddress = ConnectionStructure.Request.ResourceAddress + "&lang="+CurrentSystemLanguage()+"&l="+CurrentLanguage()+"&ls="+CurrentSystemLanguage()+"&lc="+CurrentLocaleCode();
 	
 	Response = ConnectionStructure.Connection.Get(ConnectionStructure.Request);
 	Connected = TRUE;
@@ -87,35 +88,38 @@ Procedure Submit(Command)
 	EndIf;
 	
 	NumberOfAccident = AccidentArray.Count();
-	Status = ?(NumberOfAccident = 0, "Accident Free", "Accidents found");
+	
+	NoAccidentText = NStr("en = 'The number of registered accidents: 0'; ru = 'Количество зарегистрированных ДТП: 0'; ar = 'عدد الحوادث المسجلة: 0'");;
+	AccidentsFoundText = NStr("en = 'The number of registered accidents: '; ru = 'Количество зарегистрированных ДТП:'; ar = 'دد الحوادث المسجلة: 0'");;
+	Status = ?(NumberOfAccident = 0, NoAccidentText, AccidentsFoundText + NumberOfAccident);
 	
 	N = 1;
 	Text1 = ?(N<=NumberOfAccident, AccidentArray[N-1], "");
-	Items["Text"+N].Visible = N<=NumberOfAccident;
+	Items["Text"+S.S(N)].Visible = N<=NumberOfAccident;
 	N = 2;
 	Text2 = ?(N<=NumberOfAccident, AccidentArray[N-1], "");
-	Items["Text"+N].Visible = N<=NumberOfAccident;
+	Items["Text"+S.S(N)].Visible = N<=NumberOfAccident;
 	N = 3;
 	Text3 = ?(N<=NumberOfAccident, AccidentArray[N-1], "");
-	Items["Text"+N].Visible = N<=NumberOfAccident;
+	Items["Text"+S.S(N)].Visible = N<=NumberOfAccident;
 	N = 4;
 	Text4 = ?(N<=NumberOfAccident, AccidentArray[N-1], "");
-	Items["Text"+N].Visible = N<=NumberOfAccident;
+	Items["Text"+S.S(N)].Visible = N<=NumberOfAccident;
 	N = 5;
 	Text5 = ?(N<=NumberOfAccident, AccidentArray[N-1], "");
-	Items["Text"+N].Visible = N<=NumberOfAccident;
+	Items["Text"+S.S(N)].Visible = N<=NumberOfAccident;
 	N = 6;
 	Text6 = ?(N<=NumberOfAccident, AccidentArray[N-1], "");
-	Items["Text"+N].Visible = N<=NumberOfAccident;
+	Items["Text"+S.S(N)].Visible = N<=NumberOfAccident;
 	N = 7;
 	Text7 = ?(N<=NumberOfAccident, AccidentArray[N-1], "");
-	Items["Text"+N].Visible = N<=NumberOfAccident;
+	Items["Text"+S.S(N)].Visible = N<=NumberOfAccident;
 	N = 8;
 	Text8 = ?(N<=NumberOfAccident, AccidentArray[N-1], "");
-	Items["Text"+N].Visible = N<=NumberOfAccident;
+	Items["Text"+S.S(N)].Visible = N<=NumberOfAccident;
 	N = 9;
 	Text9 = ?(N<=NumberOfAccident, AccidentArray[N-1], "");
-	Items["Text"+N].Visible = N<=NumberOfAccident;
+	Items["Text"+S.S(N)].Visible = N<=NumberOfAccident;
 	
 EndProcedure
 
@@ -136,7 +140,22 @@ Procedure OnCreateAtServer(Cancel, StandardProcessing)
 	Items.GroupVerticalResult.Visible = False;
 	
 	Status = "Accident free";
+	
+	Наименование = "details";
+	А = Новый Массив();
+	А.Добавить("Товар ");
+	А.Добавить(Новый ФорматированнаяСтрока(
+	Наименование,
+	Новый Шрифт(,,Истина)));
+	А.Добавить(" закончился");
+	А.Добавить(Chars.LF);
+	А.Добавить(Новый ФорматированнаяСтрока(
+	Наименование,
+	Новый Шрифт(,5,Истина)));
 
+	Стр = Новый ФорматированнаяСтрока(А);
+	TestA = Стр;
+	//Items.FormClose.Title = NStr("en = 'En1'; ru = 'Ru1'; ar = 'Ar1'");
 EndProcedure    
 
 &AtClient

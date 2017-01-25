@@ -1,0 +1,5 @@
+﻿Function S(Number) Export
+	
+	Return Format(Number, "L=en_US; ND=10");
+	
+EndFunction

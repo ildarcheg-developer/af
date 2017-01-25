@@ -158,6 +158,7 @@
 			<CommonModule>Serialization</CommonModule>
 			<CommonModule>HTTPServices</CommonModule>
 			<CommonModule>CommonUseServerCall</CommonModule>
+			<CommonModule>S</CommonModule>
 			<Constant>ServerExchangeLogin</Constant>
 			<Constant>ServerExchangePassword</Constant>
 			<Constant>ServerExchangeAddress</Constant>

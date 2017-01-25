@@ -11,18 +11,33 @@
 		</v8:item>
 		<v8:item>
 			<v8:lang>ar</v8:lang>
-			<v8:content>Accident Free</v8:content>
+			<v8:content>خالية من الحوادث</v8:content>
 		</v8:item>
 	</Title>
 	<WindowOpeningMode>LockWholeInterface</WindowOpeningMode>
 	<AutoTitle>false</AutoTitle>
-	<CommandBarLocation>None</CommandBarLocation>
+	<CommandBarLocation>Top</CommandBarLocation>
 	<AutoCommandBar name="FormCommandBar" id="-1">
 		<ChildItems>
-			<Button name="FormClose" id="20">
+			<Button name="FormClose" id="123">
 				<Type>CommandBarButton</Type>
+				<Representation>Text</Representation>
 				<CommandName>Form.StandardCommand.Close</CommandName>
-				<ExtendedTooltip name="FormCloseExtendedTooltip" id="21"/>
+				<Title>
+					<v8:item>
+						<v8:lang>en</v8:lang>
+						<v8:content>Close</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Закрыть</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>ar</v8:lang>
+						<v8:content>أغلق</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="FormCloseExtendedTooltip" id="124"/>
 			</Button>
 		</ChildItems>
 	</AutoCommandBar>
@@ -83,8 +98,7 @@
 							<TitleLocation>None</TitleLocation>
 							<HorizontalAlign>Center</HorizontalAlign>
 							<TextColor>#C8C8C8</TextColor>
-							<Font ref="style:NormalTextFont" height="11" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
-							<AutoCapitalizationOnTextInput>AllCharacters</AutoCapitalizationOnTextInput>
+							<Font ref="style:NormalTextFont" height="11" kind="StyleItem" scale="100"/>
 							<InputHint>
 								<v8:item>
 									<v8:lang>en</v8:lang>
@@ -92,11 +106,11 @@
 								</v8:item>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Chassis Number</v8:content>
+									<v8:content>VIN Номер</v8:content>
 								</v8:item>
 								<v8:item>
 									<v8:lang>ar</v8:lang>
-									<v8:content>Chassis Number</v8:content>
+									<v8:content>رقم الشاسي</v8:content>
 								</v8:item>
 							</InputHint>
 							<ContextMenu name="NumberContextMenu" id="15"/>
@@ -142,7 +156,21 @@
 							<Type>UsualButton</Type>
 							<CommandName>Form.Command.Submit</CommandName>
 							<TextColor>style:FormTextColor</TextColor>
-							<Font ref="style:NormalTextFont" height="11" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+							<Font ref="style:NormalTextFont" height="11" kind="StyleItem"/>
+							<Title>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Submit</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Отправить</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ar</v8:lang>
+									<v8:content>إستعلام</v8:content>
+								</v8:item>
+							</Title>
 							<ExtendedTooltip name="SubmitExtendedTooltip" id="34"/>
 						</Button>
 						<LabelDecoration name="Decoration6" id="30">
@@ -210,7 +238,7 @@
 							<ReadOnly>true</ReadOnly>
 							<TitleLocation>None</TitleLocation>
 							<HorizontalAlign>Center</HorizontalAlign>
-							<Font ref="style:NormalTextFont" height="11" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+							<Font ref="style:NormalTextFont" height="11" kind="StyleItem" scale="100"/>
 							<ContextMenu name="Number2ContextMenu" id="65"/>
 							<ExtendedTooltip name="Number2ExtendedTooltip" id="66"/>
 						</InputField>
@@ -250,7 +278,7 @@
 							<TitleLocation>None</TitleLocation>
 							<HorizontalAlign>Center</HorizontalAlign>
 							<TextColor>#C8C8C8</TextColor>
-							<Font ref="style:NormalTextFont" height="11" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+							<Font ref="style:NormalTextFont" height="11" kind="StyleItem" scale="100"/>
 							<ContextMenu name="StatusContextMenu" id="46"/>
 							<ExtendedTooltip name="StatusExtendedTooltip" id="47"/>
 						</InputField>
@@ -296,7 +324,7 @@
 							<TitleLocation>None</TitleLocation>
 							<HorizontalAlign>Center</HorizontalAlign>
 							<TextColor>#C8C8C8</TextColor>
-							<Font ref="style:NormalTextFont" height="9" kind="StyleItem"/>
+							<Font ref="style:NormalTextFont" height="7" kind="StyleItem"/>
 							<ContextMenu name="Text1ContextMenu" id="94"/>
 							<ExtendedTooltip name="Text1ExtendedTooltip" id="95"/>
 						</InputField>
@@ -306,7 +334,7 @@
 							<TitleLocation>None</TitleLocation>
 							<HorizontalAlign>Center</HorizontalAlign>
 							<TextColor>#C8C8C8</TextColor>
-							<Font ref="style:NormalTextFont" height="9" kind="StyleItem"/>
+							<Font ref="style:NormalTextFont" height="7" kind="StyleItem"/>
 							<ContextMenu name="Text2ContextMenu" id="97"/>
 							<ExtendedTooltip name="Text2ExtendedTooltip" id="98"/>
 						</InputField>
@@ -316,7 +344,7 @@
 							<TitleLocation>None</TitleLocation>
 							<HorizontalAlign>Center</HorizontalAlign>
 							<TextColor>#C8C8C8</TextColor>
-							<Font ref="style:NormalTextFont" height="9" kind="StyleItem"/>
+							<Font ref="style:NormalTextFont" height="7" kind="StyleItem"/>
 							<ContextMenu name="Text3ContextMenu" id="100"/>
 							<ExtendedTooltip name="Text3ExtendedTooltip" id="101"/>
 						</InputField>
@@ -326,7 +354,7 @@
 							<TitleLocation>None</TitleLocation>
 							<HorizontalAlign>Center</HorizontalAlign>
 							<TextColor>#C8C8C8</TextColor>
-							<Font ref="style:NormalTextFont" height="9" kind="StyleItem"/>
+							<Font ref="style:NormalTextFont" height="7" kind="StyleItem"/>
 							<ContextMenu name="Text4ContextMenu" id="103"/>
 							<ExtendedTooltip name="Text4ExtendedTooltip" id="104"/>
 						</InputField>
@@ -336,7 +364,7 @@
 							<TitleLocation>None</TitleLocation>
 							<HorizontalAlign>Center</HorizontalAlign>
 							<TextColor>#C8C8C8</TextColor>
-							<Font ref="style:NormalTextFont" height="9" kind="StyleItem"/>
+							<Font ref="style:NormalTextFont" height="7" kind="StyleItem"/>
 							<ContextMenu name="Text5ContextMenu" id="106"/>
 							<ExtendedTooltip name="Text5ExtendedTooltip" id="107"/>
 						</InputField>
@@ -346,7 +374,7 @@
 							<TitleLocation>None</TitleLocation>
 							<HorizontalAlign>Center</HorizontalAlign>
 							<TextColor>#C8C8C8</TextColor>
-							<Font ref="style:NormalTextFont" height="9" kind="StyleItem"/>
+							<Font ref="style:NormalTextFont" height="7" kind="StyleItem"/>
 							<ContextMenu name="Text6ContextMenu" id="109"/>
 							<ExtendedTooltip name="Text6ExtendedTooltip" id="110"/>
 						</InputField>
@@ -356,7 +384,7 @@
 							<TitleLocation>None</TitleLocation>
 							<HorizontalAlign>Center</HorizontalAlign>
 							<TextColor>#C8C8C8</TextColor>
-							<Font ref="style:NormalTextFont" height="9" kind="StyleItem"/>
+							<Font ref="style:NormalTextFont" height="7" kind="StyleItem"/>
 							<ContextMenu name="Text7ContextMenu" id="112"/>
 							<ExtendedTooltip name="Text7ExtendedTooltip" id="113"/>
 						</InputField>
@@ -366,7 +394,7 @@
 							<TitleLocation>None</TitleLocation>
 							<HorizontalAlign>Center</HorizontalAlign>
 							<TextColor>#C8C8C8</TextColor>
-							<Font ref="style:NormalTextFont" height="9" kind="StyleItem"/>
+							<Font ref="style:NormalTextFont" height="7" kind="StyleItem"/>
 							<ContextMenu name="Text8ContextMenu" id="115"/>
 							<ExtendedTooltip name="Text8ExtendedTooltip" id="116"/>
 						</InputField>
@@ -376,7 +404,7 @@
 							<TitleLocation>None</TitleLocation>
 							<HorizontalAlign>Center</HorizontalAlign>
 							<TextColor>#C8C8C8</TextColor>
-							<Font ref="style:NormalTextFont" height="9" kind="StyleItem"/>
+							<Font ref="style:NormalTextFont" height="7" kind="StyleItem"/>
 							<ContextMenu name="Text9ContextMenu" id="118"/>
 							<ExtendedTooltip name="Text9ExtendedTooltip" id="119"/>
 						</InputField>
@@ -409,7 +437,21 @@
 							<Type>UsualButton</Type>
 							<CommandName>Form.Command.Back</CommandName>
 							<TextColor>style:FormTextColor</TextColor>
-							<Font ref="style:NormalTextFont" height="11" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+							<Font ref="style:NormalTextFont" height="11" kind="StyleItem"/>
+							<Title>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Back</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Назад</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ar</v8:lang>
+									<v8:content>رجع</v8:content>
+								</v8:item>
+							</Title>
 							<ExtendedTooltip name="BackExtendedTooltip" id="81"/>
 						</Button>
 						<LabelDecoration name="Decoration14" id="75">
@@ -606,6 +648,17 @@
 					<v8:Length>0</v8:Length>
 					<v8:AllowedLength>Variable</v8:AllowedLength>
 				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="TestA" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Test A</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8ui:FormattedString</v8:Type>
 			</Type>
 		</Attribute>
 		<ConditionalAppearance>
