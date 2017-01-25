@@ -6,10 +6,11 @@ EndFunction
 
 Function P(English, Russian, Arabic) Export
 	
-	PString = "en = '%English'; ru = '%Russian'; ar = '%Arabic'";
+	PString = "en = '%English'; ru = '%Russian'; ar = '%Arabic'; ar_AE = '%AEArabic'";
 	PString = StrReplace(PString, "%English", English);
 	PString = StrReplace(PString, "%Russian", Russian);
 	PString = StrReplace(PString, "%Arabic", Arabic);
+	PString = StrReplace(PString, "%AEArabic", Arabic);
 	
 	Return Nstr(PString);
 	

@@ -32,15 +32,19 @@
 			<Synonym>
 				<v8:item>
 					<v8:lang>en</v8:lang>
-					<v8:content>Accident Free</v8:content>
+					<v8:content>Accident Free 1</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Accident Free</v8:content>
+					<v8:content>Accident Free 2</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>ar</v8:lang>
-					<v8:content>Accident Free</v8:content>
+					<v8:content>Accident Free 3</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ar_AE</v8:lang>
+					<v8:content>Accident Free 4</v8:content>
 				</v8:item>
 			</Synonym>
 			<Comment/>
@@ -154,6 +158,7 @@
 			<Language>English</Language>
 			<Language>Russian</Language>
 			<Language>Arabic</Language>
+			<Language>ArabicAR</Language>
 			<CommonModule>StringFunctionsClientServer</CommonModule>
 			<CommonModule>Serialization</CommonModule>
 			<CommonModule>HTTPServices</CommonModule>
