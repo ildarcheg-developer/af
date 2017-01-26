@@ -1,34 +1,4 @@
 ﻿
-Function OSVersion() Export
-	
-	Return SessionParameters.OSVersion;    
-	
-EndFunction // ВерсияОС()
-
-Function ScreenHeight() Export
-	
-	Return SessionParameters.ScreenHeight;
-	
-EndFunction // ВысотаЭкрана()
-
-Function InterfaceFontSize() Export
-	
-	Return SessionParameters.InterfaceFontSize;
-	
-EndFunction // РазмерШрифтаИнтерфейса()
-
-Function ScreenWidth() Export
-	
-	Return SessionParameters.ScreenWidth;
-	        
-EndFunction // ScreenWidth()
-
-Function IsSmartphone() Export
-	
-	Return SessionParameters.Smartphone;
-	
-EndFunction // IsSmartphone()
-
 Function GetConstantValue(ConstantName) Export
 	
 	Return Constants[ConstantName].Get();

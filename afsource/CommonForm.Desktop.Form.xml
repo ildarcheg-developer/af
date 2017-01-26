@@ -52,7 +52,6 @@
 	<Events>
 		<Event name="BeforeClose">BeforeClose</Event>
 		<Event name="OnCreateAtServer">OnCreateAtServer</Event>
-		<Event name="OnClose">OnClose</Event>
 	</Events>
 	<ChildItems>
 		<UsualGroup name="GroupVertical" id="1">
@@ -127,12 +126,6 @@
 							</InputHint>
 							<ContextMenu name="NumberContextMenu" id="15"/>
 							<ExtendedTooltip name="NumberExtendedTooltip" id="16"/>
-							<Events>
-								<Event name="EditTextChange">NumberEditTextChange</Event>
-								<Event name="AutoComplete">NumberAutoComplete</Event>
-								<Event name="StartChoice">NumberStartChoice</Event>
-								<Event name="TextEditEnd">NumberTextEditEnd</Event>
-							</Events>
 						</InputField>
 						<LabelDecoration name="Decoration4" id="17">
 							<HorizontalStretch>true</HorizontalStretch>
@@ -299,6 +292,7 @@
 							<ReadOnly>true</ReadOnly>
 							<TitleLocation>None</TitleLocation>
 							<HorizontalAlign>Center</HorizontalAlign>
+							<Font ref="style:NormalTextFont" height="7" kind="StyleItem"/>
 							<ContextMenu name="StatusContextMenu" id="46"/>
 							<ExtendedTooltip name="StatusExtendedTooltip" id="47"/>
 						</LabelField>
@@ -341,6 +335,7 @@
 							<TitleLocation>None</TitleLocation>
 							<HorizontalAlign>Center</HorizontalAlign>
 							<Hiperlink>true</Hiperlink>
+							<Font ref="style:NormalTextFont" height="7" kind="StyleItem"/>
 							<ContextMenu name="Text1ContextMenu" id="94"/>
 							<ExtendedTooltip name="Text1ExtendedTooltip" id="95"/>
 							<Events>
@@ -353,6 +348,7 @@
 							<TitleLocation>None</TitleLocation>
 							<HorizontalAlign>Center</HorizontalAlign>
 							<Hiperlink>true</Hiperlink>
+							<Font ref="style:NormalTextFont" height="7" kind="StyleItem"/>
 							<ContextMenu name="Text2ContextMenu" id="97"/>
 							<ExtendedTooltip name="Text2ExtendedTooltip" id="98"/>
 							<Events>
@@ -365,6 +361,7 @@
 							<TitleLocation>None</TitleLocation>
 							<HorizontalAlign>Center</HorizontalAlign>
 							<Hiperlink>true</Hiperlink>
+							<Font ref="style:NormalTextFont" height="7" kind="StyleItem"/>
 							<ContextMenu name="Text3ContextMenu" id="100"/>
 							<ExtendedTooltip name="Text3ExtendedTooltip" id="101"/>
 							<Events>
@@ -377,6 +374,7 @@
 							<TitleLocation>None</TitleLocation>
 							<HorizontalAlign>Center</HorizontalAlign>
 							<Hiperlink>true</Hiperlink>
+							<Font ref="style:NormalTextFont" height="7" kind="StyleItem"/>
 							<ContextMenu name="Text4ContextMenu" id="103"/>
 							<ExtendedTooltip name="Text4ExtendedTooltip" id="104"/>
 							<Events>
@@ -389,6 +387,7 @@
 							<TitleLocation>None</TitleLocation>
 							<HorizontalAlign>Center</HorizontalAlign>
 							<Hiperlink>true</Hiperlink>
+							<Font ref="style:NormalTextFont" height="7" kind="StyleItem"/>
 							<ContextMenu name="Text5ContextMenu" id="106"/>
 							<ExtendedTooltip name="Text5ExtendedTooltip" id="107"/>
 							<Events>
@@ -401,6 +400,7 @@
 							<TitleLocation>None</TitleLocation>
 							<HorizontalAlign>Center</HorizontalAlign>
 							<Hiperlink>true</Hiperlink>
+							<Font ref="style:NormalTextFont" height="7" kind="StyleItem"/>
 							<ContextMenu name="Text6ContextMenu" id="109"/>
 							<ExtendedTooltip name="Text6ExtendedTooltip" id="110"/>
 							<Events>
@@ -413,6 +413,7 @@
 							<TitleLocation>None</TitleLocation>
 							<HorizontalAlign>Center</HorizontalAlign>
 							<Hiperlink>true</Hiperlink>
+							<Font ref="style:NormalTextFont" height="7" kind="StyleItem"/>
 							<ContextMenu name="Text7ContextMenu" id="112"/>
 							<ExtendedTooltip name="Text7ExtendedTooltip" id="113"/>
 							<Events>
@@ -425,6 +426,7 @@
 							<TitleLocation>None</TitleLocation>
 							<HorizontalAlign>Center</HorizontalAlign>
 							<Hiperlink>true</Hiperlink>
+							<Font ref="style:NormalTextFont" height="7" kind="StyleItem"/>
 							<ContextMenu name="Text8ContextMenu" id="115"/>
 							<ExtendedTooltip name="Text8ExtendedTooltip" id="116"/>
 							<Events>
@@ -437,6 +439,7 @@
 							<TitleLocation>None</TitleLocation>
 							<HorizontalAlign>Center</HorizontalAlign>
 							<Hiperlink>true</Hiperlink>
+							<Font ref="style:NormalTextFont" height="7" kind="StyleItem"/>
 							<ContextMenu name="Text9ContextMenu" id="118"/>
 							<ExtendedTooltip name="Text9ExtendedTooltip" id="119"/>
 							<Events>
@@ -920,21 +923,6 @@
 				</v8:item>
 			</ToolTip>
 			<Action>Submit</Action>
-		</Command>
-		<Command name="NothingToDo" id="2">
-			<Title>
-				<v8:item>
-					<v8:lang>en</v8:lang>
-					<v8:content>Nothing to do</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>en</v8:lang>
-					<v8:content>Nothing to do</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Action>NothingToDo</Action>
 		</Command>
 		<Command name="Back" id="3">
 			<Title>

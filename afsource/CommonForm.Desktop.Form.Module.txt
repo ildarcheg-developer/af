@@ -1,4 +1,11 @@
-﻿
+﻿&AtClient
+Procedure Back(Command)
+	
+	Items.GroupVertical.Visible = True;
+	Items.GroupVerticalResult.Visible = False;
+
+EndProcedure
+
 &AtClient
 Procedure BackFromDetails(Command)
 	
@@ -31,41 +38,6 @@ Procedure TextClick(Item, StandardProcessing)
 	Details = GetDetailedHistory(AccidentNumber, Column);
 	
 EndProcedure
-
-&AtClient
-Procedure NumberAutoComplete(Item, Text, ChoiceData, DataGetParameters, Wait, StandardProcessing)
-	// Insert handler contents.
-EndProcedure
-
-&AtClient
-Procedure NumberEditTextChange(Item, Text, StandardProcessing)
-	//Items.Number.Mask ="UUUUUUUUUUUUUUUUU";
-EndProcedure
-
-&AtClient
-Procedure NumberTextEditEnd(Item, Text, ChoiceData, DataGetParameters, StandardProcessing)
-	//Items.Number.Mask = "";
-EndProcedure
-
-&AtClient
-Procedure Back(Command)
-	
-	Items.GroupVertical.Visible = True;
-	Items.GroupVerticalResult.Visible = False;
-
-EndProcedure
-
-&AtClient
-Procedure OnClose(Exit)
-	//Insert handler contents
-EndProcedure
-
-&AtClient
-Procedure BeforeClose(Cancel, Exit, MessageText, StandardProcessing)
-	Cancel = True;
-	Exit(False);
-EndProcedure
-
 
 &AtServer
 Function GetCaption(Name, Column, CaptionList)
@@ -119,7 +91,7 @@ Function GetShortHistory()
 	For Each Accident In VT Do
 		
 		AccidentText = Accident.ReportDate + " " + Accident.Emirate;
-		AccidentArray.Add(GetFormattedStringForAccident(AccidentText));
+		AccidentArray.Add(AccidentText);
 		
 	EndDo;
 	
@@ -139,7 +111,6 @@ Function SubmitAtServer(ChassisNumber)
 	Connected = TRUE;
 	
 	BodyAsString = Response.GetBodyAsString();
-	//BodyAsString = GetBBB();
 	BodyAsString = Serialization.AddValueTag(BodyAsString);
 	BodyStructure = Serialization.GetDataFromString(BodyAsString);
 	Parsed = TRUE;
@@ -148,37 +119,6 @@ Function SubmitAtServer(ChassisNumber)
 	CaptionStorageAddress = PutToTempStorage(BodyStructure.CaptionList, New UUID);
 	
 	Return New Structure("Error, AccidentArray", BodyStructure.Error, "");
-	
-EndFunction
-
-&AtClientAtServerNoContext
-Function GetFormattedStringForAccident(Text)
-
-	FormattedStringArray = Новый Массив();
-	FormattedStringArray.Add(New FormattedString(Text, New Font(, 8)));
-
-	FormattedString = New FormattedString(FormattedStringArray);
-
-	Return FormattedString;
-	
-EndFunction
-
-&AtClientAtServerNoContext
-Function GetFormattedStringForStatus(Text)
-
-	FormattedStringArray = Новый Массив();
-	FormattedStringArray.Add(New FormattedString(Text, New Font(, 8)));
-
-	FormattedString = New FormattedString(FormattedStringArray);
-
-	Return FormattedString;
-	
-EndFunction
-
-&AtServerNoContext
-Function Locale()
-
-	Return CurrentLocaleCode();
 	
 EndFunction
 
@@ -208,16 +148,7 @@ Procedure Submit(Command)
 	EndIf;
 	
 	NumberOfAccident = AccidentArray.Count();
-	
-	//NoAccidentText = NStr("en = '*Accidents: 0'; ru = '*ДТП: 0'; ar = 'الحوادث: 0'"); 	CurrentLocaleCode = Locale();    
-	
-	//AccidentsFoundText = S.P("Accident: "+NumberOfAccident, "ДТП: "+NumberOfAccident,StrReplace("الحوادث: 5557", "5557", Format(NumberOfAccident, "L=ar; ND=10")));
-	//AccidentsFoundText = S.P("Accident: "+NumberOfAccident, "ДТП: "+NumberOfAccident, "الحااا اا ننوادث: 0");
-	//StatusText = ?(NumberOfAccident = 0, NoAccidentText, AccidentsFoundText);
-	//Status = GetFormattedStringForStatus(StatusText);
-	//Status1 = Status;
-	//Status = New FormattedString(Status1);
-	
+		
 	Status = S.P("*Accidents: "+NumberOfAccident, "*ДТП: "+NumberOfAccident, StrReplace("الحوادث: 5557*", "5557", Format(NumberOfAccident, "L=ar; ND=10")));
 	
 	N = 1;
@@ -250,16 +181,6 @@ Procedure Submit(Command)
 	
 EndProcedure
 
-&AtServerNoContext
-Function GetBBB()
-	Return "AgFTS2/0iI3BTqDV67a9oKcNzVbNbptAEO61kfIOq+2llRZll//1zbJJ7MTFEbiJcsR4nSLVJgJSqYryPH2IHvpIfYUOu4uNC44aqYcyIxLm+77ZnxnWfH/7Rl6/fvx8wu8wsU3Lp4yvDE/Y3LDXKTc4Wy2NpbvkDls56doX5PTkyapv4DjGBAdFkRf4mTTP+Pn05LlNuFloFEZI0rXLuCkMn6WJYbtibXArcQ0ncbnrLz3fdWVyXt9MVt8pweHjZikKLJNcJ1Ulii2kxJhQmZgRHImHvKiO8BSIGlSJzCY+TipxTKIwJbAIXmSbLlUFFccmeJim2Upsq8W3hy63AZFClcgheFTkZZlt7+OqEKLqyBoYNbgSugSPs7JKtqlYF/lmnRVllW1BVIq0yvJtJ0/DRjUdST46FKjEnp5pBlONq6R6LPtXUuOoISipT/D0pSlMe4bjBM+y+8/ddeuorjI0wixPk1rZu7kNeLC5DJoj2GRFX5F3cU3dtURvet0SB8mhJ+5E0u04FdQkaIpYFF+zVIxEvfoOW6OogbUO+iJ+EGI1yzZZd28khDSmFdAQRzrosHGY10RG+XaV9RZK4ahF0FqocAjLq/KOpA6jOq6ZfN/wkUjKfFsefyF2BP12QrHHyUbci/IaxuoKNYg0SptDxyRwalAwBgYPxAKzwRwwF8wD88E4GLRU7Uy6Kd2Sbkt3pLvSPem+dF47zBBcnj6mGpgSdWDJQ+/yo3cxscxznzNmUpf7rRPScSj1GKXM47wVpt4ZZWcmhNtBPqBW6zkKhpERhGM0ms9m03g6D1ugYbSVrf+Ho8X0Jjhgdq4W+im8Cue34YuReDKMLoeTY6P/sYx4OAzGyEBdlU3R1eZskj8W3eSvndPBDHqWiAboJphMR7MAnUfzcEHUHxRNLyYLNAwvZoHRe4Gw3ng0C841DwZqfkfYa+ruMNNxHNNphS16Rv267s5BMwxss/U8X0yCCL2Pr4PR9Pzuw39bdOevim7+06K/tKr+YsrdjPfb2dMIssD1oQJvOXtWHyIyoLz9gXMrlpEoH79UrXFHnxP4yS71R8cAdfri9GT/vjc7dHqy74X9ru3G/A0="
-EndFunction
-
-&AtClient
-Procedure NothingToDo(Command)
-	// Insert handler contents.
-EndProcedure
-
 &AtServer
 Procedure OnCreateAtServer(Cancel, StandardProcessing)
 	
@@ -267,27 +188,11 @@ Procedure OnCreateAtServer(Cancel, StandardProcessing)
 	Items.GroupVerticalResult.Visible = False;
 	Items.GroupDetailsResult.Visible = False;
 	
-	Status = "Accident free";
-	
-	Наименование = "details";
-	А = Новый Массив();
-	А.Добавить("Товар ");
-	А.Добавить(Новый ФорматированнаяСтрока(
-	Наименование,
-	Новый Шрифт(,,Истина)));
-	А.Добавить(" закончился");
-	А.Добавить(Chars.LF);
-	А.Добавить(Новый ФорматированнаяСтрока(
-	Наименование,
-	Новый Шрифт(,5,Истина)));
-
-	Стр = Новый ФорматированнаяСтрока(А);
-	TestA = Стр;
-	//Items.FormClose.Title = NStr("en = 'En1'; ru = 'Ru1'; ar = 'Ar1'");
 EndProcedure    
 
 &AtClient
-Procedure NumberStartChoice(Item, ChoiceData, StandardProcessing)
-	// Insert handler contents.
+Procedure BeforeClose(Cancel, Exit, MessageText, StandardProcessing)
+	Cancel = True;
+	Exit(False);
 EndProcedure
 
